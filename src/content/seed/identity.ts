@@ -234,7 +234,7 @@ export const appearance: AppearanceSettings = {
   loader: {
     headline: "Perfect Detailing",
     subline: "Calibrating surface",
-    minDurationMs: 900,
+    minDurationMs: 600,
   },
   radius: 20,
 };

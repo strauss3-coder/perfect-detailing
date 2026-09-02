@@ -1,15 +1,19 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { AnimatePresence, motion } from "motion/react";
+import { motion } from "motion/react";
 import { useMotionConfig } from "./MotionProvider";
 
 /**
  * Route change transition.
  *
- * Content lifts and blurs out, and a thin ceramic rule sweeps across the top
- * of the viewport — the same raking-light gesture the rest of the site uses,
+ * The incoming page lifts and un-blurs, and a thin ceramic rule sweeps across
+ * the top of the viewport — the raking-light gesture the rest of the site uses,
  * borrowed as a progress indicator.
+ *
+ * There is deliberately no exit animation. Waiting for one before mounting the
+ * next page adds a third of a second to every navigation that buys nothing:
+ * the boot overlay already covers the change when a change needs covering.
  */
 export function PageTransition({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -18,12 +22,11 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
   if (!pageTransitions) return <>{children}</>;
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <>
       <motion.div
         key={pathname}
-        initial={{ opacity: 0, y: 14, filter: "blur(7px)" }}
-        animate={{ opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.55, ease: [0.16, 1, 0.3, 1] } }}
-        exit={{ opacity: 0, y: -10, filter: "blur(7px)", transition: { duration: 0.3, ease: [0.65, 0, 0.35, 1] } }}
+        initial={{ opacity: 0, y: 12, filter: "blur(6px)" }}
+        animate={{ opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.45, ease: [0.16, 1, 0.3, 1] } }}
       >
         <motion.span
           aria-hidden
@@ -33,6 +36,6 @@ export function PageTransition({ children }: { children: React.ReactNode }) {
         />
         {children}
       </motion.div>
-    </AnimatePresence>
+    </>
   );
 }

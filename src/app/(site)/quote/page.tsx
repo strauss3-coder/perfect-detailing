@@ -43,7 +43,7 @@ export default async function QuotePage() {
                 calculator={quotePage.calculator}
                 currency={business.currency}
                 locale={business.locale}
-                quoteHref="#enquiry"
+                quotePath=""
               />
             </Reveal>
           </div>

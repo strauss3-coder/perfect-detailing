@@ -56,6 +56,7 @@
   --accent: var(--color-ceramic);
   --accent-2: var(--color-electric);
   --nav-h: 76px;
+  --announce-h: 0rem;
   color-scheme: dark;
 }
 
@@ -63,10 +64,19 @@
   border-color: var(--hairline);
 }
 
+/* The header is fixed, so anything an anchor can target needs to stop clear of
+   it rather than sliding underneath. */
+[id] {
+  scroll-margin-top: calc(var(--nav-h) + var(--announce-h) + 1.5rem);
+}
+
 html {
   background: var(--color-ink);
   scroll-behavior: smooth;
   -webkit-text-size-adjust: 100%;
+  /* Always reserve the scrollbar so locking scroll under the loader cannot
+     shift the page sideways. */
+  scrollbar-gutter: stable;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -431,4 +441,215 @@ body {
       transparent 70%
     ),
     var(--color-graphite);
+}
+
+/* =============================================================
+   BOOT LOADER
+   The overlay is part of the server-rendered HTML and is styled
+   by this render-blocking stylesheet, so it is painted on the
+   browser's first frame — before the hero exists on screen and
+   long before React has hydrated.
+
+   `data-boot` on <html> is the single state machine, set by a
+   synchronous inline script in <head>:
+
+     (absent)  no JavaScript, or nothing to show  → hidden
+     loading   overlay visible, page scroll locked
+     exiting   overlay fading out
+     done      overlay removed from the paint path
+
+   The default is hidden. If scripting is unavailable the
+   attribute is never written and the site renders normally,
+   which is the correct way for this to fail.
+   ============================================================= */
+
+.pd-boot {
+  display: none;
+}
+
+:root[data-boot="loading"],
+:root[data-boot="exiting"] {
+  overflow: hidden;
+}
+
+:root[data-boot="loading"] body,
+:root[data-boot="exiting"] body {
+  overflow: hidden;
+}
+
+:root[data-boot="loading"] .pd-boot,
+:root[data-boot="exiting"] .pd-boot {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  display: grid;
+  place-items: center;
+  background: var(--color-ink);
+  opacity: 1;
+  transition:
+    opacity 620ms var(--ease-gloss),
+    filter 620ms var(--ease-gloss);
+  will-change: opacity, filter;
+}
+
+:root[data-boot="exiting"] .pd-boot {
+  opacity: 0;
+  filter: blur(14px);
+  pointer-events: none;
+}
+
+/* The content underneath is held back until the overlay starts leaving, so
+   nothing is caught mid-layout behind a translucent panel. */
+:root[data-boot="loading"] .pd-shell {
+  opacity: 0;
+}
+
+.pd-shell {
+  opacity: 1;
+  transition: opacity 520ms var(--ease-gloss);
+}
+
+.pd-boot__key {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    58% 44% at 50% 45%,
+    color-mix(in oklab, var(--color-electric) 17%, transparent),
+    transparent 70%
+  );
+}
+
+.pd-boot__stack {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.6rem;
+  animation: pd-boot-in 760ms var(--ease-gloss) both;
+}
+
+@keyframes pd-boot-in {
+  from {
+    opacity: 0;
+    transform: scale(0.88);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* The mark draws itself in — CSS only, so it runs before any script. */
+.pd-boot__mark {
+  width: 64px;
+  height: 64px;
+}
+
+.pd-boot__bead {
+  transform-origin: 32px 46px;
+  animation: pd-bead-rise 1.1s var(--ease-gloss) both;
+}
+
+@keyframes pd-bead-rise {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scaleY(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
+.pd-boot__rule {
+  stroke-dasharray: 52;
+  stroke-dashoffset: 52;
+  animation: pd-rule-draw 900ms var(--ease-gloss) 120ms both;
+}
+
+@keyframes pd-rule-draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.pd-boot__word {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: -0.03em;
+  color: var(--color-chrome);
+  text-align: center;
+}
+
+.pd-boot__sub {
+  margin-top: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: color-mix(in oklab, var(--color-ceramic) 82%, var(--color-silver));
+  text-align: center;
+}
+
+/* Measurement bar. It sweeps continuously rather than reporting a percentage,
+   because a fake percentage is a lie about progress we cannot measure. */
+.pd-boot__bar {
+  position: relative;
+  width: 14rem;
+  height: 1px;
+  overflow: hidden;
+  background: color-mix(in oklab, var(--color-silver) 15%, transparent);
+}
+
+.pd-boot__bar::after {
+  content: "";
+  position: absolute;
+  inset-block: 0;
+  width: 42%;
+  background: linear-gradient(90deg, transparent, var(--color-ceramic), var(--color-electric), transparent);
+  animation: pd-bar-sweep 1.25s var(--ease-precision) infinite;
+}
+
+@keyframes pd-bar-sweep {
+  from {
+    transform: translateX(-110%);
+  }
+  to {
+    transform: translateX(340%);
+  }
+}
+
+/* Tick marks either side of the bar — the instrumentation motif, at rest. */
+.pd-boot__ticks {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.pd-boot__tick {
+  width: 1.5rem;
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    color-mix(in oklab, var(--color-silver) 30%, transparent) 0 1px,
+    transparent 1px 5px
+  );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pd-boot__stack,
+  .pd-boot__bead,
+  .pd-boot__rule {
+    animation: none;
+  }
+  .pd-boot__bar::after {
+    animation: none;
+    width: 100%;
+    transform: none;
+  }
+  :root[data-boot="loading"] .pd-shell,
+  .pd-shell {
+    transition: none;
+  }
 }

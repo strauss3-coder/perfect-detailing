@@ -1,11 +1,11 @@
 import { Suspense } from "react";
 import { getSiteContent } from "@/lib/content/store";
 import { MotionProvider } from "@/components/motion/MotionProvider";
-import { Loader } from "@/components/motion/Loader";
+import { BootLoader } from "@/components/site/BootLoader";
+import { LoaderController } from "@/components/motion/LoaderController";
 import { PageTransition } from "@/components/motion/PageTransition";
 import { Header } from "@/components/site/Header";
 import { Footer } from "@/components/site/Footer";
-import { AnnouncementBar } from "@/components/site/AnnouncementBar";
 import { FloatingContact } from "@/components/site/FloatingContact";
 import { AmbientField } from "@/components/site/AmbientField";
 import { StructuredData } from "@/components/site/StructuredData";
@@ -17,21 +17,30 @@ export default async function SiteLayout({ children }: LayoutProps<"/">) {
 
   return (
     <MotionProvider settings={appearance.motion}>
+      {/* First in the body: the overlay is painted before anything below it
+          is even laid out. */}
+      <BootLoader appearance={appearance} />
+      <LoaderController minDurationMs={appearance.loader.minDurationMs} />
+
       <StructuredData content={content} />
-      <Loader
-        headline={appearance.loader.headline}
-        subline={appearance.loader.subline}
-        minDurationMs={appearance.loader.minDurationMs}
-      />
       <AmbientField />
 
-      <div className="relative z-10 flex min-h-dvh flex-col">
-        {navigation.announcement.enabled ? (
-          <AnnouncementBar items={navigation.announcement.items} />
-        ) : null}
+      <div
+        className="pd-shell relative z-10 flex min-h-dvh flex-col"
+        style={
+          {
+            // The announcement strip lives inside the fixed header, so the
+            // page has to be pushed clear of both, not just the nav row.
+            "--announce-h":
+              navigation.announcement.enabled && navigation.announcement.items.length
+                ? "2.25rem"
+                : "0rem",
+          } as React.CSSProperties
+        }
+      >
         <Header navigation={navigation} brand={brand} contact={contact} />
 
-        <main id="main" className="flex-1 pt-[var(--nav-h)]">
+        <main id="main" className="flex-1 pt-[calc(var(--nav-h)+var(--announce-h))]">
           <PageTransition>{children}</PageTransition>
         </main>
 

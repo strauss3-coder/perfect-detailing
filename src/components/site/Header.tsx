@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { AnimatePresence, motion, useScroll, useMotionValueEvent } from "motion/react";
 import type { BrandSettings, ContactSettings, NavigationSettings } from "@/content/types";
 import { Logo } from "@/components/brand/Logo";
+import { AnnouncementBar } from "@/components/site/AnnouncementBar";
 import { Motif } from "@/components/icons/Motif";
 import { ButtonLink, Arrow } from "@/components/ui/Button";
 import { resolveHref } from "@/lib/links";
@@ -20,6 +21,7 @@ export function Header({
   brand: BrandSettings;
   contact: ContactSettings;
 }) {
+  const announcement = navigation.announcement;
   const pathname = usePathname();
   const [scrolled, setScrolled] = useState(false);
   const [openMenu, setOpenMenu] = useState<string | null>(null);
@@ -61,6 +63,13 @@ export function Header({
         )}
         onMouseLeave={() => setOpenMenu(null)}
       >
+        {/* Inside the fixed header rather than above it — as a sibling in
+            normal flow the strip sat underneath this element and was never
+            visible. */}
+        {announcement.enabled && announcement.items.length ? (
+          <AnnouncementBar items={announcement.items} />
+        ) : null}
+
         <div className="shell flex h-[var(--nav-h)] items-center justify-between gap-6">
           <Link href="/" aria-label={`${brand.name} — home`} className="shrink-0">
             <Logo mark={brand.activeMark} lead={brand.nameLead} trail={brand.nameTrail} size={34} />
@@ -198,7 +207,7 @@ export function Header({
             transition={{ duration: 0.3 }}
             className="fixed inset-0 z-[110] bg-ink/96 backdrop-blur-xl lg:hidden"
           >
-            <div className="shell flex h-full flex-col gap-6 overflow-y-auto pt-[calc(var(--nav-h)+1.5rem)] pb-10">
+            <div className="shell flex h-full flex-col gap-6 overflow-y-auto pt-[calc(var(--nav-h)+var(--announce-h)+1.5rem)] pb-10">
               <nav aria-label="Mobile">
                 <ul className="flex flex-col">
                   {navigation.primary.map((item, i) => (

@@ -19,14 +19,15 @@ export function SolarCalculator({
   calculator,
   currency,
   locale,
-  quoteHref = "/quote#enquiry",
+  quotePath = "/quote",
   showViz = true,
 }: {
   economics: CalculatorEconomics;
   calculator: QuotePageContent["calculator"];
   currency: string;
   locale: string;
-  quoteHref?: string;
+  /** Empty string keeps the visitor on the current page. */
+  quotePath?: string;
   showViz?: boolean;
 }) {
   const [panels, setPanels] = useState(economics.defaultPanelCount);
@@ -37,6 +38,12 @@ export function SolarCalculator({
   );
 
   const money = (v: number) => formatCurrency(v, { currency, locale });
+
+  /* Query first, fragment last — the other way round buries the panel count
+     inside the hash, where nothing can read it. */
+  const bookingHref = quotePath
+    ? `${quotePath}?panels=${estimate.panels}#enquiry`
+    : "#enquiry";
   const setSafe = (v: number) => setPanels(clamp(Math.round(v), economics.minPanels, economics.maxPanels));
 
   return (
@@ -143,7 +150,7 @@ export function SolarCalculator({
           <p className="mt-6 text-[0.78rem] leading-relaxed text-ash">{calculator.slotNote}</p>
 
           <div className="mt-8">
-            <ButtonLink href={`${quoteHref}?panels=${estimate.panels}`} intent="primary" size="lg" magnetic={false}>
+            <ButtonLink href={bookingHref} intent="primary" size="lg" magnetic={false}>
               Book this in
               <Arrow />
             </ButtonLink>
