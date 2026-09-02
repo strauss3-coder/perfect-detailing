@@ -5,6 +5,9 @@ export const alt = "Perfect Detailing — surface engineering for things that ma
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
+/* Rendered once at build time from CMS content. */
+export const dynamic = "force-static";
+
 /**
  * Social card. Drawn rather than photographed so it stays on-brand before any
  * photography exists, and so it updates automatically when the CMS tagline or

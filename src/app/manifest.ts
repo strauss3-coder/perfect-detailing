@@ -1,6 +1,10 @@
 import type { MetadataRoute } from "next";
 import { getSiteContent } from "@/lib/content/store";
 
+/* Generated once at build time — no request-specific content, and the static
+   export requires this to be stated explicitly. */
+export const dynamic = "force-static";
+
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
   const { brand, seo } = await getSiteContent();
   return {
