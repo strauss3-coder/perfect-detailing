@@ -20,6 +20,9 @@ interface LeadFormProps {
   submitLabel: string;
   /** Pre-selects a service when the form is reached from a service page. */
   defaultService?: string;
+  /** Used only by the static build's offline variant of this form. */
+  enquiryEmail?: string;
+  whatsappNumber?: string;
 }
 
 /**

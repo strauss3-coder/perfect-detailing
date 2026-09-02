@@ -107,6 +107,8 @@ export default async function ContactPage() {
                 successTitle={contactPage.form.successTitle}
                 successBody={contactPage.form.successBody}
                 submitLabel={contactPage.form.submitLabel}
+                enquiryEmail={contact.quotesEmail || contact.email}
+                whatsappNumber={contact.whatsapp}
               />
             </Suspense>
           </Reveal>

@@ -79,6 +79,8 @@ export default async function QuotePage() {
                 successTitle={quotePage.form.successTitle}
                 successBody={quotePage.form.successBody}
                 submitLabel={quotePage.form.submitLabel}
+                enquiryEmail={contact.quotesEmail || contact.email}
+                whatsappNumber={contact.whatsapp}
               />
             </Suspense>
           </Reveal>

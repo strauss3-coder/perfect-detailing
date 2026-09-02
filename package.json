@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "hash-password": "node scripts/hash-password.mjs",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "build:static": "STATIC_EXPORT=1 NEXT_PUBLIC_STATIC_EXPORT=1 next build"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.5",
