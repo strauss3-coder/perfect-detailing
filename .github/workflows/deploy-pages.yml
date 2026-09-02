@@ -1,0 +1,66 @@
+name: Deploy site to GitHub Pages
+
+# The marketing site is exported as plain files and published to Pages on every
+# push to main. The CMS portal is not part of this build — GitHub Pages serves
+# files and cannot run a server. See scripts/prepare-static.sh.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deploy finish rather than cancelling it mid-publish.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Configure Pages
+        id: pages
+        uses: actions/configure-pages@v5
+
+      - name: Strip the server-dependent half of the app
+        run: ./scripts/prepare-static.sh
+
+      - name: Build static export
+        env:
+          STATIC_EXPORT: "1"
+          NEXT_PUBLIC_STATIC_EXPORT: "1"
+          # Project pages are served from /<repo>, so assets need that prefix.
+          PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+        run: npx next build
+
+      - name: Stop Jekyll from hiding the _next directory
+        run: touch out/.nojekyll
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: out
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
