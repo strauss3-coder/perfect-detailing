@@ -1,7 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useMemo, useState, useSyncExternalStore } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import type { ServiceDoc } from "@/content/types";
 import { Button, ButtonLink, Arrow } from "@/components/ui/Button";
@@ -32,6 +31,14 @@ interface LeadFormProps {
  * The server-backed version of this component lives in LeadForm.tsx and is used
  * whenever the app is deployed somewhere that can run it.
  */
+/* The query string is browser state the server cannot see. Reading it through
+   useSyncExternalStore keeps this component prerenderable — a `useSearchParams`
+   here would make the whole form bail out to its Suspense fallback during
+   static export, leaving an empty box in the HTML until JavaScript arrived. */
+const subscribeToNothing = () => () => {};
+const readSearch = () => window.location.search;
+const readSearchOnServer = () => "";
+
 export function LeadForm({
   services,
   source,
@@ -45,15 +52,20 @@ export function LeadForm({
   enquiryEmail = "",
   whatsappNumber = "",
 }: LeadFormProps) {
-  const searchParams = useSearchParams();
-  const panelsFromUrl = searchParams.get("panels") ?? "";
+  const search = useSyncExternalStore(subscribeToNothing, readSearch, readSearchOnServer);
+  const params = useMemo(() => new URLSearchParams(search), [search]);
+  const panelsFromUrl = params.get("panels") ?? "";
 
-  const [service, setService] = useState(() => {
-    const fromQuery = searchParams.get("service");
-    if (fromQuery) return fromQuery;
-    if (defaultService) return defaultService;
-    return panelsFromUrl ? "solar-panel-ceramic-coating" : "";
-  });
+  // `null` means the visitor has not touched the field yet, so it still
+  // follows whatever the calculator put in the query string.
+  const [serviceChoice, setServiceChoice] = useState<string | null>(null);
+  const service =
+    serviceChoice ??
+    params.get("service") ??
+    (defaultService || (panelsFromUrl ? "solar-panel-ceramic-coating" : ""));
+
+  const [panelChoice, setPanelChoice] = useState<string | null>(null);
+  const panelCount = panelChoice ?? panelsFromUrl;
 
   const [values, setValues] = useState({
     name: "",
@@ -61,7 +73,6 @@ export function LeadForm({
     email: "",
     company: "",
     propertyType: "",
-    panelCount: panelsFromUrl,
     assetDetails: "",
     message: "",
   });
@@ -85,13 +96,13 @@ export function LeadForm({
       values.company ? `Company: ${values.company}` : "",
       values.propertyType ? `Property: ${values.propertyType}` : "",
       selected ? `Service: ${selected.name}` : "Service: not sure yet",
-      isSolar && values.panelCount ? `Panels: ${values.panelCount}` : "",
+      isSolar && panelCount ? `Panels: ${panelCount}` : "",
       needsAsset && values.assetDetails ? `Details: ${values.assetDetails}` : "",
       "",
       values.message,
     ].filter(Boolean);
     return lines.join("\n");
-  }, [values, selected, isSolar, needsAsset, source]);
+  }, [values, panelCount, selected, isSolar, needsAsset, source]);
 
   const whatsappHref = `https://wa.me/${whatsappNumber.replace(/[^\d]/g, "")}?text=${encodeURIComponent(composed)}`;
   const subject = `${source === "quote" ? "Quote request" : "Enquiry"} — ${selected?.name ?? "Perfect Detailing"}`;
@@ -171,7 +182,7 @@ export function LeadForm({
           <select
             id="lf-service"
             value={service}
-            onChange={(e) => setService(e.target.value)}
+            onChange={(e) => setServiceChoice(e.target.value)}
             className="h-12 rounded-tile border border-silver/15 bg-ink/50 px-4 text-[0.92rem] text-chrome outline-none transition-colors focus:border-ceramic/50"
           >
             <option value="">Not sure yet</option>
@@ -198,7 +209,7 @@ export function LeadForm({
         <AnimatePresence mode="popLayout">
           {isSolar ? (
             <motion.div key="panels" layout initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: "auto" }} exit={{ opacity: 0, height: 0 }} transition={{ duration: 0.34, ease: [0.16, 1, 0.3, 1] }} className="sm:col-span-2">
-              <Field id="lf-panels" label="How many panels?" type="number" value={values.panelCount} onChange={(v) => set("panelCount", v)} hint="A rough count is fine — we confirm it on site." />
+              <Field id="lf-panels" label="How many panels?" type="number" value={panelCount} onChange={setPanelChoice} hint="A rough count is fine — we confirm it on site." />
             </motion.div>
           ) : null}
           {needsAsset ? (
