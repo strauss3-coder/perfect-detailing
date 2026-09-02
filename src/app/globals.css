@@ -1,26 +1,434 @@
 @import "tailwindcss";
 
+/* =============================================================
+   PERFECT DETAILING — DESIGN SYSTEM
+   Concept: "The Mirror Finish"
+   Visual language borrowed from optical instrumentation and
+   surface metrology: micron rules, contact-angle geometry,
+   specular sweeps and gloss-meter readouts.
+   ============================================================= */
+
+@theme {
+  /* --- Surfaces: deep black through gunmetal ------------------ */
+  --color-ink: #05070a;
+  --color-pitch: #080b10;
+  --color-graphite: #0c1117;
+  --color-gunmetal: #131a22;
+  --color-steel: #1e2831;
+  --color-slate: #2c3844;
+  /* AA against --color-ink at body sizes (5.2:1). */
+  --color-ash: #74838f;
+
+  /* --- Light --------------------------------------------------- */
+  --color-silver: #c9d4de;
+  --color-chrome: #e6edf3;
+  --color-porcelain: #f6f9fb;
+
+  /* --- Signature accents --------------------------------------- */
+  --color-electric: #1b6bff;
+  --color-electric-deep: #0a3fb0;
+  /* Electric is a graphic colour; this is its legible text counterpart. */
+  --color-electric-soft: #7fa8ff;
+  --color-ceramic: #38e8ff;
+  --color-ceramic-soft: #8ff4ff;
+  --color-amber: #ffb648;
+
+  /* --- Type ---------------------------------------------------- */
+  --font-display: var(--font-sora), "Helvetica Neue", sans-serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+  --font-mono: var(--font-jet), ui-monospace, monospace;
+
+  /* --- Motion -------------------------------------------------- */
+  --ease-gloss: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-precision: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* --- Rhythm -------------------------------------------------- */
+  --radius-panel: 20px;
+  --radius-tile: 14px;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --surface: var(--color-ink);
+  --on-surface: var(--color-chrome);
+  --hairline: color-mix(in oklab, var(--color-silver) 12%, transparent);
+  --hairline-strong: color-mix(in oklab, var(--color-silver) 22%, transparent);
+  --glass: color-mix(in oklab, var(--color-gunmetal) 62%, transparent);
+  --accent: var(--color-ceramic);
+  --accent-2: var(--color-electric);
+  --nav-h: 76px;
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+* {
+  border-color: var(--hairline);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+html {
+  background: var(--color-ink);
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--color-ink);
+  color: var(--on-surface);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01", "cv01";
+  overflow-x: clip;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: color-mix(in oklab, var(--color-ceramic) 30%, transparent);
+  color: var(--color-porcelain);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-ceramic);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* Scrollbar — thin, instrument-like */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-pitch);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--color-steel), var(--color-gunmetal));
+  border-radius: 99px;
+  border: 2px solid var(--color-pitch);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--color-slate), var(--color-steel));
+}
+
+/* =============================================================
+   TYPE SCALE — fluid, display-led
+   ============================================================= */
+@utility text-hero {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.9rem, 8.2vw, 8.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.045em;
+}
+@utility text-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2.1rem, 5vw, 4.4rem);
+  line-height: 0.96;
+  letter-spacing: -0.035em;
+}
+@utility text-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+@utility text-lede {
+  font-size: clamp(1.02rem, 1.35vw, 1.28rem);
+  line-height: 1.62;
+  color: color-mix(in oklab, var(--color-silver) 88%, transparent);
+}
+
+/* Technical / instrumentation label */
+@utility label-tech {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: color-mix(in oklab, var(--color-ceramic) 82%, var(--color-silver));
+}
+
+@utility numeral {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.03em;
+}
+
+/* =============================================================
+   SURFACES — glass, panels, hairlines
+   ============================================================= */
+@utility panel-glass {
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in oklab, var(--color-silver) 7%, transparent),
+      transparent 46%
+    ),
+    color-mix(in oklab, var(--color-gunmetal) 55%, transparent);
+  backdrop-filter: blur(18px) saturate(1.25);
+  -webkit-backdrop-filter: blur(18px) saturate(1.25);
+  border: 1px solid var(--hairline);
+  box-shadow:
+    inset 0 1px 0 color-mix(in oklab, var(--color-silver) 12%, transparent),
+    0 24px 60px -30px rgb(0 0 0 / 0.9);
+}
+
+@utility panel-solid {
+  background: linear-gradient(
+    168deg,
+    var(--color-gunmetal),
+    var(--color-graphite) 70%
+  );
+  border: 1px solid var(--hairline);
+  box-shadow: inset 0 1px 0 color-mix(in oklab, var(--color-silver) 9%, transparent);
+}
+
+/* Edge-lit top hairline, as on a polished panel */
+@utility edge-lit {
+  position: relative;
+}
+@utility hairline-x {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    var(--hairline-strong) 12%,
+    var(--hairline-strong) 88%,
+    transparent
+  );
+}
+
+/* =============================================================
+   SIGNATURE: SPECULAR SWEEP
+   A raking highlight that travels across polished type/panels.
+   ============================================================= */
+@utility specular {
+  background-image: linear-gradient(
+    100deg,
+    var(--color-silver) 0%,
+    var(--color-porcelain) 22%,
+    #ffffff 34%,
+    var(--color-silver) 46%,
+    #7d8b98 58%,
+    var(--color-chrome) 74%,
+    var(--color-silver) 100%
+  );
+  background-size: 260% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: sweep 9s var(--ease-gloss) infinite;
+}
+
+@keyframes sweep {
+  0%,
+  100% {
+    background-position: 130% 50%;
+  }
+  50% {
+    background-position: -30% 50%;
+  }
+}
+
+/* Glass reflection that slides across a card on hover */
+@utility reflect {
+  position: relative;
+  overflow: hidden;
+}
+@utility reflect-sheen {
+  content: "";
+  position: absolute;
+  inset: -40% -120%;
+  background: linear-gradient(
+    72deg,
+    transparent 42%,
+    color-mix(in oklab, var(--color-silver) 16%, transparent) 50%,
+    transparent 58%
+  );
+  transform: translateX(-70%);
+  transition: transform 0.95s var(--ease-gloss);
+  pointer-events: none;
+}
+
+/* =============================================================
+   MICRON RULE — tick-mark divider used between sections
+   ============================================================= */
+@utility micron-rule {
+  height: 1px;
+  background-image: repeating-linear-gradient(
+    90deg,
+    var(--hairline-strong) 0 1px,
+    transparent 1px 9px
+  );
+}
+
+/* =============================================================
+   AMBIENT FIELD — grain + grid, layered under sections
+   ============================================================= */
+@utility grain {
+  position: relative;
+}
+@utility grain-layer {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.38'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+  opacity: 0.16;
+}
+
+@utility grid-field {
+  background-image:
+    linear-gradient(var(--hairline) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hairline) 1px, transparent 1px);
+  background-size: 72px 72px;
+}
+
+/* =============================================================
+   ANIMATED GRADIENT AURORA
+   ============================================================= */
+@keyframes aurora-a {
+  0%,
+  100% {
+    transform: translate3d(-8%, -4%, 0) scale(1);
+  }
+  33% {
+    transform: translate3d(10%, 6%, 0) scale(1.18);
+  }
+  66% {
+    transform: translate3d(-4%, 12%, 0) scale(0.94);
+  }
+}
+@keyframes aurora-b {
+  0%,
+  100% {
+    transform: translate3d(6%, 8%, 0) scale(1.1);
+  }
+  50% {
+    transform: translate3d(-12%, -6%, 0) scale(0.9);
+  }
+}
+
+@utility aurora-a {
+  animation: aurora-a 26s var(--ease-gloss) infinite;
+}
+@utility aurora-b {
+  animation: aurora-b 32s var(--ease-gloss) infinite;
+}
+
+/* =============================================================
+   MISC KEYFRAMES
+   ============================================================= */
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(1.4deg);
+  }
+}
+@keyframes bead-drift {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120px) scale(0.4);
+    opacity: 0;
+  }
+}
+@keyframes dash-travel {
+  to {
+    stroke-dashoffset: -1000;
+  }
+}
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.85);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes scan-line {
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(1100%);
+  }
+}
+@keyframes marquee-x {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@utility float-slow {
+  animation: float-slow 7s var(--ease-gloss) infinite;
+}
+@utility dash-travel {
+  animation: dash-travel 12s linear infinite;
+}
+@utility marquee-x {
+  animation: marquee-x 42s linear infinite;
+}
+
+/* =============================================================
+   COMPONENT PRIMITIVES
+   ============================================================= */
+@utility shell {
+  width: 100%;
+  max-width: 82rem;
+  margin-inline: auto;
+  padding-inline: clamp(1.15rem, 4vw, 3rem);
+}
+
+@utility section-y {
+  padding-block: clamp(4.5rem, 10vw, 9rem);
+}
+
+@utility accent-text {
+  background: linear-gradient(
+    92deg,
+    var(--color-ceramic),
+    var(--color-electric) 78%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility ring-hairline {
+  box-shadow: inset 0 0 0 1px var(--hairline);
+}
+
+/* Prevent CLS on media placeholders */
+@utility media-frame {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(
+      120% 90% at 30% 10%,
+      color-mix(in oklab, var(--color-steel) 70%, transparent),
+      transparent 70%
+    ),
+    var(--color-graphite);
 }
