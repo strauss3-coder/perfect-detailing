@@ -9,6 +9,10 @@
 #
 set -euo pipefail
 
+# A .next left behind by `next dev` still holds route types for the portal
+# routes this script is about to delete, and type checking fails on them.
+rm -rf .next
+
 echo "Removing everything that needs a server…"
 
 # The CMS portal, its server actions and the components that call them.
