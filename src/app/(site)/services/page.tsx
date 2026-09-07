@@ -8,6 +8,7 @@ import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { SectionHeading, MicronRule } from "@/components/ui/Section";
 import { BeadField } from "@/components/motion/BeadField";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 
 export async function generateMetadata(): Promise<Metadata> {
   return pageMetadata("services", "/services");

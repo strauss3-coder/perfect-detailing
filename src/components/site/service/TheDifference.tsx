@@ -3,6 +3,7 @@ import type { ServiceDoc } from "@/content/types";
 import { Motif } from "@/components/icons/Motif";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { Eyebrow } from "@/components/ui/Section";
+import { asset } from "@/lib/asset";
 
 /**
  * The with/without comparison.
@@ -38,7 +39,7 @@ export function TheDifference({
         <Reveal delay={0.08} className="mt-14">
           <figure className="overflow-hidden rounded-panel ring-hairline">
             <Image
-              src={difference.media.src}
+              src={asset(difference.media.src)}
               alt={difference.media.alt}
               width={1600}
               height={Math.round(1600 / (difference.media.ratio ?? 16 / 9))}

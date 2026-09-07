@@ -1,6 +1,7 @@
 import Image from "next/image";
 import type { MediaRef } from "@/content/types";
 import { Motif } from "@/components/icons/Motif";
+import { asset } from "@/lib/asset";
 import { cn } from "@/lib/utils";
 
 /**
@@ -39,7 +40,7 @@ export function MediaFrame({
     >
       {media.src ? (
         <Image
-          src={media.src}
+          src={asset(media.src)}
           alt={media.alt}
           fill
           sizes={sizes}

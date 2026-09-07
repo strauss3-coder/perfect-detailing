@@ -46,6 +46,8 @@ jobs:
           NEXT_PUBLIC_STATIC_EXPORT: "1"
           # Project pages are served from /<repo>, so assets need that prefix.
           PAGES_BASE_PATH: ${{ steps.pages.outputs.base_path }}
+          # next/image does not prefix src when images are unoptimized.
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.pages.outputs.base_path }}
         run: npx next build
 
       - name: Stop Jekyll from hiding the _next directory

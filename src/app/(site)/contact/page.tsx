@@ -5,6 +5,7 @@ import { pageMetadata } from "@/lib/seo";
 import { LeadForm } from "@/components/site/LeadForm";
 import { toServiceOption } from "@/lib/projections";
 import Image from "next/image";
+import { asset } from "@/lib/asset";
 import { Motif } from "@/components/icons/Motif";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { BeadField } from "@/components/motion/BeadField";
@@ -135,7 +136,7 @@ export default async function ContactPage() {
 
             <div className="panel-solid overflow-hidden rounded-panel">
               <Image
-                src="/profile/shop-products.webp"
+                src={asset("/profile/shop-products.webp")}
                 alt="Perfect Detailing coating and aftercare products on display in the Witbank shop"
                 width={900}
                 height={640}

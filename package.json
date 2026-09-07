@@ -9,7 +9,7 @@
     "lint": "eslint",
     "hash-password": "node scripts/hash-password.mjs",
     "typecheck": "tsc --noEmit",
-    "build:static": "STATIC_EXPORT=1 NEXT_PUBLIC_STATIC_EXPORT=1 next build"
+    "build:static": "STATIC_EXPORT=1 NEXT_PUBLIC_STATIC_EXPORT=1 NEXT_PUBLIC_BASE_PATH=$PAGES_BASE_PATH next build"
   },
   "dependencies": {
     "@supabase/ssr": "^0.12.5",
