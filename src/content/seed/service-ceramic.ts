@@ -41,8 +41,9 @@ export const ceramicService: ServiceDoc = {
       body:
         "The coating arrives as a solvent-carried silicon dioxide resin. Applied to clean, bare clear coat it flashes off its carrier and cross-links — silicon and oxygen forming a lattice that keys into the microscopic texture of your paint. What is left is a few microns of glass-like film with its own hardness, its own chemical resistance and its own surface energy, sitting above your clear coat and taking the abuse first.",
       bullets: [
+        "Multi-layer nanotechnology application creating a 9H hardness glass barrier",
         "Bonds chemically to clear coat rather than sitting on it like wax",
-        "Measured in microns and rated to 9H on the pencil hardness scale",
+        "Bonds equally to paint, metal and glass, so wheels and windows are covered too",
         "Optically clear — it deepens gloss without adding colour",
         "Removable only by machine abrasion, not by washing or solvent",
       ],
@@ -188,6 +189,37 @@ export const ceramicService: ServiceDoc = {
       "Dry with a clean plush towel or filtered blower, never a chamois dragged across dry paint",
       "Remove bird droppings and bug residue within a day; the coating buys time, not immunity",
       "Book the annual inspection — a topper reset costs a fraction of a re-coat",
+    ],
+  },
+
+  difference: {
+    eyebrow: "The difference",
+    title: "Half a bonnet tells the whole story.",
+    body:
+      "Paint that looks smooth is not. At the scale airflow cares about, uncorrected clear coat is a landscape of peaks and valleys, and every one of them trips the air passing over it.",
+    media: {
+      src: "/profile/automotive-aerodynamics.webp",
+      alt: "Split comparison of a car with and without ceramic coating, showing laminar airflow against turbulent airflow and the resulting drag difference",
+      ratio: 1536 / 856,
+    },
+    withoutLabel: "Without ceramic coating",
+    withoutBody:
+      "Microscopic paint surface roughness causes turbulent airflow, increasing skin friction and drag — and giving contamination somewhere to bond while it does.",
+    withLabel: "With ceramic coating",
+    withBody:
+      "An ultra-smooth, hydrophobic surface minimises skin friction and promotes attached flow, for lower drag and greater aerodynamic stability at speed.",
+    headline: {
+      value: "Up to 2–4%",
+      label: "Aerodynamic drag reduction",
+      qualifier:
+        "Perfect Detailing's published figure, alongside up to 2–4% track efficiency improvement. Savings and benefits vary based on driving conditions, environmental conditions and coating quality. On a road car this is a bonus rather than a reason to book — the reasons to book are the chemical resistance, the UV stability and the wash that takes half as long.",
+    },
+    benefits: [
+      { id: "cd1", title: "Reduced drag & turbulence", body: "A smoother surface lowers skin friction and turbulent airflow.", motif: "coupe" },
+      { id: "cd2", title: "Better energy efficiency", body: "Less dynamic drag contributes to fuel economy and energy use.", motif: "gloss-meter" },
+      { id: "cd3", title: "More predictable handling", body: "Attached flow supports stable behaviour at sustained high speed.", motif: "sparkle" },
+      { id: "cd4", title: "Long-term protective barrier", body: "The ceramic layer takes chemical attack, UV, etching and bird droppings.", motif: "shield" },
+      { id: "cd5", title: "Easier to clean", body: "Hydrophobic properties reject dirt, dust and bugs with far less effort.", motif: "microfibre" },
     ],
   },
 

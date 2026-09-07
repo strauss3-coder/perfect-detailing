@@ -42,7 +42,9 @@ export type IllustrationMotif =
   | "fleet"
   | "sparkle"
   | "coating-layers"
-  | "gloss-meter";
+  | "gloss-meter"
+  | "marine"
+  | "window";
 
 export interface LinkRef {
   label: string;
@@ -82,8 +84,6 @@ export interface BrandSettings {
   nameLead: string;
   nameTrail: string;
   tagline: string;
-  /** Which logo concept the site renders. */
-  activeMark: "bead" | "facet" | "sweep";
   positioningStatement: string;
   /** Short descriptor under the footer lockup. */
   descriptor: string;
@@ -289,6 +289,8 @@ export type ServiceCategory =
   | "ceramic"
   | "solar"
   | "aircraft"
+  | "marine"
+  | "windows"
   | "fleet";
 
 export interface ServiceSection {
@@ -389,6 +391,24 @@ export interface ServiceDoc {
   lifespan: { id: string; label: string; value: string; note: string }[];
   maintenance: { title: string; body: string; items: string[] };
   faqIds: string[];
+
+  /**
+   * The with/without comparison for this discipline, taken from the company
+   * profile. Its figures are the company's own published claims and carry
+   * their own qualifier, which is rendered with them.
+   */
+  difference?: {
+    eyebrow: string;
+    title: string;
+    body: string;
+    media: MediaRef;
+    withoutLabel: string;
+    withoutBody: string;
+    withLabel: string;
+    withBody: string;
+    benefits: { id: string; title: string; body: string; motif?: IllustrationMotif }[];
+    headline: { value: string; label: string; qualifier: string };
+  };
 
   /** Optional, category-specific. */
   solar?: SolarEconomics;

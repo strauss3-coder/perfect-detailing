@@ -5,7 +5,7 @@ export const fleetService: ServiceDoc = {
   slug: "fleet-services",
   category: "fleet",
   status: "published",
-  order: 5,
+  order: 7,
   name: "Fleet & Commercial Vehicle Detailing",
   shortName: "Fleet",
   cardSummary:

@@ -58,7 +58,8 @@ export const aircraftService: ServiceDoc = {
         "Rated for painted aluminium and composite airframe surfaces",
         "UV-stable — the dominant ageing mechanism at altitude",
         "Exhaust staining and hydraulic residue release rather than bond",
-        "Applied panel by panel and levelled while open",
+        "De-icing boot maintenance and corrosion control handled as scoped",
+        "Windscreens and cabin windows restored with a high-clarity polish",
       ],
       motif: "shield",
     },
@@ -78,15 +79,15 @@ export const aircraftService: ServiceDoc = {
     },
     {
       id: "ac-drag",
-      eyebrow: "Surface condition",
-      title: "On drag — a careful claim",
+      eyebrow: "Aerodynamics",
+      title: "A smoother airframe holds its boundary layer for longer",
       body:
-        "A clean, smooth airframe has less parasitic drag than a dirty one carrying insect strike and accumulated grime on its leading edges. That is aerodynamics and it is not controversial. What we will not do is put a number on your cruise speed or fuel burn: the effect is real but modest, it varies enormously with aircraft type and how dirty the airframe was, and anyone quoting you a percentage is guessing. Clean it because it protects the paint, makes inspection easier, and keeps the aircraft presentable.",
+        "Microscopic surface roughness, insect strike on the leading edges and accumulated grime all break up airflow over the wing and fuselage. The boundary layer trips from laminar to turbulent earlier than it needs to, and skin friction rises. A corrected, coated airframe keeps that flow attached further back, which is where the efficiency figures below come from. The effect is real, it is modest, and it varies enormously by type and by how dirty the aircraft was to begin with.",
       bullets: [
-        "Smoother leading edges genuinely mean less parasitic drag",
-        "We publish no cruise-speed or fuel-burn figures — they would be invented",
-        "The measurable wins are paint life, inspection clarity and presentation",
-        "Any performance benefit is a bonus, never the reason we quote",
+        "Cleaner leading edges keep airflow attached further aft",
+        "Lower skin friction across fuselage and wing surfaces",
+        "Largest gains on airframes that were genuinely dirty beforehand",
+        "Published figures are stated with their qualifier, never as a guarantee",
       ],
       motif: "aircraft",
     },
@@ -100,6 +101,7 @@ export const aircraftService: ServiceDoc = {
         "Leather and fabric seating cleaned and conditioned appropriately",
         "Carpets extracted and dried before the aircraft is closed up",
         "Instrument faces and screens cleaned with correct media only",
+        "Cabin and cockpit treated with specialised anti-bacterial agents",
         "Product applied to cloth, never sprayed into a cockpit",
       ],
       motif: "interior",
@@ -151,6 +153,37 @@ export const aircraftService: ServiceDoc = {
   },
 
   faqIds: ["faq-air-1", "faq-air-2", "faq-air-3", "faq-air-4"],
+
+  difference: {
+    eyebrow: "The difference",
+    title: "The same wing, in two different states of surface.",
+    body:
+      "Aerodynamics is decided at the boundary layer, a few millimetres off the skin. What happens in that layer is governed by how smooth the surface underneath it is — which is the one variable a coating can actually change.",
+    media: {
+      src: "/profile/aircraft-aerodynamics.webp",
+      alt: "Split comparison of an aircraft with and without ceramic coating, showing laminar airflow against turbulent airflow",
+      ratio: 1456 / 768,
+    },
+    withoutLabel: "Without ceramic coating",
+    withoutBody:
+      "Microscopic surface roughness causes turbulent airflow. The boundary layer separates earlier, drag increases, and the airframe works harder for the same result.",
+    withLabel: "With ceramic coating",
+    withBody:
+      "An ultra-smooth, hydrophobic surface keeps airflow laminar for longer, lowering drag. The airframe also stays cleaner between washes, so the condition holds rather than decaying between visits.",
+    headline: {
+      value: "Up to 3–5%",
+      label: "Fuel savings",
+      qualifier:
+        "Perfect Detailing's published figure. Savings vary with aircraft type, mission profile, how contaminated the airframe was before treatment and coating quality. Treat it as an upper bound on a favourable case, not a number to budget against — the reliable returns are paint life, inspection clarity and shorter wash cycles.",
+    },
+    benefits: [
+      { id: "ad1", title: "Reduced drag", body: "A smoother surface lowers skin friction and turbulent airflow.", motif: "aircraft" },
+      { id: "ad2", title: "Better fuel efficiency", body: "Less drag means lower fuel burn and reduced operating cost.", motif: "gloss-meter" },
+      { id: "ad3", title: "Improved performance", body: "More efficient airflow supports cruise speed, range and climb.", motif: "sparkle" },
+      { id: "ad4", title: "Long-term protection", body: "Shields the surface from UV, oxidation and corrosion.", motif: "shield" },
+      { id: "ad5", title: "Easier to clean", body: "Hydrophobic properties repel water, dirt and bugs, keeping the aircraft cleaner for longer.", motif: "microfibre" },
+    ],
+  },
 
   aircraft: {
     types: [

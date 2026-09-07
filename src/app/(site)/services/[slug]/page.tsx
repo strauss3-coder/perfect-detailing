@@ -4,6 +4,7 @@ import { getSiteContent } from "@/lib/content/store";
 import { metadataFromSeo } from "@/lib/seo";
 import { ServiceHero } from "@/components/site/service/ServiceHero";
 import { ServiceSections } from "@/components/site/service/ServiceSections";
+import { TheDifference } from "@/components/site/service/TheDifference";
 import { BenefitGrid, PackageCards, LifespanAndCare } from "@/components/site/service/ServiceBlocks";
 import { AircraftDetails, FleetDetails } from "@/components/site/service/CategoryBlocks";
 import { SolarCalculator } from "@/components/site/solar/SolarCalculator";
@@ -58,6 +59,8 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
           </div>
         </section>
       ) : null}
+
+      {service.difference ? <TheDifference difference={service.difference} /> : null}
 
       <ServiceSections sections={service.sections} />
 

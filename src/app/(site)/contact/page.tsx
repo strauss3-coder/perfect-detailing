@@ -4,6 +4,7 @@ import { getSiteContent } from "@/lib/content/store";
 import { pageMetadata } from "@/lib/seo";
 import { LeadForm } from "@/components/site/LeadForm";
 import { toServiceOption } from "@/lib/projections";
+import Image from "next/image";
 import { Motif } from "@/components/icons/Motif";
 import { Reveal, RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { BeadField } from "@/components/motion/BeadField";
@@ -130,6 +131,25 @@ export default async function ContactPage() {
                   </li>
                 ))}
               </ul>
+            </div>
+
+            <div className="panel-solid overflow-hidden rounded-panel">
+              <Image
+                src="/profile/shop-products.webp"
+                alt="Perfect Detailing coating and aftercare products on display in the Witbank shop"
+                width={900}
+                height={640}
+                sizes="(min-width: 1024px) 26rem, 92vw"
+                className="h-auto w-full"
+              />
+              <div className="p-7 sm:p-8">
+                <h2 className="font-display text-[1.2rem] tracking-tight text-chrome">Visit the shop</h2>
+                <p className="mt-3 text-[0.88rem] leading-relaxed text-silver/68">
+                  Coatings, aftercare products and honest advice from the people who apply them.
+                  {" "}
+                  {business.address.city}, {business.address.province}.
+                </p>
+              </div>
             </div>
 
             <div className="panel-solid rounded-panel p-7 sm:p-8">

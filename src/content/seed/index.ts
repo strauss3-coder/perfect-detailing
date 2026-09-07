@@ -7,6 +7,8 @@ import { solarService } from "./service-solar";
 import { ceramicService } from "./service-ceramic";
 import { automotiveService } from "./service-automotive";
 import { aircraftService } from "./service-aircraft";
+import { marineService } from "./service-marine";
+import { windowsService } from "./service-windows";
 import { fleetService } from "./service-fleet";
 import { beforeAfter, emailTemplates, galleryItems, media, posts, pricing, testimonials, users } from "./collections";
 import { faqs } from "./faqs";
@@ -16,6 +18,8 @@ export const services: ServiceDoc[] = [
   ceramicService,
   automotiveService,
   aircraftService,
+  marineService,
+  windowsService,
   fleetService,
 ];
 

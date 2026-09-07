@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MarkBead } from "@/components/brand/Marks";
+import { Mark } from "@/components/brand/Marks";
 
 export default function NotFound() {
   return (
@@ -7,7 +7,7 @@ export default function NotFound() {
       <body style={{ background: "#05070a", color: "#e6edf3", margin: 0 }}>
         <main className="grid min-h-dvh place-items-center px-6 py-20 text-center">
           <div className="flex max-w-lg flex-col items-center gap-7">
-            <MarkBead size={58} />
+            <Mark size={58} />
             <p className="numeral text-[0.72rem] tracking-[0.32em] text-ash uppercase">Error 404</p>
             <h1 className="font-display text-[clamp(2.2rem,6vw,3.4rem)] leading-[0.98] font-bold tracking-tight text-chrome">
               Nothing to polish here.

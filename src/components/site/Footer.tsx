@@ -29,7 +29,7 @@ export function Footer({
       <div className="shell relative z-10 pt-20 pb-10">
         <div className="grid gap-14 lg:grid-cols-[1.15fr_2fr]">
           <div className="flex flex-col gap-6">
-            <Logo mark={brand.activeMark} lead={brand.nameLead} trail={brand.nameTrail} size={38} />
+            <Logo lead={brand.nameLead} trail={brand.nameTrail} size={38} />
             <p className="max-w-sm text-[0.92rem] leading-relaxed text-silver/65">{footer.blurb}</p>
 
             <div className="flex flex-col gap-1.5">

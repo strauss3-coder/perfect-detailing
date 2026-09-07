@@ -187,6 +187,42 @@ const DRAW: Record<IllustrationMotif, Draw> = {
     </>
   ),
 
+  /* ------------------------------------------------------------- Marine */
+  marine: (a, sw) => (
+    <>
+      {/* Hull, deck and raked bow */}
+      <path
+        d="M9 34h41c5 0 8 2 9 5-6 7-15 10-27 10s-19-5-23-15Z"
+        stroke="currentColor"
+        strokeWidth={sw}
+        {...S}
+      />
+      <path d="M26 34v-9h11v9M21 25h20" stroke="currentColor" strokeWidth={sw} {...S} />
+      {/* Waterline — the surface the coating actually meets */}
+      <path
+        d="M4 55c5-2 9 2 14 0s9-2 14 0 9 2 14 0 9-2 14 0"
+        stroke={a}
+        strokeWidth={sw}
+        {...S}
+      />
+      <path d="M14 46c8 3 28 3 36 0" stroke={a} strokeWidth={sw * 0.8} opacity="0.65" {...S} />
+    </>
+  ),
+
+  /* --------------------------------------------------------- Architectural */
+  window: (a, sw) => (
+    <>
+      <path d="M12 12h40v40H12z" stroke="currentColor" strokeWidth={sw} {...S} />
+      <path d="M32 12v40M12 32h40" stroke="currentColor" strokeWidth={sw * 0.7} opacity="0.6" {...S} />
+      {/* Beads running off the coated pane */}
+      <circle cx="21" cy="41" r="3" stroke={a} strokeWidth={sw * 0.9} {...S} />
+      <circle cx="25" cy="47" r="1.9" stroke={a} strokeWidth={sw * 0.8} opacity="0.8" {...S} />
+      <circle cx="17" cy="47" r="1.4" stroke={a} strokeWidth={sw * 0.8} opacity="0.6" {...S} />
+      {/* Solar gain being turned away */}
+      <path d="M44 18l8-8M48 24h8M44 12V4" stroke={a} strokeWidth={sw * 0.85} opacity="0.8" {...S} />
+    </>
+  ),
+
   /* ----------------------------------------------------------- Aviation */
   aircraft: (a, sw) => (
     <>

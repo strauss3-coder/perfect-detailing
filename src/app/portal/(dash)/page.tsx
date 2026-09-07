@@ -57,6 +57,13 @@ export default async function PortalDashboard() {
       href: "/portal/edit/seo",
     },
     {
+      id: "c0",
+      done: false,
+      label: "Replace the placeholder testimonials",
+      body: "The reviews currently on the site were written as design placeholders. They are not real customers and must be replaced with genuine reviews before the site is promoted.",
+      href: "/portal/edit/testimonials",
+    },
+    {
       id: "c5",
       done: galleryItems.some((g) => g.media.src),
       label: "Upload real photography",

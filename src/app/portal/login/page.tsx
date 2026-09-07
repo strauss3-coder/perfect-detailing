@@ -3,7 +3,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import { getSession, usingDefaultCredentials } from "@/lib/portal/auth";
 import { LoginForm } from "@/components/portal/LoginForm";
-import { MarkBead } from "@/components/brand/Marks";
+import { Mark } from "@/components/brand/Marks";
 
 export const metadata: Metadata = { title: "Sign in" };
 
@@ -18,7 +18,7 @@ export default async function LoginPage({ searchParams }: PageProps<"/portal/log
     <main className="grid min-h-dvh place-items-center px-6 py-16">
       <div className="w-full max-w-sm">
         <div className="mb-10 flex flex-col items-center gap-5 text-center">
-          <MarkBead size={54} />
+          <Mark size={54} />
           <div>
             <p className="font-display text-[1.4rem] font-bold tracking-tight text-chrome">Perfect Detailing</p>
             <p className="label-tech mt-1.5">Content portal</p>

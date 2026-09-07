@@ -42,7 +42,8 @@ export const solarService: ServiceDoc = {
       body:
         "The coating is a silicon-dioxide chemistry formulated for photovoltaic cover glass. Once applied it cross-links into a hard, transparent film measured in single-digit microns, bonded to the glass rather than resting on it. It does not tint, it does not haze, and it is engineered to stay optically neutral under constant ultraviolet load — which matters, because anything that shades a cell costs you generation.",
       bullets: [
-        "Optically clear at visible wavelengths — no transmission penalty",
+        "High-transmission formulation designed for minimal light refraction",
+        "Anti-static, so airborne dust is actively discouraged from settling",
         "Bonds to the cover glass, so it cannot be washed off like a wax",
         "Rated for continuous UV exposure and roof-surface temperatures",
         "Safe on anti-reflective coated glass when applied by trained hands",
@@ -266,6 +267,37 @@ export const solarService: ServiceDoc = {
   },
 
   faqIds: ["faq-solar-1", "faq-solar-2", "faq-solar-3", "faq-solar-4", "faq-solar-5", "faq-solar-6"],
+
+  difference: {
+    eyebrow: "The difference",
+    title: "One module, two surfaces, two yields.",
+    body:
+      "A photovoltaic cell can only convert the light that reaches it. Everything between the sun and the cell — dust, mineral haze, a rough surface scattering light back out — is generation you paid for and did not get.",
+    media: {
+      src: "/profile/solar-performance.webp",
+      alt: "Split comparison of a solar panel with and without ceramic coating, showing light scattering off a soiled surface against clean transmission on a coated one",
+      ratio: 1456 / 768,
+    },
+    withoutLabel: "Without ceramic coating",
+    withoutBody:
+      "Microscopic irregularities let particles adhere to the glass. Incident light scatters off the rough, soiled surface instead of passing through, and transmittance drops.",
+    withLabel: "With ceramic coating",
+    withBody:
+      "A super-smooth, non-porous layer holds far less soiling and lets water bead cleanly away. More light passes through with minimal reflection, and rain does much of the cleaning.",
+    headline: {
+      value: "Up to 30%",
+      label: "Efficiency increase on heavily soiled arrays",
+      qualifier:
+        "Perfect Detailing's published figure, and it describes the recovery available on an array that has been left to soil badly — not a gain over a clean panel, which is not physically possible. The worked example further down this page uses a far more conservative 6% to 2.5% annualised soiling loss, which is what we have measured on monitored Highveld installations. We would rather quote you the conservative number and beat it.",
+    },
+    benefits: [
+      { id: "sd1", title: "Maximised light transmission", body: "A smoother surface reduces reflection and scattering, increasing photon capture.", motif: "solar-panel" },
+      { id: "sd2", title: "Easier to clean", body: "Hydrophobic properties reject dirt, pollen and debris, allowing self-cleaning with rain.", motif: "droplet" },
+      { id: "sd3", title: "Improved power output", body: "Less soiling means more consistent generation across the year.", motif: "gloss-meter" },
+      { id: "sd4", title: "Long-term panel protection", body: "The ceramic layer shields the glass from UV degradation and abrasion.", motif: "shield" },
+      { id: "sd5", title: "Better for the environment", body: "Less water and chemical cleaning, and more energy from the same array.", motif: "sparkle" },
+    ],
+  },
 
   solar: {
     pricePerPanel: 280,

@@ -12,9 +12,9 @@ const f = (
 export const faqs: Faq[] = [
   /* ---------------------------------------------------------- General */
   f("faq-gen-1", "general", 1, "Where do you work?",
-    "We are mobile across Gauteng — Johannesburg, Sandton, Midrand, Centurion, Pretoria, Krugersdorp, the Vaal Triangle and the Lanseria and Grand Central airfields. Larger commercial and solar jobs are worth travelling further for; ask and we will tell you honestly whether the travel makes the price sensible.", true),
-  f("faq-gen-2", "general", 2, "Why is there no address on your website?",
-    "Because we do not have premises, and we would rather say so than invent one. Everything is done on site with self-contained units carrying deionised water, power, lighting and containment. It saves you a drop-off, and it means we see the conditions the surface actually lives in.", true),
+    "Our base is Witbank in Mpumalanga, and we work across the Highveld — eMalahleni, Middelburg, Secunda, Ermelo, Bethal and the surrounding areas. Larger commercial, solar, aviation and marine jobs are worth travelling further for, including into Gauteng; ask and we will tell you honestly whether the travel makes the price sensible.", true),
+  f("faq-gen-2", "general", 2, "Do you work at your shop or at mine?",
+    "Both. Our workshop and product shop are in Witbank — come in for coatings, aftercare products and advice. The detailing and coating work itself is done on site wherever the asset lives, with self-contained units carrying their own water, power, lighting and containment. It saves you a drop-off, and it means we see the conditions the surface actually lives in.", true),
   f("faq-gen-3", "general", 3, "What do you need from me on the day?",
     "Access, and somewhere to park the unit. We bring our own water and power. For solar work we need safe roof access and, on commercial sites, whatever induction your facility requires — tell us up front and we will arrive with the paperwork done.", false),
   f("faq-gen-4", "general", 4, "How far in advance should I book?",
@@ -77,6 +77,22 @@ export const faqs: Faq[] = [
     "No, because everything we do is cosmetic — we never touch anything requiring an approved maintenance release. We agree a written scope with you or your maintenance organisation before the date, log every cover fitted to probes and ports on a checklist, and walk that checklist in reverse at completion. You get a completion record for the aircraft file.", false),
   f("faq-air-4", "aircraft", 4, "How often should the aircraft be done?",
     "Six to eight weeks for a hangared aircraft in regular use, four weekly if it lives outside or operates off grass. Leading edges and the belly deserve attention after any heavy insect season. The coating itself is inspected annually, ideally aligned to your scheduled maintenance so the aircraft is already down.", false),
+
+  /* ----------------------------------------------------------- Marine */
+  f("faq-marine-1", "marine", 1, "Is this the same as antifouling?",
+    "No, and it does not replace it. Antifouling is a biocidal paint system applied below the waterline to stop marine growth taking hold, and that remains your yard's job. Our marine ceramic coating protects gelcoat, topsides, superstructure and metalwork against salt, ultraviolet and staining, and makes the surfaces above and around the waterline dramatically easier to keep clean. On running gear it reduces how readily barnacles adhere, which is a different mechanism to antifouling and complements it.", true),
+  f("faq-marine-2", "marine", 2, "My gelcoat is chalky and faded. Is it recoverable?",
+    "Usually, and further than most owners expect. Gelcoat is a thick pigmented layer that chalks from the surface down, so there is normally sound material underneath. Multi-stage machine correction removes the dead layer and brings colour and depth back. Where a hull has been compounded aggressively many times before, there may be less left to work with — we assess that at survey and tell you before quoting.", true),
+  f("faq-marine-3", "marine", 3, "Does the vessel need to come out of the water?",
+    "Yes. Correction and coating are done with the hull dry and the coating needs an undisturbed cure of 24 to 48 hours out of the water. We schedule around a lift you already have booked wherever possible, so you are not paying for a haul-out twice.", false),
+
+  /* ---------------------------------------------------- Architectural glass */
+  f("faq-windows-1", "windows", 1, "Is this window tint?",
+    "No. Tint is a film adhered to the glass that can bubble, peel and discolour, and it darkens the pane. This is a liquid ceramic chemistry that bonds into the glass surface itself. It is optically clear — you do not lose daylight — and there is nothing stuck on to fail later. It rejects solar heat through nanoceramic particles rather than by blocking visible light.", true),
+  f("faq-windows-2", "windows", 2, "My windows already have permanent-looking stains. Can you fix them?",
+    "It depends whether the deposit is on the glass or in it. Hard water and irrigation overspray dry onto the pane and, over enough wet-dry cycles, chemically etch into the surface. Surface deposits come off. Etching sometimes polishes out and sometimes does not. We test a panel first and tell you honestly which you have — and we will not charge you to coat over damage that coating cannot hide.", true),
+  f("faq-windows-3", "windows", 3, "How much will it actually save on cooling?",
+    "Our published figure is up to 10–15% reduced cooling costs, and the honest answer is that it depends entirely on your building. Orientation, glazing type, how much of the envelope is glass and your local climate all move that number a great deal — a west-facing glass elevation in full afternoon sun behaves nothing like a shaded one. We survey the building and give you a figure for your elevations rather than an average.", false),
 
   /* ------------------------------------------------------------ Fleet */
   f("faq-fleet-1", "fleet", 1, "Will you take my vehicles off the road?",

@@ -10,10 +10,10 @@ import type {
 
 export const about: AboutContent = {
   hero: {
-    eyebrow: "Since 2016",
-    title: "We started because nobody could tell us what they had actually done.",
+    eyebrow: "A decade of surface care",
+    title: "We stopped repairing damage and started preventing it.",
     lede:
-      "Perfect Detailing began with a badly polished black car and an invoice that said 'full valet'. No readings, no explanation of what had been removed, and holograms across every panel in the afternoon sun. We decided that if we were going to do this, every job would end with numbers rather than adjectives.",
+      "Perfect Detailing began in vehicle repair. Years of putting surfaces right after they had failed taught us something obvious in hindsight: almost all of that damage was preventable, and the customer would rather have never had it. So we made a deliberate move from reactive repair to proactive protection.",
     media: {
       src: "",
       alt: "Detailer inspecting a corrected panel under a raking inspection light",
@@ -22,12 +22,12 @@ export const about: AboutContent = {
     },
   },
   story: {
-    title: "How a car habit turned into a coatings business",
+    title: "From putting it right to keeping it right",
     paragraphs: [
-      "The first two years were entirely automotive — weekends, a single polisher and a borrowed inspection light, working on friends' cars and learning the difference between a finish that looks good in a garage and one that survives direct sunlight.",
-      "Solar found us by accident. A client with a corrected black Audi asked, half-joking, whether the same beading trick would work on his rooftop array — it had gone hazy after a year of municipal-water cleaning. We ran a controlled test across two strings, monitored output for a season, and the numbers were interesting enough that we spent the next eighteen months learning photovoltaic surfaces properly.",
-      "Aviation followed the same route: an owner at a Gauteng field who had seen the solar work and wanted to know whether the same chemistry could take a Cessna's UV exposure. It could, with a different product and a completely different water discipline. That job taught us more about process control than anything before it.",
-      "Today the split is roughly half solar, a third automotive and the balance aviation and fleet. What has not changed is the method: measure it, correct it, protect it, measure it again, then hand over the readings.",
+      "A decade in vehicle repair and surface care gives you an unusual view of the problem. You see the same failures arrive over and over — oxidised paint, etched glass, chalked gelcoat, hazed panels — and you notice that by the time the work reaches you, the owner has already lost most of the value they were trying to protect.",
+      "Building on that foundation, and on the customer relationships that came with it, we made a strategic decision: move from purely reactive repair to proactive, premium surface protection and restoration. The skills transfer directly. The difference is that the work now happens before the damage instead of after it.",
+      "That shift opened up sectors a repair shop never touches. The same chemistry and the same discipline that protect a bonnet also protect an airframe at altitude, a hull in salt water, a photovoltaic module losing yield to dust, and a facade quietly costing a building its cooling budget. Each needed its own products and its own method, and each took time to learn properly.",
+      "We are surface care specialists, and we are committed to delivering more than a clean result. Your assets — whether mobility or structural — are valuable, and they deserve to be treated that way. What has not changed since the repair days is the method: measure it, correct it, protect it, measure it again, then hand over the readings.",
     ],
   },
   principles: {
@@ -248,6 +248,8 @@ export const galleryPage: GalleryPageContent = {
     { id: "gc2", label: "Automotive", slug: "automotive" },
     { id: "gc3", label: "Ceramic", slug: "ceramic" },
     { id: "gc4", label: "Aircraft", slug: "aircraft" },
+    { id: "gc6", label: "Marine", slug: "marine" },
+    { id: "gc7", label: "Glass", slug: "windows" },
     { id: "gc5", label: "Fleet", slug: "fleet" },
   ],
   beforeAfterTitle: "Before and after",
@@ -295,6 +297,8 @@ export const faqPage: FaqPageContent = {
     { id: "fq2", slug: "ceramic", label: "Ceramic coating", blurb: "What it does, what it does not do, and how long it lasts." },
     { id: "fq3", slug: "automotive", label: "Automotive", blurb: "Correction, interiors, headlights and maintenance." },
     { id: "fq4", slug: "aircraft", label: "Aircraft", blurb: "Dry washing, scope, compliance and scheduling." },
+    { id: "fq6", slug: "marine", label: "Marine", blurb: "Gelcoat, salt, fouling and running gear." },
+    { id: "fq7", slug: "windows", label: "Architectural glass", blurb: "Self-cleaning, heat rejection and etch prevention." },
     { id: "fq5", slug: "fleet", label: "Fleet", blurb: "Cycles, downtime, wraps and invoicing." },
   ],
   cta: {
@@ -312,7 +316,7 @@ export const contactPage: ContactPageContent = {
     eyebrow: "Contact",
     title: "Talk to the person who will do the work.",
     lede:
-      "There is no call centre and no enquiry queue. Whichever channel you use, you are speaking to someone who has held a polisher.",
+      "There is no call centre and no enquiry queue. Whichever channel you use, you are speaking to someone who has held a polisher. Our team responds promptly — usually the same working day.",
   },
   channels: [
     { id: "ch1", kind: "phone", label: "Call", value: "", href: "", note: "Fastest between 07:00 and 17:00 on weekdays" },
@@ -332,9 +336,9 @@ export const contactPage: ContactPageContent = {
     submitLabel: "Send enquiry",
   },
   addressCard: {
-    title: "Why there is no address here",
+    title: "Come to the shop, or have us come to you",
     body:
-      "We are a mobile operation and we like it that way. Our units carry deionised water, power, lighting and containment, so the work happens where the asset already is — your driveway, your depot, your roof or your hangar. That saves you a drop-off, and it means we see the conditions the surface actually lives in.",
+      "Our workshop and product shop are in Witbank, Mpumalanga — come in for coatings, aftercare products and advice from someone who actually applies them. Detailing and coating work itself is done on site wherever the asset lives: your driveway, your yard, your roof, your hangar or your mooring. Our units carry their own water, power, lighting and containment, so we need nothing from you but access.",
   },
 };
 

@@ -2,7 +2,7 @@ import type { HomeContent } from "@/content/types";
 
 export const home: HomeContent = {
   hero: {
-    eyebrow: "Automotive · Aviation · Solar",
+    eyebrow: "Automotive · Aviation · Marine · Solar · Glass",
     headlineLines: ["We don't clean", "surfaces.", "We engineer them."],
     accentWord: "surfaces.",
     lede:
@@ -74,14 +74,16 @@ export const home: HomeContent = {
   },
   services: {
     eyebrow: "Capability",
-    title: "Five disciplines, one standard.",
+    title: "Six disciplines, one standard.",
     lede:
-      "The chemistry changes between a bonnet, a wing and a photovoltaic module. The method does not: inspect, correct, prepare, coat, cure, verify.",
+      "The chemistry changes between a bonnet, a wing, a hull, a window and a photovoltaic module. The method does not: inspect, correct, prepare, coat, cure, verify.",
     featured: [
       "solar-panel-ceramic-coating",
       "ceramic-coating",
       "automotive-detailing",
       "aircraft-detailing",
+      "marine-detailing",
+      "building-window-coating",
       "fleet-services",
     ],
     action: { label: "All services", href: "/services", intent: "ghost" },
@@ -148,7 +150,7 @@ export const home: HomeContent = {
     eyebrow: "Industries we serve",
     title: "Different surfaces. Same physics.",
     lede:
-      "Contamination bonds, light scatters, and value quietly leaves the asset. We work wherever that equation costs someone money.",
+      "Contamination bonds, light scatters, and value quietly leaves the asset. We work wherever that equation costs someone money — on the road, in the air, on the water and on the building.",
     items: [
       {
         id: "i1",
@@ -173,6 +175,18 @@ export const home: HomeContent = {
         name: "Fleet & logistics",
         body: "Panel vans, bakkies and branded vehicles on scheduled cycles that keep livery legible.",
         motif: "fleet",
+      },
+      {
+        id: "i7",
+        name: "Marine & leisure",
+        body: "Recreational and commercial vessels, from weekend boats to working craft.",
+        motif: "marine",
+      },
+      {
+        id: "i8",
+        name: "Commercial property",
+        body: "Facades and glazing where cleaning costs and cooling load both matter.",
+        motif: "window",
       },
       {
         id: "i5",

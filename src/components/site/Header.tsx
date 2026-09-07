@@ -72,7 +72,7 @@ export function Header({
 
         <div className="shell flex h-[var(--nav-h)] items-center justify-between gap-6">
           <Link href="/" aria-label={`${brand.name} — home`} className="shrink-0">
-            <Logo mark={brand.activeMark} lead={brand.nameLead} trail={brand.nameTrail} size={34} />
+            <Logo lead={brand.nameLead} trail={brand.nameTrail} size={34} />
           </Link>
 
           <nav aria-label="Primary" className="hidden lg:block">

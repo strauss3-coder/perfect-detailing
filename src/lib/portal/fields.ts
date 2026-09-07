@@ -41,11 +41,10 @@ const SELECTS: Record<string, string[]> = {
   intent: ["primary", "secondary", "ghost"],
   kind: ["image", "video", "document", "vector"],
   layout: ["inline", "stacked", "mark-only"],
-  activeMark: ["bead", "facet", "sweep"],
   intensity: ["subtle", "balanced", "full"],
   role: ["owner", "manager", "staff"],
-  category: ["automotive", "ceramic", "solar", "aircraft", "fleet"],
-  categorySlug: ["general", "automotive", "ceramic", "solar", "aircraft", "fleet"],
+  category: ["automotive", "ceramic", "solar", "aircraft", "marine", "windows", "fleet"],
+  categorySlug: ["general", "automotive", "ceramic", "solar", "aircraft", "marine", "windows", "fleet"],
   propertyType: ["residential", "commercial", ""],
   align: ["left", "center"],
 };

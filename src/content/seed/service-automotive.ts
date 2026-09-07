@@ -41,7 +41,7 @@ export const automotiveService: ServiceDoc = {
       body:
         "Most of the risk in detailing lives in the wash. Grit dragged across paint by a dirty mitt puts in more defects than a week of driving. We pre-soak to soften road film, foam and dwell, then wash with two buckets and fresh media, working panel by panel from the top down. Wheels, arches and exhaust tips are handled separately with their own tools so brake dust never reaches the paintwork.",
       bullets: [
-        "Pre-soak and snow foam dwell before anything touches the paint",
+        "Premium snow foam pre-soak and dwell before anything touches the paint",
         "Two-bucket contact wash with grit guards and fresh media per panel",
         "Wheels, barrels, arches and tips cleaned with dedicated tools",
         "Deionised final rinse so the car dries without mineral spotting",
@@ -85,6 +85,7 @@ export const automotiveService: ServiceDoc = {
       bullets: [
         "Compressed air and soft brushes through vents, seams and switchgear",
         "Hot-water extraction on fabric seats, carpets and mats",
+        "Upholstery extraction and leather conditioning as standard, not an extra",
         "Leather cleaned in the grain, then conditioned — matte, never greasy",
         "Glass finished last, inside and out, with a streak-free two-towel method",
       ],
@@ -103,6 +104,20 @@ export const automotiveService: ServiceDoc = {
         "Satin dressing on plastics and hoses — no wet-look gloss",
       ],
       motif: "engine-bay",
+    },
+    {
+      id: "au-wheels",
+      eyebrow: "Wheels, calipers & exhaust tips",
+      title: "The details that decide how a car reads at ten paces",
+      body:
+        "Wheel faces, barrels, brake calipers and exhaust tips take more chemical and thermal punishment than any painted panel on the car, and they are the first thing that makes an otherwise clean vehicle look tired. We restore them properly — decontaminated, corrected where the finish allows, then coated so brake dust stops bonding and the tips stop bluing back to brown within a fortnight.",
+      bullets: [
+        "Wheel faces and barrels decontaminated and coated, not just wiped",
+        "Brake calipers cleaned and, where appropriate, refinished",
+        "Exhaust tips polished back and sealed against re-staining",
+        "Coated surfaces release brake dust with a rinse rather than a scrub",
+      ],
+      motif: "sparkle",
     },
     {
       id: "au-lights",

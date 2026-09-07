@@ -1,9 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 80" width="320" height="80" role="img" aria-label="Perfect Detailing">
-  <g transform="translate(8,8)" fill="currentColor" color="#05070A">
-    <path d="M6 46H58" stroke="currentColor" stroke-width="2" stroke-linecap="round" opacity=".55"/>
-    <path d="M22 46C14.6 43.4 16.2 26.4 32 19.5C47.8 26.4 49.4 43.4 42 46C37 47.8 27 47.8 22 46Z"/>
-    <path d="M22 46L13.6 38.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" opacity=".4" fill="none"/>
-  </g>
-  <text x="86" y="40" font-family="Sora, Helvetica Neue, sans-serif" font-weight="700" font-size="23" letter-spacing="-0.5" fill="currentColor" color="#05070A">PERFECT</text>
-  <text x="87" y="58" font-family="JetBrains Mono, ui-monospace, monospace" font-size="11.5" letter-spacing="5.6" fill="currentColor" opacity=".7" color="#05070A">DETAILING</text>
-</svg>

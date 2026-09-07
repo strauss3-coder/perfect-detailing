@@ -5,7 +5,7 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { GROUPS, MODULES, type ModuleGroup } from "@/lib/portal/modules";
-import { MarkBead } from "@/components/brand/Marks";
+import { Mark } from "@/components/brand/Marks";
 import { logoutAction } from "@/app/actions/cms";
 import { cn } from "@/lib/utils";
 
@@ -87,7 +87,7 @@ export function Sidebar({
       {/* Mobile bar */}
       <div className="sticky top-0 z-40 flex items-center justify-between gap-4 border-b border-silver/10 bg-ink/90 px-4 py-3 backdrop-blur-xl lg:hidden">
         <Link href="/portal" className="flex items-center gap-2.5">
-          <MarkBead size={26} />
+          <Mark size={26} />
           <span className="font-display text-[0.95rem] font-bold text-chrome">Portal</span>
         </Link>
         <button
@@ -116,7 +116,7 @@ export function Sidebar({
       {/* Desktop rail */}
       <aside className="sticky top-0 hidden h-dvh w-[16.5rem] shrink-0 flex-col border-r border-silver/10 bg-pitch/70 lg:flex">
         <div className="flex items-center gap-3 border-b border-silver/10 px-5 py-5">
-          <MarkBead size={30} />
+          <Mark size={30} />
           <div className="min-w-0">
             <p className="truncate font-display text-[0.95rem] font-bold tracking-tight text-chrome">Portal</p>
             <p className="label-tech truncate text-[0.55rem] text-silver/60">{userName}</p>
