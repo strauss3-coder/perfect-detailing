@@ -42,8 +42,13 @@ export default async function AboutPage() {
 
       <section className="relative section-y">
         <div className="shell grid gap-12 lg:grid-cols-[0.72fr_1.28fr] lg:gap-20">
-          <Reveal direction="right">
-            <h2 className="text-title text-balance text-chrome lg:sticky lg:top-32">{about.story.title}</h2>
+          <Reveal direction="right" className="flex flex-col gap-10">
+            <h2 className="text-title text-balance text-chrome">{about.story.title}</h2>
+            {about.story.media ? (
+              <Parallax speed={0.04}>
+                <MediaFrame media={about.story.media} sizes="(min-width: 1024px) 26vw, 92vw" />
+              </Parallax>
+            ) : null}
           </Reveal>
           <Reveal direction="left" delay={0.08}>
             <div className="flex max-w-2xl flex-col gap-6">

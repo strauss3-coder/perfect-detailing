@@ -31,8 +31,8 @@ export default async function ServicesIndexPage() {
             <SectionHeading
               as="h1"
               eyebrow="Capability"
-              title="Five disciplines, one standard."
-              lede="The chemistry changes between a bonnet, a wing and a photovoltaic module. The method does not: inspect, correct, prepare, coat, cure, verify."
+              title="Seven disciplines, one standard."
+              lede="The chemistry changes between a bonnet, a wing, a hull, a window and a photovoltaic module. The method does not: inspect, correct, prepare, coat, cure, verify."
             />
           </Reveal>
         </div>
@@ -48,6 +48,36 @@ export default async function ServicesIndexPage() {
               </RevealItem>
             ))}
           </RevealGroup>
+        </div>
+      </section>
+
+      {/* The capability map from the printed company profile, reproduced at
+          full width — it says in one plate what the cards say in seven. */}
+      <section className="relative section-y" aria-labelledby="capability-map">
+        <div className="shell">
+          <MicronRule label="From the company profile" />
+          <Reveal className="mt-12">
+            <SectionHeading
+              eyebrow="The whole picture"
+              title="What we do, on one plate."
+              lede="This is the capability map we hand to clients in print: six disciplines, the work inside each, and the physics each one turns on. Every line of it is expanded on the service pages above."
+            />
+          </Reveal>
+          <Reveal delay={0.08} className="mt-12">
+            <figure className="panel-glass overflow-hidden rounded-panel p-3 sm:p-5">
+              <Image
+                src={asset("/profile/what-we-do.webp")}
+                alt="Perfect Detailing capability map: automobile detailing, aircraft detailing, ceramic coating, building window coating, solar panel coating and the marine division, each with its scope of work"
+                width={1600}
+                height={1120}
+                sizes="(min-width: 1024px) 76rem, 92vw"
+                className="w-full rounded-tile"
+              />
+              <figcaption className="label-tech mt-4 px-2 pb-1 text-ash normal-case tracking-[0.14em]">
+                Perfect Detailing company profile — capability overview
+              </figcaption>
+            </figure>
+          </Reveal>
         </div>
       </section>
 

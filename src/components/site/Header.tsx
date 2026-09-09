@@ -128,7 +128,10 @@ export function Header({
             >
               {contact.phoneDisplay}
             </a>
-            <ButtonLink href={navigation.cta.href} intent="primary" size="sm" className="hidden sm:inline-flex">
+            {/* `max-sm:hidden`, not `hidden sm:inline-flex`: the button's own
+                base class is `inline-flex`, and between two unprefixed display
+                utilities it is stylesheet order that decides, not class order. */}
+            <ButtonLink href={navigation.cta.href} intent="primary" size="sm" className="max-sm:hidden">
               {navigation.cta.label}
               <Arrow />
             </ButtonLink>

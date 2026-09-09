@@ -12,9 +12,10 @@ export const home: HomeContent = {
       { label: "See the process", href: "/process", intent: "secondary" },
     ],
     media: {
-      src: "",
-      alt: "A freshly coated dark panel under raking studio light, water beading on the surface",
-      ratio: 16 / 10,
+      src: "/work/poster/hero-panamera.webp",
+      videoSrc: "/video/hero-panamera.mp4",
+      alt: "A black Porsche Panamera Sport Turismo in the Perfect Detailing bay, its bodywork holding an unbroken reflection after correction and coating",
+      ratio: 16 / 9,
       motif: "coupe",
     },
     readouts: [
@@ -74,7 +75,7 @@ export const home: HomeContent = {
   },
   services: {
     eyebrow: "Capability",
-    title: "Six disciplines, one standard.",
+    title: "Seven disciplines, one standard.",
     lede:
       "The chemistry changes between a bonnet, a wing, a hull, a window and a photovoltaic module. The method does not: inspect, correct, prepare, coat, cure, verify.",
     featured: [
@@ -109,6 +110,60 @@ export const home: HomeContent = {
       "No filters, no wet-look dressing, no reshoot from a better angle. Both frames are the same lighting setup, minutes apart.",
     projectId: "ba-solar-midrand",
     action: { label: "Open the gallery", href: "/gallery", intent: "ghost" },
+  },
+  proof: {
+    eyebrow: "Filmed on the job",
+    title: "Three clips, three claims, no captions needed.",
+    lede:
+      "Everything below was shot on a working day in our own bay, on customers' cars, with a phone. Watch the pad load the panel, watch water refuse to sit on it, watch a reflection stay straight along the length of a door.",
+    clips: [
+      {
+        id: "p1",
+        label: "Stage two",
+        title: "Correction, not concealment",
+        body:
+          "A rotary and a cutting pad taking a defined layer off a black bonnet. Filler waxes hide this damage for a fortnight; removing it is what makes the coating worth bonding on top.",
+        media: {
+          src: "/work/poster/paint-correction.webp",
+          videoSrc: "/video/paint-correction.mp4",
+          alt: "A Perfect Detailing technician machine-polishing the bonnet of a black Mercedes-AMG",
+          ratio: 16 / 9,
+          motif: "polisher",
+          caption: "Machine correction · black metallic",
+        },
+      },
+      {
+        id: "p2",
+        label: "Contact angle",
+        title: "Water leaves before it can dry",
+        body:
+          "Poured, not sprayed, onto a coated bonnet in slow motion. A high contact angle means the water pulls itself into beads and runs — carrying dust with it and leaving nothing behind to etch.",
+        media: {
+          src: "/work/poster/water-sheeting.webp",
+          videoSrc: "/video/water-sheeting.mp4",
+          alt: "Slow-motion footage of water beading and running straight off a ceramic-coated bonnet",
+          ratio: 9 / 16,
+          motif: "droplet",
+          caption: "Sheeting test · coated panel",
+        },
+      },
+      {
+        id: "p3",
+        label: "Gloss",
+        title: "A reflection that stays straight",
+        body:
+          "The camera tracks the full length of a coated flank. Straight lines staying straight across a door and a rear quarter is the honest test of a finish — swirls and holograms break the reflection where the panel curves.",
+        media: {
+          src: "/work/poster/gloss-sweep.webp",
+          videoSrc: "/video/gloss-sweep.mp4",
+          alt: "Camera panning along the coated flank of a black Porsche, the reflected building line staying unbroken",
+          ratio: 16 / 9,
+          motif: "gloss-meter",
+          caption: "Reflection sweep · coated flank",
+        },
+      },
+    ],
+    action: { label: "See more of the work", href: "/gallery", intent: "ghost" },
   },
   whyUs: {
     eyebrow: "Why owners keep us",
@@ -214,7 +269,7 @@ export const home: HomeContent = {
   },
   reviewsTeaser: {
     eyebrow: "In their words",
-    title: "Nine years of work, reviewed by the people who paid for it.",
+    title: "Reviewed by the people who paid for it.",
     action: { label: "Read all reviews", href: "/reviews", intent: "ghost" },
   },
   ctaBanner: {

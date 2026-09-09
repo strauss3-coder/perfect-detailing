@@ -18,10 +18,10 @@ export const ceramicService: ServiceDoc = {
   lede:
     "A ceramic coating is a liquid silica polymer that cross-links into a hard, transparent film chemically bonded to your clear coat. It is not a shine you top up every few months — it is a sacrificial surface that takes the chemical and ultraviolet punishment your paint would otherwise absorb.",
   heroMedia: {
-    src: "",
-    alt: "Water beading tightly across a coated dark bonnet under raking light",
+    src: "/work/seven/bootlid-mirror.webp",
+    alt: "A corrected and coated black bootlid returning a sharp, unbroken reflection of the sky",
     ratio: 16 / 9,
-    motif: "coating-layers",
+    motif: "shield",
   },
   heroStats: [
     { id: "ch1", value: 9, suffix: "H", label: "Pencil hardness", detail: "Cured film hardness on the standard scale" },
@@ -76,6 +76,13 @@ export const ceramicService: ServiceDoc = {
         "Also stabilises coated plastic trim, which is where fade shows first",
       ],
       motif: "sparkle",
+      media: {
+        src: "/work/panamera/flank-reflection.webp",
+        alt: "A workshop roofline reflected without distortion along the coated door of a black Porsche",
+        ratio: 16 / 9,
+        motif: "sparkle",
+        caption: "Coated flank, twelve months on",
+      },
     },
     {
       id: "cc-hydro",
@@ -90,6 +97,14 @@ export const ceramicService: ServiceDoc = {
         "Mineral spotting is reduced because water leaves rather than evaporating in place",
       ],
       motif: "droplet",
+      media: {
+        src: "/work/poster/water-sheeting.webp",
+        videoSrc: "/video/water-sheeting.mp4",
+        alt: "Slow-motion footage of water pulling into beads and running off a coated bonnet",
+        ratio: 9 / 16,
+        motif: "droplet",
+        caption: "Contact angle, filmed at 240 fps",
+      },
     },
     {
       id: "cc-scratch",
@@ -104,6 +119,14 @@ export const ceramicService: ServiceDoc = {
         "Pairs well with paint protection film on high-impact panels",
       ],
       motif: "polisher",
+      media: {
+        src: "/work/poster/gloss-sweep.webp",
+        videoSrc: "/video/gloss-sweep.mp4",
+        alt: "Camera panning along a coated black flank, the reflected line staying unbroken",
+        ratio: 16 / 9,
+        motif: "gloss-meter",
+        caption: "Reflection sweep, coated flank",
+      },
     },
     {
       id: "cc-value",
@@ -118,6 +141,13 @@ export const ceramicService: ServiceDoc = {
         "Correction done once, at the start, rather than repeatedly",
       ],
       motif: "gloss-meter",
+      media: {
+        src: "/work/seven/bonnet-haze.webp",
+        alt: "Raking sunlight across an uncoated black bonnet showing the haze left by years of automated washing",
+        ratio: 16 / 9,
+        motif: "gloss-meter",
+        caption: "Unprotected, after years of automatic washing",
+      },
     },
   ],
 

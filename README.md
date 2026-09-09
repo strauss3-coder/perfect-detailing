@@ -167,14 +167,29 @@ social handles in the same module are also assumed rather than confirmed.
 
 ### 5. Add photography
 
-Until real images are uploaded, every image slot draws an illustrated technical
-plate — the motif for that subject, registration brackets and a specular band —
-sized to the exact aspect ratio the photograph will occupy, so swapping images
-in shifts nothing on the page.
+The automotive half of the site is photographed. Fifty-one stills live in
+`public/work/`, six silent clips in `public/video/` with a still poster each in
+`public/work/poster/`, all shot on real jobs. The originals sit outside the
+build in `media-source/`, which is gitignored — 2.8 GB of full-resolution
+camera files that must not reach the repository or the dev server's watcher.
+
+**Still missing: solar, aviation, marine, architectural glass and fleet.** Those
+disciplines have no photography, so their slots still draw an illustrated
+technical plate — the motif for that subject, registration brackets and a
+specular band — sized to the exact aspect ratio the photograph will occupy, so
+swapping an image in shifts nothing on the page. The before/after comparisons
+are in the same position: they need genuine paired frames of the same panel,
+and nothing in the current library is an honest pair.
 
 Upload through **Portal → Media library** (needs Supabase Storage), or register
 files that already live elsewhere by URL. Copy an asset's path and paste it into
 any image field in the portal.
+
+Any `MediaRef` also takes a `videoSrc`. Set it and the slot becomes a silent,
+looping clip with the still as its poster: the source is fetched only when the
+frame comes within a screen of the viewport, playback stops when it leaves or
+the tab is hidden, and `prefers-reduced-motion` leaves the poster alone. Keep
+clips short and under about 2 MB — see `AmbientVideo`.
 
 ---
 

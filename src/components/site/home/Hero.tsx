@@ -117,12 +117,14 @@ export function Hero({ hero, contact }: { hero: HomeContent["hero"]; contact: Co
         >
           <MediaFrame media={hero.media} priority sizes="(min-width: 1024px) 45vw, 92vw" motifScale={0.42} />
 
-          {/* Readouts pinned around the frame */}
-          <ul className="pointer-events-none absolute inset-0">
+          {/* Readouts pinned around the frame — but only once there is room
+              around it. On a phone the frame is barely wider than the chips,
+              so they run underneath it as a strip instead. */}
+          <ul className="pointer-events-none mt-3 grid grid-cols-3 gap-2 sm:absolute sm:inset-0 sm:mt-0 sm:block">
             {hero.readouts.map((readout, i) => (
               <motion.li
                 key={readout.id}
-                className={`panel-glass absolute flex flex-col gap-0.5 rounded-tile px-3.5 py-2.5 ${
+                className={`panel-glass flex flex-col gap-0.5 rounded-tile px-3 py-2.5 sm:absolute sm:px-3.5 ${
                   READOUT_POSITIONS[i % READOUT_POSITIONS.length]
                 }`}
                 initial={{ opacity: 0, y: 14, scale: 0.9 }}
@@ -136,20 +138,21 @@ export function Hero({ hero, contact }: { hero: HomeContent["hero"]; contact: Co
           </ul>
 
           {/* Floating equipment */}
-          <FloatingMotif motif="polisher" className="hidden sm:grid sm:-top-7 sm:-left-6" delay={1.1} size={54} />
-          <FloatingMotif motif="droplet" className="hidden sm:grid sm:-right-5 sm:bottom-16" delay={1.35} size={44} />
-          <FloatingMotif motif="microfibre" className="hidden sm:grid sm:-bottom-6 sm:left-12" delay={1.5} size={40} />
+          {/* Two, not three: the left edge of the frame is spoken for by the
+              gloss and film-build readouts. */}
+          <FloatingMotif motif="polisher" className="hidden sm:grid sm:-top-7 sm:right-10" delay={1.1} size={54} />
+          <FloatingMotif motif="droplet" className="hidden sm:grid sm:-right-6 sm:-bottom-6" delay={1.35} size={44} />
         </motion.div>
       </div>
     </section>
   );
 }
 
-/* Negative insets only from `sm` up, so nothing hangs off a phone screen. */
+/* Only applied from `sm`, where the chips become absolute. */
 const READOUT_POSITIONS = [
-  "top-[7%] left-2 sm:top-[9%] sm:-left-[7%]",
-  "top-[42%] right-2 sm:top-[44%] sm:-right-[6%]",
-  "bottom-[14%] left-4 sm:bottom-[16%] sm:left-[6%]",
+  "sm:top-[9%] sm:-left-[7%]",
+  "sm:top-[44%] sm:-right-[6%]",
+  "sm:bottom-[16%] sm:left-[6%]",
 ] as const;
 
 function FloatingMotif({

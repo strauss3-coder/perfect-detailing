@@ -1,11 +1,14 @@
 import Image from "next/image";
 import type { MediaRef } from "@/content/types";
 import { Motif } from "@/components/icons/Motif";
+import { AmbientVideo } from "@/components/ui/AmbientVideo";
 import { asset } from "@/lib/asset";
 import { cn } from "@/lib/utils";
 
 /**
- * Every image slot on the site renders through here.
+ * Every image slot on the site renders through here — and every video slot,
+ * because a `MediaRef` carrying `videoSrc` renders its still as the poster of
+ * a silent looping clip.
  *
  * Until real photography is uploaded through the portal's media library, the
  * frame draws an illustrated technical plate instead of a grey box: the motif
@@ -31,14 +34,26 @@ export function MediaFrame({
   rounded?: string;
 }) {
   const ratio = media.ratio && media.ratio > 0 ? media.ratio : 16 / 9;
-  const label = plateLabel ?? media.caption ?? media.alt;
+  /* The illustrated plate is an instrument diagram and wants its subject
+     named on it; a photograph does not want its own alt text printed across
+     it, so captions on real imagery have to be asked for. */
+  const label = plateLabel ?? media.caption ?? (media.src ? undefined : media.alt);
 
   return (
     <figure
       className={cn("media-frame group ring-hairline", rounded, className)}
       style={{ aspectRatio: String(ratio) }}
     >
-      {media.src ? (
+      {media.videoSrc && media.src ? (
+        <AmbientVideo
+          src={media.videoSrc}
+          poster={media.src}
+          alt={media.alt}
+          sizes={sizes}
+          priority={priority}
+          className="absolute inset-0 transition-transform duration-[1.4s] ease-[var(--ease-gloss)] group-hover:scale-[1.035]"
+        />
+      ) : media.src ? (
         <Image
           src={asset(media.src)}
           alt={media.alt}

@@ -6,6 +6,7 @@ import { Stats } from "@/components/site/home/Stats";
 import { ServicesSection } from "@/components/site/home/ServicesSection";
 import { SolarSpotlight } from "@/components/site/home/SolarSpotlight";
 import { BeforeAfterTeaser } from "@/components/site/home/BeforeAfterTeaser";
+import { ProofFilm } from "@/components/site/home/ProofFilm";
 import { WhyUs } from "@/components/site/home/WhyUs";
 import { Industries } from "@/components/site/home/Industries";
 import { TrustBadges } from "@/components/site/home/TrustBadges";
@@ -50,6 +51,7 @@ export default async function HomePage() {
       <Stats stats={home.stats} />
       <ServicesSection section={home.services} services={publishedServices} />
       <SolarSpotlight section={home.solarSpotlight} contact={contact} />
+      <ProofFilm section={home.proof} />
       <BeforeAfterTeaser section={home.beforeAfter} project={featuredProject} />
       <WhyUs section={home.whyUs} />
       <TrustBadges section={home.trustBadges} />

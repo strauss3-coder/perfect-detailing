@@ -12,7 +12,10 @@ import type { ServiceDoc, SolarEconomics } from "@/content/types";
 export type ServiceCardData = Pick<
   ServiceDoc,
   "id" | "slug" | "name" | "cardSummary" | "motif" | "flag"
->;
+> & {
+  /** The service's hero still, reused as the card's band. */
+  media: ServiceDoc["heroMedia"];
+};
 
 export function toCardData(service: ServiceDoc): ServiceCardData {
   return {
@@ -22,6 +25,9 @@ export function toCardData(service: ServiceDoc): ServiceCardData {
     cardSummary: service.cardSummary,
     motif: service.motif,
     flag: service.flag,
+    /* The band is a still even where the hero is a clip — a grid of seven
+       autoplaying videos is not a design, it is a bandwidth bill. */
+    media: { ...service.heroMedia, videoSrc: undefined },
   };
 }
 

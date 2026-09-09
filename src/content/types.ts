@@ -22,6 +22,11 @@ export interface MediaRef {
   /** Placeholder motif drawn when `src` is empty. */
   motif?: IllustrationMotif;
   caption?: string;
+  /**
+   * Optional silent, looping clip. When set, `src` is used as its poster and
+   * the clip plays only while the frame is on screen — see AmbientVideo.
+   */
+  videoSrc?: string;
 }
 
 export type IllustrationMotif =
@@ -221,6 +226,23 @@ export interface HomeContent {
     projectId: string;
     action: LinkRef;
   };
+  /**
+   * Footage from real jobs, cut to the moment that proves the claim. Each
+   * clip is silent, loops, and plays only while it is on screen.
+   */
+  proof: {
+    eyebrow: string;
+    title: string;
+    lede: string;
+    clips: {
+      id: string;
+      label: string;
+      title: string;
+      body: string;
+      media: MediaRef;
+    }[];
+    action: LinkRef;
+  };
   whyUs: {
     eyebrow: string;
     title: string;
@@ -256,7 +278,12 @@ export interface HomeContent {
 
 export interface AboutContent {
   hero: { eyebrow: string; title: string; lede: string; media: MediaRef };
-  story: { title: string; paragraphs: string[] };
+  story: {
+    title: string;
+    paragraphs: string[];
+    /** Sits under the heading, filling the column the prose does not use. */
+    media?: MediaRef;
+  };
   principles: { eyebrow: string; title: string; items: FeatureItem[] };
   standards: {
     eyebrow: string;
@@ -322,6 +349,12 @@ export interface ProcessStep {
   duration: string;
   motif?: IllustrationMotif;
   detail: string[];
+  /**
+   * Shown in the timeline's companion panel while this stage is open. Give
+   * every stage one or none — a panel that empties on some stages reads as a
+   * fault rather than a choice.
+   */
+  media?: MediaRef;
 }
 
 /** Service-specific structured extras, all CMS-editable. */

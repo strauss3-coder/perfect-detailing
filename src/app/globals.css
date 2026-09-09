@@ -145,9 +145,16 @@ body {
 @utility text-hero {
   font-family: var(--font-display);
   font-weight: 700;
-  font-size: clamp(2.9rem, 8.2vw, 8.5rem);
-  line-height: 0.9;
-  letter-spacing: -0.045em;
+  /* Below `lg` the headline has the full shell; from `lg` it has roughly
+     44% of it beside the media panel, which is why the ceiling steps down
+     rather than following the viewport all the way up. */
+  font-size: clamp(2.7rem, 7.6vw, 5.4rem);
+  line-height: 0.94;
+  letter-spacing: -0.042em;
+
+  @media (min-width: 1536px) {
+    font-size: 6.1rem;
+  }
 }
 @utility text-display {
   font-family: var(--font-display);

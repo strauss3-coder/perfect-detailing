@@ -51,7 +51,13 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en-ZA" className={`${sora.variable} ${manrope.variable} ${jet.variable} ${playfair.variable}`}>
+    /* The loader script stamps `data-boot` on this element before React
+       hydrates — an intended difference, not a rendering bug. */
+    <html
+      lang="en-ZA"
+      className={`${sora.variable} ${manrope.variable} ${jet.variable} ${playfair.variable}`}
+      suppressHydrationWarning
+    >
       <body>{children}</body>
     </html>
   );

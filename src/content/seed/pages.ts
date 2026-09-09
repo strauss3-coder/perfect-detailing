@@ -15,10 +15,11 @@ export const about: AboutContent = {
     lede:
       "Perfect Detailing began in vehicle repair. Years of putting surfaces right after they had failed taught us something obvious in hindsight: almost all of that damage was preventable, and the customer would rather have never had it. So we made a deliberate move from reactive repair to proactive protection.",
     media: {
-      src: "",
-      alt: "Detailer inspecting a corrected panel under a raking inspection light",
-      ratio: 4 / 3,
+      src: "/work/glc43/machine-polish.webp",
+      alt: "A Perfect Detailing technician running a rotary polisher across the bonnet of a black Mercedes-AMG",
+      ratio: 16 / 9,
       motif: "polisher",
+      caption: "Cut stage, in our own bay",
     },
   },
   story: {
@@ -29,6 +30,13 @@ export const about: AboutContent = {
       "That shift opened up sectors a repair shop never touches. The same chemistry and the same discipline that protect a bonnet also protect an airframe at altitude, a hull in salt water, a photovoltaic module losing yield to dust, and a facade quietly costing a building its cooling budget. Each needed its own products and its own method, and each took time to learn properly.",
       "We are surface care specialists, and we are committed to delivering more than a clean result. Your assets — whether mobility or structural — are valuable, and they deserve to be treated that way. What has not changed since the repair days is the method: measure it, correct it, protect it, measure it again, then hand over the readings.",
     ],
+    media: {
+      src: "/work/i8/badge-macro.webp",
+      alt: "Macro view of a coated badge with the surrounding paint holding a mirror reflection",
+      ratio: 9 / 16,
+      motif: "sparkle",
+      caption: "Coated clear coat at 1:1",
+    },
   },
   principles: {
     eyebrow: "How we work",
@@ -114,6 +122,13 @@ export const process: ProcessContent = {
         "Existing damage photographed so nothing is disputed later",
         "Achievable outcome agreed and written down before work begins",
       ],
+      media: {
+        src: "/work/i20/wash-bay.webp",
+        alt: "A car standing on a wet workshop floor under inspection lighting before any work begins",
+        ratio: 16 / 9,
+        motif: "gloss-meter",
+        caption: "Stage 01 — baseline recorded",
+      },
     },
     {
       id: "pr2",
@@ -128,6 +143,13 @@ export const process: ProcessContent = {
         "Iron and tar dissolved chemically, rinsed to neutral",
         "Deionised final rinse — zero dissolved solids left behind",
       ],
+      media: {
+        src: "/work/panamera/crest-foam.webp",
+        alt: "Snow foam breaking and running off a bonnet during the pre-soak",
+        ratio: 16 / 9,
+        motif: "foam-cannon",
+        caption: "Stage 02 — foam dwell, contact wash",
+      },
     },
     {
       id: "pr3",
@@ -142,6 +164,14 @@ export const process: ProcessContent = {
         "Depth re-checked as work progresses — we stop where it is safe",
         "Complex curves and edges worked by hand where a machine is a risk",
       ],
+      media: {
+        src: "/work/poster/paint-correction.webp",
+        videoSrc: "/video/paint-correction.mp4",
+        alt: "A technician machine-polishing a black bonnet with a rotary and cutting pad",
+        ratio: 16 / 9,
+        motif: "polisher",
+        caption: "Stage 03 — cut, then refine",
+      },
     },
     {
       id: "pr4",
@@ -156,6 +186,13 @@ export const process: ProcessContent = {
         "Trim, glass and adjacent surfaces masked where required",
         "Environment checked — temperature, humidity, dust, light",
       ],
+      media: {
+        src: "/work/panamera/decontamination.webp",
+        alt: "A gloved hand drawing a clay bar across a lubricated panel to strip it back to bare substrate",
+        ratio: 16 / 9,
+        motif: "microfibre",
+        caption: "Stage 04 — stripped to bare substrate",
+      },
     },
     {
       id: "pr5",
@@ -170,6 +207,13 @@ export const process: ProcessContent = {
         "Raking-light inspection of every section before moving on",
         "Additional layers applied at the correct interval where specified",
       ],
+      media: {
+        src: "/work/seven/arch-reflection.webp",
+        alt: "A freshly coated rear arch inspected at a raking angle for high spots",
+        ratio: 16 / 9,
+        motif: "shield",
+        caption: "Stage 05 — levelled inside the flash window",
+      },
     },
     {
       id: "pr6",
@@ -184,6 +228,13 @@ export const process: ProcessContent = {
         "Full hardness continues developing for up to seven days",
         "Nothing washed, wiped or driven through weather before it is ready",
       ],
+      media: {
+        src: "/work/panamera/front-quarter-bay.webp",
+        alt: "A coated car left undisturbed indoors overnight while the film cross-links",
+        ratio: 16 / 9,
+        motif: "coating-layers",
+        caption: "Stage 06 — indoors, undisturbed",
+      },
     },
     {
       id: "pr7",
@@ -198,6 +249,14 @@ export const process: ProcessContent = {
         "Full walk-around under the same three light sources",
         "Anything below standard is corrected before handover, not after",
       ],
+      media: {
+        src: "/work/poster/water-sheeting.webp",
+        videoSrc: "/video/water-sheeting.mp4",
+        alt: "Water poured onto the finished panel beading and running straight off",
+        ratio: 9 / 16,
+        motif: "droplet",
+        caption: "Stage 07 — measured against stage one",
+      },
     },
     {
       id: "pr8",
@@ -212,6 +271,13 @@ export const process: ProcessContent = {
         "Aftercare pack with the correct shampoo and drying media",
         "Next service date suggested and diarised if you want it",
       ],
+      media: {
+        src: "/work/i8/doors-open.webp",
+        alt: "A finished car handed back to its owner in good light",
+        ratio: 16 / 9,
+        motif: "sparkle",
+        caption: "Stage 08 — readings, warranty, wash media",
+      },
     },
   ],
   guarantee: {
@@ -238,19 +304,17 @@ export const process: ProcessContent = {
 export const galleryPage: GalleryPageContent = {
   hero: {
     eyebrow: "Recent work",
-    title: "Same light, same angle, no filter.",
+    title: "Our own cars, our own bay, our own phone.",
     lede:
-      "Every comparison on this page was shot under the same lighting setup, minutes apart, from the same position. That constraint rules out most of the tricks this industry uses in its marketing.",
+      "Nothing on this page was bought from a stock library or borrowed from a supplier. It is a working record — correction in progress, foam breaking on a coated panel, water refusing to sit still, and cars going back to their owners. Shot in daylight and workshop light, unretouched.",
   },
   categories: [
     { id: "gc0", label: "All work", slug: "all" },
-    { id: "gc1", label: "Solar", slug: "solar" },
-    { id: "gc2", label: "Automotive", slug: "automotive" },
-    { id: "gc3", label: "Ceramic", slug: "ceramic" },
-    { id: "gc4", label: "Aircraft", slug: "aircraft" },
-    { id: "gc6", label: "Marine", slug: "marine" },
-    { id: "gc7", label: "Glass", slug: "windows" },
-    { id: "gc5", label: "Fleet", slug: "fleet" },
+    { id: "gc1", label: "Paint correction", slug: "correction" },
+    { id: "gc2", label: "Ceramic coating", slug: "ceramic" },
+    { id: "gc3", label: "Finished vehicles", slug: "automotive" },
+    { id: "gc4", label: "Interiors", slug: "interiors" },
+    { id: "gc5", label: "Wheels, bays & trim", slug: "detail" },
   ],
   beforeAfterTitle: "Before and after",
   emptyState: "No work in this category yet. Try another filter.",
@@ -259,7 +323,7 @@ export const galleryPage: GalleryPageContent = {
 export const reviewsPage: ReviewsPageContent = {
   hero: {
     eyebrow: "Reviews",
-    title: "Nine years, reviewed by the people who paid.",
+    title: "Reviewed by the people who paid for it.",
     lede:
       "These are collected after the job, not during it — and we publish the whole set rather than a curated top five. Every review is tied to a real invoice.",
   },

@@ -44,3 +44,8 @@ next-env.d.ts
 /.data
 
 .env.local
+
+# Raw camera media. The originals of everything in public/work and
+# public/video live here — 2.8 GB of full-resolution stills and clips that
+# must not be committed or watched by the dev server.
+/media-source

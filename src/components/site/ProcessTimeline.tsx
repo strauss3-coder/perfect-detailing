@@ -4,6 +4,7 @@ import { useRef, useState } from "react";
 import { AnimatePresence, motion, useScroll, useSpring, useTransform } from "motion/react";
 import type { ProcessStep } from "@/content/types";
 import { Motif } from "@/components/icons/Motif";
+import { MediaFrame } from "@/components/ui/MediaFrame";
 import { useMotionConfig } from "@/components/motion/MotionProvider";
 import { cn } from "@/lib/utils";
 
@@ -14,6 +15,12 @@ import { cn } from "@/lib/utils";
  * claim being that this is a sequence, not a menu. Each stage expands to show
  * what actually happens at that step; one is open at a time so the page never
  * becomes a wall.
+ *
+ * Where the stages carry imagery, a companion panel tracks alongside them and
+ * cross-fades to whatever stage is open, so the reader is looking at the step
+ * they are reading about. Where they do not — the service pages, whose stages
+ * are described rather than photographed — the rail runs full width exactly
+ * as before.
  */
 export function ProcessTimeline({
   steps,
@@ -26,6 +33,8 @@ export function ProcessTimeline({
 }) {
   const ref = useRef<HTMLOListElement>(null);
   const [open, setOpen] = useState<number>(defaultOpen);
+  /* Collapsing the open stage must not blank the companion panel. */
+  const [lastOpen, setLastOpen] = useState<number>(defaultOpen);
   const { reduced } = useMotionConfig();
 
   const { scrollYProgress } = useScroll({
@@ -37,8 +46,11 @@ export function ProcessTimeline({
 
   if (!steps.length) return null;
 
-  return (
-    <ol ref={ref} className={cn("relative", className)}>
+  const withMedia = steps.every((step) => step.media);
+  const shown = steps[open] ?? steps[lastOpen];
+
+  const rail = (
+    <ol ref={ref} className="relative">
       {/* Rail */}
       <span aria-hidden className="absolute top-2 bottom-2 left-[1.4rem] w-px bg-silver/12 sm:left-[2.1rem]" />
       <motion.span
@@ -53,7 +65,10 @@ export function ProcessTimeline({
           <li key={step.id} className="relative pl-14 sm:pl-24">
             <button
               type="button"
-              onClick={() => setOpen(isOpen ? -1 : i)}
+              onClick={() => {
+                setOpen(isOpen ? -1 : i);
+                if (!isOpen) setLastOpen(i);
+              }}
               aria-expanded={isOpen}
               className="group block w-full py-7 text-left sm:py-9"
             >
@@ -124,5 +139,34 @@ export function ProcessTimeline({
         );
       })}
     </ol>
+  );
+
+  if (!withMedia) return <div className={cn("relative", className)}>{rail}</div>;
+
+  return (
+    <div className={cn("relative lg:grid lg:grid-cols-[1.06fr_0.94fr] lg:gap-14", className)}>
+      {rail}
+      <div className="mt-10 lg:mt-0">
+        <div className="lg:sticky lg:top-[calc(var(--nav-h)+var(--announce-h)+3rem)]">
+          <AnimatePresence mode="wait" initial={false}>
+            <motion.div
+              key={shown.id}
+              initial={{ opacity: 0, y: 14 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
+            >
+              <MediaFrame
+                media={shown.media!}
+                sizes="(min-width: 1024px) 42vw, 92vw"
+                className={
+                  (shown.media!.ratio ?? 16 / 9) < 1 ? "mx-auto w-full max-w-[20rem]" : undefined
+                }
+              />
+            </motion.div>
+          </AnimatePresence>
+        </div>
+      </div>
+    </div>
   );
 }

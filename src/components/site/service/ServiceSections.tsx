@@ -48,7 +48,19 @@ export function ServiceSections({ sections }: { sections: ServiceSection[] }) {
                 className={cn("relative", flipped && "lg:order-1")}
               >
                 {section.media ? (
-                  <MediaFrame media={section.media} />
+                  /* A portrait frame at half the shell would tower over its
+                     own paragraph, so it is held to a column width. */
+                  <MediaFrame
+                    media={section.media}
+                    className={
+                      (section.media.ratio ?? 16 / 9) < 1 ? "mx-auto w-full max-w-[21rem]" : undefined
+                    }
+                    sizes={
+                      (section.media.ratio ?? 16 / 9) < 1
+                        ? "(min-width: 1024px) 21rem, 92vw"
+                        : "(min-width: 1024px) 46vw, 92vw"
+                    }
+                  />
                 ) : (
                   <MotifPlate motif={section.motif} title={section.title} />
                 )}

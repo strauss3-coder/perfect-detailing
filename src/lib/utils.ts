@@ -67,10 +67,19 @@ export function clamp(value: number, min: number, max: number): number {
   return Math.min(max, Math.max(min, value));
 }
 
-/** Deterministic pseudo-random in [0,1) so server and client agree. */
+/**
+ * Deterministic pseudo-random in [0,1) so server and client agree.
+ *
+ * Integer arithmetic only (mulberry32). The obvious `Math.sin(seed) * k`
+ * trick is *not* stable across runtimes — `Math.sin` is implementation
+ * defined, so Node and the browser disagree in the last few digits and every
+ * value seeded that way arrives as a hydration mismatch.
+ */
 export function seededRandom(seed: number): number {
-  const x = Math.sin(seed * 12.9898) * 43758.5453;
-  return x - Math.floor(x);
+  let t = (Math.trunc(seed) + 0x6d2b79f5) | 0;
+  t = Math.imul(t ^ (t >>> 15), t | 1);
+  t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
 }
 
 export function initials(name: string): string {

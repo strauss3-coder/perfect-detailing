@@ -18,8 +18,8 @@ export const automotiveService: ServiceDoc = {
   lede:
     "A car is a set of very different materials pretending to be one object: clear coat, glass, chrome, anodised trim, textured plastic, leather, alcantara, carpet and painted metal under the bonnet. Each wants a different chemistry and a different order of operations. We work through them in sequence, because the shortcuts are always visible six months later.",
   heroMedia: {
-    src: "",
-    alt: "Dark coupe under studio lighting with correction work in progress on the front wing",
+    src: "/work/i8/doors-open.webp",
+    alt: "A BMW i8 with both doors raised after a full detail, photographed head-on",
     ratio: 16 / 9,
     motif: "coupe",
   },
@@ -47,6 +47,13 @@ export const automotiveService: ServiceDoc = {
         "Deionised final rinse so the car dries without mineral spotting",
       ],
       motif: "foam-cannon",
+      media: {
+        src: "/work/panamera/crest-foam.webp",
+        alt: "Snow foam breaking and running off the bonnet of a black Porsche around the crest",
+        ratio: 16 / 9,
+        motif: "foam-cannon",
+        caption: "Snow foam pre-soak",
+      },
     },
     {
       id: "au-decon",
@@ -61,6 +68,13 @@ export const automotiveService: ServiceDoc = {
         "Surface checked by touch and under raking light before correction",
       ],
       motif: "droplet",
+      media: {
+        src: "/work/panamera/decontamination.webp",
+        alt: "A gloved hand drawing a clay bar across a lubricated black panel to shear off bonded contamination",
+        ratio: 16 / 9,
+        motif: "droplet",
+        caption: "Clay treatment on lubricated paint",
+      },
     },
     {
       id: "au-correct",
@@ -75,6 +89,14 @@ export const automotiveService: ServiceDoc = {
         "Verified under raking, cross-polarised and daylight-balanced light",
       ],
       motif: "polisher",
+      media: {
+        src: "/work/poster/paint-correction.webp",
+        videoSrc: "/video/paint-correction.mp4",
+        alt: "A technician machine-polishing the bonnet of a black Mercedes-AMG with a rotary",
+        ratio: 16 / 9,
+        motif: "polisher",
+        caption: "Cut stage, rotary and wool pad",
+      },
     },
     {
       id: "au-int",
@@ -90,6 +112,13 @@ export const automotiveService: ServiceDoc = {
         "Glass finished last, inside and out, with a streak-free two-towel method",
       ],
       motif: "interior",
+      media: {
+        src: "/work/sl65/cabin-red.webp",
+        alt: "The red quilted leather cabin of a Mercedes-AMG SL 65 after cleaning and conditioning",
+        ratio: 16 / 9,
+        motif: "interior",
+        caption: "Leather cleaned in the grain, then conditioned",
+      },
     },
     {
       id: "au-engine",
@@ -104,6 +133,13 @@ export const automotiveService: ServiceDoc = {
         "Satin dressing on plastics and hoses — no wet-look gloss",
       ],
       motif: "engine-bay",
+      media: {
+        src: "/work/sl65/engine-bay.webp",
+        alt: "The twin-turbo V12 engine bay of a Mercedes-AMG SL 65 after a dry-biased clean and satin dressing",
+        ratio: 16 / 9,
+        motif: "engine-bay",
+        caption: "Bay cleaned dry-biased, dressed matte",
+      },
     },
     {
       id: "au-wheels",
@@ -118,6 +154,13 @@ export const automotiveService: ServiceDoc = {
         "Coated surfaces release brake dust with a rinse rather than a scrub",
       ],
       motif: "sparkle",
+      media: {
+        src: "/work/sl65/wheel-caliper.webp",
+        alt: "A cleaned AMG wheel face with the red brake caliper visible behind the spokes",
+        ratio: 9 / 16,
+        motif: "shield",
+        caption: "Faces, barrels and calipers",
+      },
     },
     {
       id: "au-lights",
@@ -132,6 +175,13 @@ export const automotiveService: ServiceDoc = {
         "Beam clarity restored, which is the point of the exercise",
       ],
       motif: "headlight",
+      media: {
+        src: "/work/gladiator/lamp-detail.webp",
+        alt: "Close view of a cleaned headlamp unit and arch liner on a Jeep Gladiator",
+        ratio: 9 / 16,
+        motif: "headlight",
+        caption: "Lens clarity restored",
+      },
     },
     {
       id: "au-protect",
@@ -146,6 +196,14 @@ export const automotiveService: ServiceDoc = {
         "We will tell you when the cheaper option is the right one for your car",
       ],
       motif: "shield",
+      media: {
+        src: "/work/poster/water-sheeting.webp",
+        videoSrc: "/video/water-sheeting.mp4",
+        alt: "Slow-motion footage of water beading and running straight off a ceramic-coated bonnet",
+        ratio: 9 / 16,
+        motif: "droplet",
+        caption: "Sheeting test on a coated panel",
+      },
     },
   ],
 

@@ -32,7 +32,7 @@ const SIZES = {
 
 function shell(intent: Intent, size: keyof typeof SIZES, className?: string) {
   return cn(
-    "group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full font-medium tracking-[0.01em]",
+    "group/btn relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full font-medium tracking-[0.01em] whitespace-nowrap",
     "transition-[color,border-color,box-shadow,background-color,transform] duration-400 ease-[var(--ease-gloss)]",
     "active:scale-[0.975]",
     SIZES[size],

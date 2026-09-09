@@ -27,7 +27,16 @@ const offsetFor = (d: Direction, px: number) => {
   }
 };
 
-/** The site's single scroll-reveal primitive. Everything else composes it. */
+/**
+ * The site's single scroll-reveal primitive. Everything else composes it.
+ *
+ * It moves and fades but deliberately does not blur. Motion leaves the settled
+ * value on the element, and a `filter` of `blur(0px)` is still a filter: it
+ * makes the revealed element the containing block for every `position: fixed`
+ * descendant, so an overlay opened from inside a revealed section pins itself
+ * to that section instead of to the viewport. `transform` is safe — Motion
+ * resets it to `none` once the travel reaches zero.
+ */
 export function Reveal({
   children,
   className,
@@ -41,12 +50,11 @@ export function Reveal({
   const travel = distance * intensity;
 
   const variants: Variants = {
-    hidden: { opacity: 0, filter: "blur(6px)", ...offsetFor(direction, travel) },
+    hidden: { opacity: 0, ...offsetFor(direction, travel) },
     shown: {
       opacity: 1,
       x: 0,
       y: 0,
-      filter: "blur(0px)",
       transition: {
         duration: 0.78 + delay * 0.05,
         delay,
@@ -101,8 +109,8 @@ export function RevealGroup({
 }
 
 export const revealItem: Variants = {
-  hidden: { opacity: 0, y: 24, filter: "blur(5px)" },
-  shown: { opacity: 1, y: 0, filter: "blur(0px)", transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
+  hidden: { opacity: 0, y: 24 },
+  shown: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] } },
 };
 
 export function RevealItem({
