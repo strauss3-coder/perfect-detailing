@@ -5,13 +5,13 @@ export const solarService: ServiceDoc = {
   slug: "solar-panel-ceramic-coating",
   category: "solar",
   status: "published",
-  order: 1,
+  order: 7,
   name: "Solar Panel Ceramic Coating",
   shortName: "Solar Coating",
   cardSummary:
     "A photovoltaic-grade ceramic layer that keeps dust from bonding, lets rain do the cleaning, and puts lost generation back on the meter.",
   motif: "solar-panel",
-  flag: "Primary service",
+  flag: "Specialist division",
   featuredOnHome: true,
 
   eyebrow: "Primary service · R280 per panel",
@@ -374,7 +374,7 @@ export const solarService: ServiceDoc = {
   seo: {
     title: "Solar Panel Ceramic Coating — R280 per panel",
     description:
-      "Photovoltaic-grade ceramic coating for solar arrays across Gauteng. R280 per panel, about ten minutes each. Less soiling, fewer cleans, measurable yield recovery.",
+      "Photovoltaic-grade ceramic coating for solar arrays across Mpumalanga and the Highveld. R280 per panel, about ten minutes each. Less soiling, fewer cleans, measurable yield recovery.",
     keywords: [
       "solar panel ceramic coating",
       "solar panel coating South Africa",

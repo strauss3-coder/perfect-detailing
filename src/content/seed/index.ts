@@ -6,6 +6,9 @@ import { about, contactPage, faqPage, galleryPage, process, quotePage, reviewsPa
 import { solarService } from "./service-solar";
 import { ceramicService } from "./service-ceramic";
 import { automotiveService } from "./service-automotive";
+import { correctionService } from "./service-correction";
+import { interiorService } from "./service-interior";
+import { maintenanceService } from "./service-maintenance";
 import { aircraftService } from "./service-aircraft";
 import { marineService } from "./service-marine";
 import { windowsService } from "./service-windows";
@@ -13,11 +16,16 @@ import { fleetService } from "./service-fleet";
 import { beforeAfter, emailTemplates, galleryItems, media, posts, pricing, testimonials, users } from "./collections";
 import { faqs } from "./faqs";
 
+/* Order is the site's hierarchy: vehicle detailing leads, the specialist
+   divisions follow. `order` on each document is what actually sorts them. */
 export const services: ServiceDoc[] = [
-  solarService,
-  ceramicService,
   automotiveService,
+  ceramicService,
+  correctionService,
+  interiorService,
+  maintenanceService,
   aircraftService,
+  solarService,
   marineService,
   windowsService,
   fleetService,

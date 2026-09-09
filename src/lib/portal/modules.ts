@@ -42,9 +42,9 @@ export const MODULES: PortalModule[] = [
   { slug: "edit/quotePage", label: "Quote page", description: "Calculator settings, form copy and assurances", group: "Pages", target: { type: "singleton", key: "quotePage" } },
 
   { slug: "services", label: "All services", description: "Every service page in one place", group: "Services", custom: "services" },
-  { slug: "services?category=solar", label: "Solar coatings", description: "Solar panel ceramic coating", group: "Services", badge: "Primary" },
+  { slug: "services?category=automotive", label: "Vehicle services", description: "Detailing, correction, interiors, maintenance", group: "Services", badge: "Core" },
   { slug: "services?category=ceramic", label: "Ceramic coatings", description: "Vehicle ceramic coating", group: "Services" },
-  { slug: "services?category=automotive", label: "Automotive services", description: "Detailing, correction, interiors", group: "Services" },
+  { slug: "services?category=solar", label: "Solar coatings", description: "Solar panel ceramic coating", group: "Services" },
   { slug: "services?category=aircraft", label: "Aircraft services", description: "Dry washing and airframe coating", group: "Services" },
   { slug: "services?category=fleet", label: "Fleet services", description: "Commercial vehicle programmes", group: "Services" },
 

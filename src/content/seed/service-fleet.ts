@@ -5,7 +5,7 @@ export const fleetService: ServiceDoc = {
   slug: "fleet-services",
   category: "fleet",
   status: "published",
-  order: 7,
+  order: 10,
   name: "Fleet & Commercial Vehicle Detailing",
   shortName: "Fleet",
   cardSummary:
@@ -155,7 +155,7 @@ export const fleetService: ServiceDoc = {
   seo: {
     title: "Fleet & Commercial Vehicle Detailing",
     description:
-      "Scheduled fleet detailing across Gauteng. Wrap-safe cleaning, ceramic coating for livery, overnight working with zero downtime and one consolidated monthly invoice.",
+      "Scheduled fleet detailing across Mpumalanga and the Highveld. Wrap-safe cleaning, ceramic coating for livery, overnight working with zero downtime and one consolidated monthly invoice.",
     keywords: ["fleet detailing South Africa", "commercial vehicle cleaning", "vehicle wrap care", "fleet washing Gauteng"],
     ogImageText: "Zero downtime. One invoice.",
   },

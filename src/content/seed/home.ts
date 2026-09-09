@@ -2,14 +2,14 @@ import type { HomeContent } from "@/content/types";
 
 export const home: HomeContent = {
   hero: {
-    eyebrow: "Automotive · Aviation · Marine · Solar · Glass",
-    headlineLines: ["We don't clean", "surfaces.", "We engineer them."],
-    accentWord: "surfaces.",
+    eyebrow: "Detailing · Paint correction · Ceramic coating",
+    headlineLines: ["We don't wash", "cars.", "We correct them."],
+    accentWord: "cars.",
     lede:
-      "Perfect Detailing corrects, coats and measures the surfaces that other people simply wash. Paint, glass, composite and photovoltaic — protected with ceramic chemistry and handed back with a reading, not a promise.",
+      "Premium vehicle detailing, multi-stage paint correction and ceramic coating. We level the clear coat, bond protection to the surface we have just built, and hand the car back with gloss readings rather than adjectives.",
     actions: [
-      { label: "Coat my solar panels", href: "/services/solar-panel-ceramic-coating", intent: "primary" },
-      { label: "See the process", href: "/process", intent: "secondary" },
+      { label: "Book a paint inspection", href: "/quote", intent: "primary" },
+      { label: "See the work", href: "/gallery", intent: "secondary" },
     ],
     media: {
       src: "/work/poster/hero-panamera.webp",
@@ -28,14 +28,18 @@ export const home: HomeContent = {
   marquee: {
     enabled: true,
     items: [
-      "Solar arrays",
-      "Ceramic coating",
       "Paint correction",
-      "Aircraft dry wash",
-      "Fleet cycles",
+      "Ceramic coating",
+      "Interior restoration",
+      "Machine polishing",
       "Engine bays",
+      "Wheel & caliper coating",
+      "Glass coating",
+      "Trim restoration",
       "Headlight restoration",
-      "Interior deep clean",
+      "Maintenance plans",
+      "Aircraft dry wash",
+      "Solar arrays",
     ],
   },
   stats: {
@@ -44,25 +48,24 @@ export const home: HomeContent = {
     items: [
       {
         id: "s1",
-        value: 280,
-        prefix: "R",
-        label: "Per solar panel",
-        detail: "Coated, sealed and cured. Roughly ten minutes each.",
+        value: 94,
+        suffix: "GU",
+        label: "Typical finished gloss",
+        detail: "Measured at 60° on corrected black paint, before and after.",
       },
       {
         id: "s2",
-        value: 4.2,
-        precision: 1,
-        suffix: "%",
-        label: "Typical yield recovered",
-        detail: "Measured against soiled baselines on Highveld installations.",
+        value: 3,
+        suffix: "stage",
+        label: "Maximum correction",
+        detail: "Cut, refine and finish — each guided by clear coat depth readings.",
       },
       {
         id: "s3",
         value: 112,
         suffix: "°",
         label: "Water contact angle",
-        detail: "The steeper the bead, the less a surface holds onto dirt.",
+        detail: "The steeper the bead, the less your paint holds onto dirt.",
       },
       {
         id: "s4",
@@ -75,40 +78,39 @@ export const home: HomeContent = {
   },
   services: {
     eyebrow: "Capability",
-    title: "Seven disciplines, one standard.",
+    title: "Everything a car needs, in the order it needs it.",
     lede:
-      "The chemistry changes between a bonnet, a wing, a hull, a window and a photovoltaic module. The method does not: inspect, correct, prepare, coat, cure, verify.",
+      "Detailing is a sequence, not a menu: decontaminate, correct, protect, then maintain. These five are that sequence — and the specialist divisions for aviation, solar, marine, architectural glass and fleet are one click further in.",
+    /* The homepage shows the vehicle sequence. All ten live on /services. */
     featured: [
-      "solar-panel-ceramic-coating",
-      "ceramic-coating",
       "automotive-detailing",
-      "aircraft-detailing",
-      "marine-detailing",
-      "building-window-coating",
-      "fleet-services",
+      "ceramic-coating",
+      "paint-correction",
+      "interior-detailing",
+      "maintenance-plans",
     ],
-    action: { label: "All services", href: "/services", intent: "ghost" },
+    action: { label: "All ten services", href: "/services", intent: "secondary" },
   },
   solarSpotlight: {
-    eyebrow: "Primary service",
-    title: "A solar panel is a lens. Treat it like one.",
+    eyebrow: "Specialist division",
+    title: "The same chemistry, pointed at a solar array.",
     body:
-      "Every gram of dust on a module is light that never reaches the cell. Our photovoltaic-grade ceramic coating leaves a slick, hydrophobic surface that sheds dust, resists mineral staining and lets ordinary rain do most of the cleaning for you — at R280 a panel, applied in about ten minutes.",
+      "Coating a photovoltaic module is the same argument as coating a bonnet: a slicker surface holds onto less, and what it does hold onto leaves with the next rain. On glass that happens to be a lens, that is measurable in generation. Our photovoltaic-grade coating sheds dust, resists mineral staining and cuts the cleaning cycle — R280 a panel, about ten minutes each.",
     bullets: [
       "Higher light transmission through a cleaner, flatter surface",
       "Dust and pollen release instead of bonding to the glass",
       "Bird droppings and hard-water scale lift without scrubbing",
       "Fewer cleaning visits across the life of the array",
     ],
-    action: { label: "Read the full case", href: "/services/solar-panel-ceramic-coating", intent: "primary" },
-    secondaryAction: { label: "Calculate my array", href: "/quote#calculator", intent: "secondary" },
+    action: { label: "The full solar case", href: "/services/solar-panel-ceramic-coating", intent: "secondary" },
+    secondaryAction: { label: "Calculate my array", href: "/quote#calculator", intent: "ghost" },
   },
   beforeAfter: {
     eyebrow: "Evidence",
     title: "Drag the handle. That is the same panel.",
     lede:
-      "No filters, no wet-look dressing, no reshoot from a better angle. Both frames are the same lighting setup, minutes apart.",
-    projectId: "ba-solar-midrand",
+      "No filters, no wet-look dressing, no reshoot from a better angle. Both frames are the same lighting setup, minutes apart, and the figures underneath come off the job card.",
+    projectId: "ba-auto-black",
     action: { label: "Open the gallery", href: "/gallery", intent: "ghost" },
   },
   proof: {
@@ -202,10 +204,10 @@ export const home: HomeContent = {
     ],
   },
   industries: {
-    eyebrow: "Industries we serve",
-    title: "Different surfaces. Same physics.",
+    eyebrow: "Who we work for",
+    title: "It starts with cars. It does not end there.",
     lede:
-      "Contamination bonds, light scatters, and value quietly leaves the asset. We work wherever that equation costs someone money — on the road, in the air, on the water and on the building.",
+      "Contamination bonds, light scatters, and value quietly leaves the asset. Most of our week is spent on vehicles — and the same physics is why an airframe, a hull, a facade and a solar array all end up on the same schedule.",
     items: [
       {
         id: "i1",
@@ -214,10 +216,22 @@ export const home: HomeContent = {
         motif: "sedan",
       },
       {
-        id: "i2",
-        name: "Solar & renewables",
-        body: "Residential rooftops, commercial arrays and installer partnerships coated at handover.",
-        motif: "solar-array",
+        id: "i9",
+        name: "Performance & prestige",
+        body: "Dark paint, soft clear coats and owners who notice a hologram from across a car park.",
+        motif: "coupe",
+      },
+      {
+        id: "i6",
+        name: "Dealerships & brokers",
+        body: "Pre-delivery preparation and handover coatings applied on the dealership floor.",
+        motif: "sparkle",
+      },
+      {
+        id: "i4",
+        name: "Fleet & logistics",
+        body: "Panel vans, bakkies and branded vehicles on scheduled cycles that keep livery legible.",
+        motif: "fleet",
       },
       {
         id: "i3",
@@ -226,10 +240,10 @@ export const home: HomeContent = {
         motif: "aircraft",
       },
       {
-        id: "i4",
-        name: "Fleet & logistics",
-        body: "Panel vans, bakkies and branded vehicles on scheduled cycles that keep livery legible.",
-        motif: "fleet",
+        id: "i2",
+        name: "Solar & renewables",
+        body: "Residential rooftops, commercial arrays and installer partnerships coated at handover.",
+        motif: "solar-array",
       },
       {
         id: "i7",
@@ -242,18 +256,6 @@ export const home: HomeContent = {
         name: "Commercial property",
         body: "Facades and glazing where cleaning costs and cooling load both matter.",
         motif: "window",
-      },
-      {
-        id: "i5",
-        name: "Property & facilities",
-        body: "Estates, office parks and body corporates managing glass and PV across many buildings.",
-        motif: "shield",
-      },
-      {
-        id: "i6",
-        name: "Dealerships & brokers",
-        body: "Pre-delivery preparation and handover coatings applied on the dealership floor.",
-        motif: "sparkle",
       },
     ],
   },
@@ -274,9 +276,9 @@ export const home: HomeContent = {
   },
   ctaBanner: {
     eyebrow: "Next step",
-    title: "Tell us what needs protecting.",
+    title: "Tell us what you drive.",
     body:
-      "Send a photo and a rough panel count or registration number. You will have a written quote back within one working day — usually the same afternoon.",
+      "Send a photograph of the paint in daylight and tell us what is bothering you. You will have a written, itemised quote back within one working day — usually the same afternoon.",
     actions: [
       { label: "Get a quote", href: "/quote", intent: "primary" },
       { label: "WhatsApp us", href: "#whatsapp", intent: "secondary" },

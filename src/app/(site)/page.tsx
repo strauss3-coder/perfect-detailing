@@ -50,12 +50,14 @@ export default async function HomePage() {
 
       <Stats stats={home.stats} />
       <ServicesSection section={home.services} services={publishedServices} />
-      <SolarSpotlight section={home.solarSpotlight} contact={contact} />
       <ProofFilm section={home.proof} />
       <BeforeAfterTeaser section={home.beforeAfter} project={featuredProject} />
       <WhyUs section={home.whyUs} />
       <TrustBadges section={home.trustBadges} />
       <Industries section={home.industries} />
+      {/* The specialist divisions sit after the vehicle story, not in front
+          of it — solar is a service this business offers, not what it is. */}
+      <SolarSpotlight section={home.solarSpotlight} contact={contact} />
 
       <section className="relative section-y">
         <div className="shell">

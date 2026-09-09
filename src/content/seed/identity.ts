@@ -16,10 +16,10 @@ export const brand: BrandSettings = {
   name: "Perfect Detailing",
   nameLead: "PERFECT",
   nameTrail: "Detailing",
-  tagline: "Advanced care for multi-sector assets",
+  tagline: "Premium vehicle detailing and ceramic coating",
   positioningStatement:
-    "We are surface care specialists. A decade of vehicle repair taught us that the cheapest work is the work you never have to redo — so we moved from fixing surfaces after the damage to protecting them before it.",
-  descriptor: "Automotive · Aviation · Marine · Solar · Architectural glass",
+    "We are a detailing house. A decade of vehicle repair taught us that the cheapest work is the work you never have to redo — so we moved from fixing paint after the damage to correcting and protecting it before it. The same chemistry and the same discipline now go onto aircraft, boats, architectural glass and solar arrays, but the car is where it started and where it still lives.",
+  descriptor: "Vehicle detailing · Ceramic coating · Paint correction",
 };
 
 export const business: BusinessSettings = {
@@ -93,33 +93,55 @@ export const navigation: NavigationSettings = {
       href: "/services",
       children: [
         {
-          id: "solar",
-          label: "Solar Panel Ceramic Coating",
-          href: "/services/solar-panel-ceramic-coating",
-          description: "R280 per panel. Roughly ten minutes each.",
-          motif: "solar-panel",
-          flag: "Primary service",
+          id: "automotive",
+          label: "Vehicle Detailing",
+          href: "/services/automotive-detailing",
+          description: "The full discipline — exterior, interior, engine bay and trim.",
+          motif: "sedan",
+          flag: "Most booked",
         },
         {
           id: "ceramic",
           label: "Ceramic Coating",
           href: "/services/ceramic-coating",
-          description: "Multi-layer 9H nanotechnology for paint, metal and glass.",
+          description: "Multi-layer 9H protection bonded to corrected paint, glass and wheels.",
           motif: "shield",
         },
         {
-          id: "automotive",
-          label: "Automotive Detailing",
-          href: "/services/automotive-detailing",
-          description: "Paint correction, interiors, wheels and trim.",
-          motif: "sedan",
+          id: "correction",
+          label: "Paint Correction",
+          href: "/services/paint-correction",
+          description: "Swirls, holograms and etching removed by machine, not filled.",
+          motif: "polisher",
+        },
+        {
+          id: "interior",
+          label: "Interior Detailing",
+          href: "/services/interior-detailing",
+          description: "Extraction, leather, trim restoration and odour removed at source.",
+          motif: "interior",
+        },
+        {
+          id: "maintenance",
+          label: "Maintenance Plans",
+          href: "/services/maintenance-plans",
+          description: "Scheduled safe washing that keeps a correction alive for years.",
+          motif: "microfibre",
         },
         {
           id: "aircraft",
           label: "Aircraft Detailing",
           href: "/services/aircraft-detailing",
-          description: "Airframe, cabin and cockpit, hangar-based.",
+          description: "Airframe, cabin and cockpit, hangar-based and dry washed.",
           motif: "aircraft",
+        },
+        {
+          id: "solar",
+          label: "Solar Panel Ceramic Coating",
+          href: "/services/solar-panel-ceramic-coating",
+          description: "R280 per panel. Our specialist renewable-energy division.",
+          motif: "solar-panel",
+          flag: "Specialist",
         },
         {
           id: "marine",
@@ -155,8 +177,9 @@ export const navigation: NavigationSettings = {
   announcement: {
     enabled: true,
     items: [
-      "Solar panel ceramic coating — R280 per panel, about 10 minutes each",
-      "Automotive · Aviation · Marine · Solar · Architectural glass",
+      "Premium vehicle detailing, paint correction and ceramic coating",
+      "Multi-layer 9H ceramic systems with a written warranty",
+      "Maintenance plans from six-weekly — the wash is what damages paint",
       "Witbank workshop and product shop — Mon to Fri 08:00–17:00, Sat 08:00–13:00",
     ],
   },
@@ -164,16 +187,19 @@ export const navigation: NavigationSettings = {
 
 export const footer: FooterSettings = {
   blurb:
-    "Perfect Detailing protects the surfaces other people only clean. Paint, gelcoat, composite, architectural glass and photovoltaic — corrected, coated and measured.",
+    "Perfect Detailing corrects and protects paint that other people only wash. Vehicle detailing, machine correction and ceramic coating first — with the same discipline carried onto aircraft, boats, architectural glass and solar arrays.",
   columns: [
     {
       id: "services",
       title: "Services",
       links: [
-        { label: "Solar Panel Ceramic Coating", href: "/services/solar-panel-ceramic-coating" },
+        { label: "Vehicle Detailing", href: "/services/automotive-detailing" },
         { label: "Ceramic Coating", href: "/services/ceramic-coating" },
-        { label: "Automotive Detailing", href: "/services/automotive-detailing" },
+        { label: "Paint Correction", href: "/services/paint-correction" },
+        { label: "Interior Detailing", href: "/services/interior-detailing" },
+        { label: "Maintenance Plans", href: "/services/maintenance-plans" },
         { label: "Aircraft Detailing", href: "/services/aircraft-detailing" },
+        { label: "Solar Panel Ceramic Coating", href: "/services/solar-panel-ceramic-coating" },
         { label: "Marine Division", href: "/services/marine-detailing" },
         { label: "Building Windows", href: "/services/building-window-coating" },
         { label: "Fleet & Commercial", href: "/services/fleet-services" },
@@ -195,6 +221,7 @@ export const footer: FooterSettings = {
       title: "Get started",
       links: [
         { label: "Get a quote", href: "/quote" },
+        { label: "Maintenance plans", href: "/services/maintenance-plans" },
         { label: "Solar cost calculator", href: "/quote#calculator" },
         { label: "Frequently asked questions", href: "/faq" },
         { label: "Contact us", href: "/contact" },
@@ -232,29 +259,32 @@ export const appearance: AppearanceSettings = {
 export const seo: SeoSettings = {
   siteUrl: "https://perfectdetailing.co.za",
   titleTemplate: "%s — Perfect Detailing",
-  defaultTitle: "Perfect Detailing — Ceramic coatings for vehicles, aircraft, boats and solar",
+  defaultTitle: "Perfect Detailing — Premium vehicle detailing and ceramic coating",
   defaultDescription:
-    "Surface care specialists in Witbank, Mpumalanga. Ceramic coating and detailing for cars, aircraft, boats, solar panels and architectural glass. Solar panel coating from R280 a panel.",
+    "Premium vehicle detailing, multi-stage paint correction and ceramic coating in Witbank, Mpumalanga. Interior restoration, maintenance plans, and specialist coating for aircraft, boats, architectural glass and solar arrays.",
   keywords: [
+    "car detailing Witbank",
+    "vehicle detailing Mpumalanga",
     "ceramic coating Witbank",
-    "ceramic coating Mpumalanga",
-    "solar panel ceramic coating",
-    "solar panel cleaning South Africa",
+    "ceramic coating car Mpumalanga",
     "paint correction Witbank",
+    "swirl mark removal eMalahleni",
+    "interior detailing Witbank",
+    "car detailing eMalahleni",
+    "detailing maintenance plan",
     "aircraft detailing South Africa",
+    "solar panel ceramic coating",
     "marine ceramic coating",
-    "building window coating",
-    "fleet detailing Mpumalanga",
   ],
   twitterHandle: "",
   organisationType: "AutoDetailing",
   verification: { google: "", bing: "" },
   pages: {
     home: {
-      title: "Ceramic coatings for vehicles, aircraft, boats and solar",
+      title: "Premium vehicle detailing and ceramic coating",
       description:
-        "Perfect Detailing protects high-value surfaces across five sectors from our base in Witbank — solar panel ceramic coating from R280 a panel, paint correction, aviation, marine and architectural glass.",
-      ogImageText: "Advanced care for multi-sector assets",
+        "Perfect Detailing corrects and protects paint from our base in Witbank — multi-stage paint correction, multi-layer ceramic coating, interior restoration and maintenance plans, plus specialist coating for aircraft, marine, architectural glass and solar.",
+      ogImageText: "Premium detailing and ceramic coating",
     },
     about: {
       title: "About",
@@ -271,7 +301,7 @@ export const seo: SeoSettings = {
     gallery: {
       title: "Gallery",
       description:
-        "Recent work across automotive, solar, aviation, marine and architectural glass — with before and after comparisons.",
+        "Recent detailing work — machine correction in progress, decontamination, coated finishes, interiors and engine bays. Shot in our own bay, unretouched.",
       ogImageText: "The work, uncropped",
     },
     reviews: {
@@ -282,7 +312,7 @@ export const seo: SeoSettings = {
     faq: {
       title: "Frequently asked questions",
       description:
-        "Straight answers on ceramic coating lifespan, solar panel economics, aviation compliance, marine antifouling and aftercare.",
+        "Straight answers on paint correction, ceramic coating lifespan, interior restoration, maintenance intervals — and on solar economics, aviation compliance and marine antifouling.",
       ogImageText: "Straight answers",
     },
     contact: {
@@ -294,13 +324,13 @@ export const seo: SeoSettings = {
     quote: {
       title: "Get a quote",
       description:
-        "Estimate solar panel ceramic coating instantly at R280 a panel, or send us the details of your vehicle, aircraft, boat or building.",
-      ogImageText: "Price it in ten seconds",
+        "Send us your vehicle and what you want done — correction, coating, interior or a maintenance plan — and get a written quote back within one working day. Solar arrays price instantly at R280 a panel.",
+      ogImageText: "A written quote in one day",
     },
     services: {
       title: "Services",
       description:
-        "Ceramic coating and detailing across five sectors: automotive, aviation, marine, solar and architectural glass, plus fleet programmes.",
+        "Vehicle detailing, ceramic coating, paint correction, interior restoration and maintenance plans — plus specialist coating divisions for aviation, solar, marine and architectural glass.",
       ogImageText: "What we protect",
     },
     journal: {

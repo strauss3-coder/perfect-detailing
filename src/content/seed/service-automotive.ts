@@ -5,7 +5,7 @@ export const automotiveService: ServiceDoc = {
   slug: "automotive-detailing",
   category: "automotive",
   status: "published",
-  order: 3,
+  order: 1,
   name: "Automotive Detailing",
   shortName: "Automotive",
   cardSummary:
@@ -283,8 +283,8 @@ export const automotiveService: ServiceDoc = {
   seo: {
     title: "Automotive Detailing",
     description:
-      "Mobile automotive detailing across Gauteng — paint decontamination, machine polishing and paint correction, interior deep cleaning, engine bays and headlight restoration.",
-    keywords: ["car detailing Johannesburg", "paint correction", "machine polishing", "interior deep clean", "headlight restoration"],
+      "Premium vehicle detailing in Witbank, Mpumalanga — paint decontamination, machine polishing and correction, interior deep cleaning, engine bays, wheels and headlight restoration. Carried out on site or at our workshop.",
+    keywords: ["car detailing Witbank", "vehicle detailing Mpumalanga", "car detailing eMalahleni", "paint correction", "machine polishing", "interior deep clean", "engine bay detailing", "headlight restoration"],
     ogImageText: "The full discipline, in order",
   },
 };

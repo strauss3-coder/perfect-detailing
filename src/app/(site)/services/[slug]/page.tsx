@@ -8,7 +8,10 @@ import { TheDifference } from "@/components/site/service/TheDifference";
 import { BenefitGrid, PackageCards, LifespanAndCare } from "@/components/site/service/ServiceBlocks";
 import { AircraftDetails, FleetDetails } from "@/components/site/service/CategoryBlocks";
 import { SolarCalculator } from "@/components/site/solar/SolarCalculator";
-import { toCalculatorEconomics } from "@/lib/projections";
+import { CoatingViz } from "@/components/site/CoatingViz";
+import { toCalculatorEconomics, toCardData } from "@/lib/projections";
+import { ServiceCard } from "@/components/site/ServiceCard";
+import { RevealGroup, RevealItem } from "@/components/motion/Reveal";
 import { SolarAssumptions, SolarRoi, SolarNeglect } from "@/components/site/solar/SolarEconomicsBlocks";
 import { ProcessTimeline } from "@/components/site/ProcessTimeline";
 import { FaqAccordion } from "@/components/site/FaqAccordion";
@@ -37,6 +40,14 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
   if (!service) notFound();
 
   const { contact, business, quotePage, faqs } = content;
+
+  /* The vehicle services are one sequence rather than five islands, so each
+     page ends by pointing at its neighbours. */
+  const related = content.services
+    .filter((s) => s.status === "published" && s.category === service.category && s.slug !== service.slug)
+    .sort((a, b) => a.order - b.order)
+    .slice(0, 3)
+    .map(toCardData);
   const serviceFaqs = service.faqIds
     .map((id) => faqs.find((f) => f.id === id))
     .filter((f): f is NonNullable<typeof f> => Boolean(f) && f!.status === "published");
@@ -56,6 +67,24 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
               currency={business.currency}
               locale={business.locale}
             />
+          </div>
+        </section>
+      ) : null}
+
+      {/* The coating pages argue from a mechanism, so they get to show it. */}
+      {service.category === "ceramic" ? (
+        <section className="relative pb-4">
+          <div className="shell">
+            <Reveal>
+              <SectionHeading
+                eyebrow="Coated vs uncoated"
+                title="What the water is actually telling you."
+                lede="Beading is not a party trick — it is the visible readout of how much surface area water is sharing with your paint. Switch the surface and watch what changes."
+              />
+            </Reveal>
+            <Reveal delay={0.08} className="mt-12">
+              <CoatingViz />
+            </Reveal>
           </div>
         </section>
       ) : null}
@@ -130,6 +159,33 @@ export default async function ServicePage({ params }: PageProps<"/services/[slug
             <Reveal direction="left" delay={0.08}>
               <FaqAccordion faqs={serviceFaqs} defaultOpenId={serviceFaqs[0]?.id} />
             </Reveal>
+          </div>
+        </section>
+      ) : null}
+
+      {related.length ? (
+        <section className="relative section-y">
+          <div className="shell">
+            <Reveal>
+              <SectionHeading
+                eyebrow="Goes with this"
+                title="The rest of the sequence."
+                lede="Correction, protection and maintenance are one job split across three bookings. Most cars need at least two of them."
+                action={
+                  <ButtonLink href="/services" intent="secondary">
+                    All ten services
+                    <Arrow />
+                  </ButtonLink>
+                }
+              />
+            </Reveal>
+            <RevealGroup className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" stagger={0.08}>
+              {related.map((item, i) => (
+                <RevealItem key={item.id}>
+                  <ServiceCard service={item} index={i} />
+                </RevealItem>
+              ))}
+            </RevealGroup>
           </div>
         </section>
       ) : null}

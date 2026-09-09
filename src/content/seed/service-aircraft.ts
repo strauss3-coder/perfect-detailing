@@ -5,7 +5,7 @@ export const aircraftService: ServiceDoc = {
   slug: "aircraft-detailing",
   category: "aircraft",
   status: "published",
-  order: 4,
+  order: 6,
   name: "Aircraft Cleaning & Ceramic Coating",
   shortName: "Aircraft",
   cardSummary:

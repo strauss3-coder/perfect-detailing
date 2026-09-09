@@ -38,7 +38,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         url: `${base}/services/${service.slug}`,
         lastModified: now,
         changeFrequency: "monthly" as const,
-        priority: service.category === "solar" ? 1 : 0.85,
+        priority: service.slug === "automotive-detailing" ? 1 : 0.85,
       })),
     ...posts
       .filter((p) => p.status === "published")

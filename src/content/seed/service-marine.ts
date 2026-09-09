@@ -5,7 +5,7 @@ export const marineService: ServiceDoc = {
   slug: "marine-detailing",
   category: "marine",
   status: "published",
-  order: 5,
+  order: 8,
   name: "Marine Detailing & Protection",
   shortName: "Marine",
   cardSummary:

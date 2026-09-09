@@ -68,6 +68,42 @@ export const faqs: Faq[] = [
   f("faq-auto-5", "automotive", 5, "Do you do interiors only?",
     "Yes. Interior deep cleans are a standalone booking — hot-water extraction on fabric and carpets, leather cleaned in the grain and conditioned, vents and switchgear detailed, glass finished last. It is a popular pre-sale service on its own.", false),
 
+  /* -------------------------------------------------- Paint correction */
+  f("faq-corr-1", "automotive", 6, "How do I know how many stages my paint needs?",
+    "You do not, and neither do we until we have looked at it. We gauge the clear coat across every panel, then work a taped test section up from the gentlest pad and compound until the defects clear. That tells us what the paint needs and what it can safely support — sometimes those are different numbers, and when they are we say so. You see the test section beside untouched paint and approve the finish before the rest of the car is committed.", true),
+  f("faq-corr-2", "automotive", 7, "Is paint correction safe? Will you burn through my paint?",
+    "It is safe because it is measured. Factory clear coat is roughly 40 to 60 microns and correction removes a few of them, so the risk is real if nobody is checking — which is exactly why the depth gauge comes out before the polisher does. Resprays, filler, thin edges and previously machined panels get flagged and worked by hand or left alone. If a panel has nothing left to give, we protect it as it is and tell you why.", true),
+  f("faq-corr-3", "automotive", 8, "Will correction remove every scratch?",
+    "No, and be wary of anyone who says otherwise. If you can catch a scratch with a fingernail it is through the clear coat, and levelling the paint around it would take more than the panel has. Those we improve rather than remove. Stone chips are missing paint, not displaced paint. Dents and failed lacquer are somebody else's trade. We show you the limits on the day, on your car, before you commit to anything.", false),
+  f("faq-corr-4", "automotive", 9, "How long does corrected paint stay corrected?",
+    "The correction itself is permanent — the clear coat is level and stays level until something puts new scratches into it. Left unprotected and washed carelessly, a car can be visibly marred again inside eighteen months. Corrected, ceramic coated and washed properly, four to six years is realistic. The variable is almost never the correction; it is the wash.", false),
+  f("faq-corr-5", "automotive", 10, "Should I have it coated at the same time?",
+    "Yes, and ideally in the same booking. A freshly corrected panel is bare clear coat stripped of every oil and sealant — the most vulnerable it will ever be. Coating it there and then means the protection bonds to the surface we have just built, and there is no window where the car is out in the world unprotected. Doing it later means paying to decontaminate and prepare the paint a second time.", false),
+
+  /* ---------------------------------------------------------- Interior */
+  f("faq-int-1", "automotive", 11, "Will you get the stain out?",
+    "Usually, but not always, and the honest answer depends on whether it is soiling or dye. Coffee, milk, mud and body oils are soiling and come out with hot-water extraction. Ink, dye transfer from denim on light leather, sun-bleached patches and anything that has actually altered the colour of the fibre are not soiling — they are a change to the material. We tell you which one you have before we start, and we never promise a stain we cannot see the back of.", true),
+  f("faq-int-2", "automotive", 12, "Is extraction safe on leather and Alcantara?",
+    "Extraction is for fabric and carpet. Leather is cleaned with a pH-appropriate product worked into the grain with a soft brush and lifted out, then conditioned to a factory matte finish — never flooded, and never dressed to a shine. Alcantara and suede are cleaned low-moisture with a soft brush and re-napped while damp so they dry evenly rather than going patchy and matted.", true),
+  f("faq-int-3", "automotive", 13, "Can you get the smoke smell out?",
+    "Usually. Odour is a source, not a scent, so we find it first — headliner and glass film in a smoked-in car, damp underlay, a blocked air-conditioning drain, something spilled under a seat rail. Once the source is removed and the surfaces are extracted, an ozone or chlorine-dioxide treatment oxidises whatever is left in the ducting. Heavy long-term smoke damage on a headliner sometimes cannot be fully recovered, and we will say so up front.", false),
+  f("faq-int-4", "automotive", 14, "How long will the car be with you, and will it come back damp?",
+    "A full interior is five to seven hours on a five-seat car; a heavy restoration is one to two days. It does not come back damp — everything extracted is force-dried before the car is handed over, because moisture left in foam is exactly how a clean interior develops a smell two weeks later.", false),
+  f("faq-int-5", "automotive", 15, "Is fabric and leather guard worth it?",
+    "On a light-coloured interior, on a family car, or on anything that carries dogs, yes. Guard puts a hydrophobic layer around each fibre so a spill sits on top long enough to be lifted rather than wicking into the foam, and on leather it slows dye transfer from denim — which is the single most common thing that ruins a pale cabin. It lasts about twelve months and is re-applied at every maintenance service.", false),
+
+  /* ------------------------------------------------------- Maintenance */
+  f("faq-maint-1", "automotive", 16, "Why do I need a plan if the car is already coated?",
+    "Because a coating is consumable and the wash is what damages cars. Detergents, ultraviolet light and heat deplete protection, so a coating that beaded tightly at handover will bead lazily within a year if nothing tops it up. A plan restores the contact angle at every visit and, just as importantly, replaces the forecourt washes that put swirl marks into your freshly corrected paint. Coated cars on a plan reach their full rated life; coated cars without one typically reach half to two-thirds of it.", true),
+  f("faq-maint-2", "automotive", 17, "How often should the car come in?",
+    "It depends on where it sleeps, not on what we would like to sell you. Six-weekly for a daily driver parked outside or under trees, eight-weekly for a garaged car on normal mileage, twelve-weekly for low-mileage and weekend cars. We propose an interval, review it after two visits, and stretch it if the car is holding up better than expected.", true),
+  f("faq-maint-3", "automotive", 18, "Can I still wash the car myself?",
+    "Please do, if you enjoy it — done correctly it is good for the finish. Every plan starts with a handover kit and a written method: pH-neutral shampoo that will not strip the coating, two buckets with grit guards, a fresh mitt, a drying towel and a drying aid. What we ask is that nothing abrasive touches the car in between — no automatic washes, no forecourt brushes, and never a dry wipe on a dusty panel.", false),
+  f("faq-maint-4", "automotive", 19, "What does the annual inspection actually involve?",
+    "It is a longer visit. We take gloss readings and contact-angle measurements and compare them against the figures on your original job card, then go over the paint under raking and cross-polarised light for anything that has crept in. Isolated defects are spot-corrected and re-coated while they are still isolated. On a warranted coating this inspection is what keeps the warranty live, and it is included in the plan rather than billed when you need it.", false),
+  f("faq-maint-5", "automotive", 20, "How is it billed, and can I cancel?",
+    "Monthly, by vehicle size and interval, with multi-car households and small fleets on a single account. There is no lock-in period and no cancellation penalty — a plan that is not earning its place should end. Tell us and the next invoice simply stops.", false),
+
   /* --------------------------------------------------------- Aircraft */
   f("faq-air-1", "aircraft", 1, "Why dry wash instead of a normal wash?",
     "Water is the risk. A flooded wash pushes moisture into control surface hinges, seams, fastener heads and behind fairings, and trapped moisture is how corrosion starts. An encapsulating dry wash lifts soiling into a lubricating film that is removed with clean media — no water enters a seam, and we can work inside the hangar with no run-off at all.", true),

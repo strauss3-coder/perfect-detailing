@@ -34,25 +34,9 @@ export default async function QuotePage() {
         </div>
       </section>
 
-      {solar ? (
-        <section className="relative pb-16" id="calculator">
-          <div className="shell">
-            <Reveal delay={0.05}>
-              <SolarCalculator
-                economics={toCalculatorEconomics(solar)}
-                calculator={quotePage.calculator}
-                currency={business.currency}
-                locale={business.locale}
-                quotePath=""
-              />
-            </Reveal>
-          </div>
-        </section>
-      ) : null}
-
       <section className="relative pb-8">
         <div className="shell">
-          <MicronRule label="Everything else" />
+          <MicronRule label="What happens next" />
           <RevealGroup className="mt-10 grid gap-px overflow-hidden rounded-panel bg-silver/10 sm:grid-cols-2 lg:grid-cols-4" stagger={0.06}>
             {quotePage.assurances.map((item) => (
               <RevealItem key={item.id}>
@@ -129,6 +113,37 @@ export default async function QuotePage() {
           </Reveal>
         </div>
       </section>
+
+      {/* Solar is the one thing we can price without seeing it, so the
+          calculator stays — below the enquiry form rather than in front of
+          it, where it used to imply this was a solar business. */}
+      {solar ? (
+        <section className="relative section-y" id="calculator">
+          <div className="shell">
+            <MicronRule label="Solar arrays" />
+            <Reveal className="mt-12 max-w-2xl">
+              <Eyebrow>Specialist division</Eyebrow>
+              <h2 className="text-display mt-5 text-balance text-chrome">
+                Coating a solar array prices itself.
+              </h2>
+              <p className="text-lede mt-6 text-pretty">
+                Vehicle work is quoted after we have seen the paint. A photovoltaic array is the
+                exception — it is a flat rate per panel, so you can price the whole job here and
+                now, along with what it saves against your current cleaning cycle.
+              </p>
+            </Reveal>
+            <Reveal delay={0.08} className="mt-12">
+              <SolarCalculator
+                economics={toCalculatorEconomics(solar)}
+                calculator={quotePage.calculator}
+                currency={business.currency}
+                locale={business.locale}
+                quotePath=""
+              />
+            </Reveal>
+          </div>
+        </section>
+      ) : null}
     </>
   );
 }

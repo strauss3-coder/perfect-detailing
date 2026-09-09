@@ -31,8 +31,8 @@ export default async function ServicesIndexPage() {
             <SectionHeading
               as="h1"
               eyebrow="Capability"
-              title="Seven disciplines, one standard."
-              lede="The chemistry changes between a bonnet, a wing, a hull, a window and a photovoltaic module. The method does not: inspect, correct, prepare, coat, cure, verify."
+              title="Detailing first. Everything else follows from it."
+              lede="The first five services below are one sequence — decontaminate, correct, protect, then maintain. The rest are the specialist divisions that same chemistry opened up: aviation, solar, marine, architectural glass and fleet."
             />
           </Reveal>
         </div>
@@ -60,7 +60,7 @@ export default async function ServicesIndexPage() {
             <SectionHeading
               eyebrow="The whole picture"
               title="What we do, on one plate."
-              lede="This is the capability map we hand to clients in print: six disciplines, the work inside each, and the physics each one turns on. Every line of it is expanded on the service pages above."
+              lede="The capability map we hand to clients in print. Automobile detailing and ceramic coating are the core of it; the aviation, solar, marine and architectural panels are the divisions that grew out of them. Every line is expanded on the service pages above."
             />
           </Reveal>
           <Reveal delay={0.08} className="mt-12">

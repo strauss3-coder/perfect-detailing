@@ -149,6 +149,73 @@ export const ceramicService: ServiceDoc = {
         caption: "Unprotected, after years of automatic washing",
       },
     },
+    {
+      id: "cc-gloss",
+      eyebrow: "Gloss & depth",
+      title: "The coating does not add shine. It stops taking it away.",
+      body:
+        "A cured ceramic layer has a higher refractive index than bare clear coat and it is optically flatter, so light entering it is returned as one clean image rather than scattered by the micro-texture underneath. That is what people read as depth — the sense that you are looking into dark paint rather than at it. The catch is that a coating is transparent and perfectly faithful: it magnifies whatever surface it is laid over. On corrected paint that is the whole point. On swirled paint it preserves the swirls in high resolution for five years, which is exactly why we will not coat a car we have not corrected first.",
+      bullets: [
+        "Higher refractive index than bare clear coat — light returns as one image",
+        "Optically flat film fills nothing, but scatters nothing either",
+        "Typical measured gain of 15 to 25 gloss units over corrected paint",
+        "Faithful to what is underneath — which is why correction comes first",
+      ],
+      motif: "sparkle",
+      media: {
+        src: "/work/poster/gloss-sweep.webp",
+        videoSrc: "/video/gloss-sweep.mp4",
+        alt: "Camera panning along the coated flank of a black car, the reflected building line staying unbroken",
+        ratio: 16 / 9,
+        motif: "gloss-meter",
+        caption: "Reflection held along the full flank",
+      },
+    },
+    {
+      id: "cc-substrates",
+      eyebrow: "Beyond the paint",
+      title: "Glass, wheels, trim and plastics each get their own chemistry",
+      body:
+        "Coating only the painted panels solves a quarter of the problem. Glass is the surface you look through in the rain; wheels take more chemical and thermal punishment than anything else on the car; exterior trim is the first thing to chalk and go grey; and plastic headlight lenses yellow under ultraviolet until the beam pattern collapses. Each of those substrates needs a different formulation with a different bond mechanism and a different service life, so they are quoted and applied as separate treatments — not as one bottle wiped over everything.",
+      bullets: [
+        "Glass coating — rain clears at speed, wipers go quiet, no more etched water spots",
+        "Wheel and caliper coating — heat-stable, so brake dust releases under a rinse rather than baking on",
+        "Exterior trim and rubber — a coating that stops the chalking and greying, not a dressing that washes off",
+        "Headlight lenses — restored, then sealed with a fresh ultraviolet layer to hold clarity",
+        "Wrap and PPF-safe systems where the car is already filmed",
+      ],
+      motif: "window",
+      media: {
+        src: "/work/sl65/wheel-caliper.webp",
+        alt: "A cleaned and coated AMG wheel face with the red brake caliper visible behind the spokes",
+        ratio: 9 / 16,
+        motif: "shield",
+        caption: "Faces, barrels and calipers, coated separately",
+      },
+    },
+    {
+      id: "cc-care",
+      eyebrow: "Living with it",
+      title: "Washing a coated car is a genuinely different job",
+      body:
+        "This is the benefit owners actually notice, and it is the one nobody puts in the brochure. Because contamination cannot key into a slick, low-energy surface, it sits on top waiting to be rinsed away instead of bonding to the clear coat. The pre-soak does most of the work. The contact wash becomes shorter and gentler, which matters enormously, because contact is what put the swirl marks there in the first place. Brake dust releases from coated wheels. Bugs come off the front bar without a soak. What used to be a careful two hours becomes a comfortable forty minutes.",
+      bullets: [
+        "Most soiling leaves during the pre-soak, before anything touches the paint",
+        "Shorter, lighter contact washing — the single biggest cause of new defects",
+        "Brake dust releases from coated wheel faces under a rinse",
+        "No more drying marks: water sheets off rather than sitting in droplets to evaporate",
+        "A ceramic booster at each maintenance visit restores the contact angle",
+      ],
+      motif: "microfibre",
+      media: {
+        src: "/work/poster/glass-rinse.webp",
+        videoSrc: "/video/glass-rinse.mp4",
+        alt: "Water sheeting cleanly off coated glass and paint during a maintenance rinse",
+        ratio: 16 / 9,
+        motif: "droplet",
+        caption: "Rinse, not scrub",
+      },
+    },
   ],
 
   benefits: [
@@ -259,7 +326,7 @@ export const ceramicService: ServiceDoc = {
     title: "Ceramic Coating",
     description:
       "Professional ceramic coating in Gauteng. Multi-stage paint correction, bonded SiO₂ protection, written warranty and measured results on paint, glass and wheels.",
-    keywords: ["ceramic coating Johannesburg", "9H ceramic coating", "paint protection South Africa", "SiO2 coating"],
+    keywords: ["ceramic coating Witbank", "ceramic coating car Mpumalanga", "9H ceramic coating", "paint protection South Africa", "SiO2 coating", "hydrophobic car coating"],
     ogImageText: "Bonded, not applied",
   },
 };

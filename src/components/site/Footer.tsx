@@ -86,7 +86,7 @@ export function Footer({
           </div>
         </div>
 
-        <MicronRule className="mt-16" label={business.hasPhysicalAddress ? "Visit us" : "Mobile across Gauteng"} />
+        <MicronRule className="mt-16" label={business.hasPhysicalAddress ? "Visit us" : "We come to you"} />
 
         <div className="mt-8 flex flex-col gap-5">
           <p className="max-w-3xl text-[0.82rem] leading-relaxed text-ash">

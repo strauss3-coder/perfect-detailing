@@ -5,7 +5,7 @@ export const windowsService: ServiceDoc = {
   slug: "building-window-coating",
   category: "windows",
   status: "published",
-  order: 6,
+  order: 9,
   name: "Building Window Ceramic Coating",
   shortName: "Architectural Glass",
   cardSummary:
