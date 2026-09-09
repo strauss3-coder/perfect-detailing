@@ -7,13 +7,13 @@ import { ButtonLink, Arrow } from "@/components/ui/Button";
 /**
  * Footage instead of adjectives.
  *
- * The composition is deliberately asymmetric — a wide clip, a tall clip
- * running the full height beside it, a wide clip beneath — so the block reads
- * as a contact sheet rather than three equal tiles. On a phone the clips
- * simply stack in the order they are told in.
+ * All three clips are landscape, so the composition gives the first one the
+ * full width and lets the other two share the row beneath it. That keeps a
+ * clear focal point instead of three equal tiles, and it stacks in the order
+ * the clips are told in on a phone.
  */
 export function ProofFilm({ section }: { section: HomeContent["proof"] }) {
-  const [lead, tall, base] = section.clips;
+  const [lead, ...rest] = section.clips;
 
   return (
     <section className="relative section-y">
@@ -44,23 +44,21 @@ export function ProofFilm({ section }: { section: HomeContent["proof"] }) {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-5 lg:grid-cols-12">
+        <div className="mt-14 grid gap-5">
           {lead ? (
-            <Reveal className="lg:col-span-7" delay={0.05}>
-              <Clip clip={lead} sizes="(min-width: 1024px) 56vw, 92vw" />
+            <Reveal delay={0.05}>
+              <Clip clip={lead} sizes="(min-width: 1024px) 76rem, 92vw" />
             </Reveal>
           ) : null}
 
-          {tall ? (
-            <Reveal className="lg:col-span-5 lg:row-span-2" delay={0.12}>
-              <Clip clip={tall} sizes="(min-width: 1024px) 38vw, 92vw" fill />
-            </Reveal>
-          ) : null}
-
-          {base ? (
-            <Reveal className="lg:col-span-7" delay={0.19}>
-              <Clip clip={base} sizes="(min-width: 1024px) 56vw, 92vw" />
-            </Reveal>
+          {rest.length ? (
+            <div className="grid gap-5 lg:grid-cols-2">
+              {rest.map((clip, i) => (
+                <Reveal key={clip.id} delay={0.12 + i * 0.07}>
+                  <Clip clip={clip} sizes="(min-width: 1024px) 38vw, 92vw" fill />
+                </Reveal>
+              ))}
+            </div>
           ) : null}
         </div>
       </div>
@@ -75,7 +73,7 @@ function Clip({
 }: {
   clip: HomeContent["proof"]["clips"][number];
   sizes: string;
-  /** Stretch the card so the tall clip fills the height of the two beside it. */
+  /** Stretch the card so cards sharing a row end level. */
   fill?: boolean;
 }) {
   return (

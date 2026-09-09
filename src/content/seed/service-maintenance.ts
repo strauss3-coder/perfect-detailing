@@ -92,12 +92,11 @@ export const maintenanceService: ServiceDoc = {
       ],
       motif: "shield",
       media: {
-        src: "/work/poster/water-sheeting.webp",
-        videoSrc: "/video/water-sheeting.mp4",
-        alt: "Water beading tightly and running off a coated bonnet after a protection top-up",
+        src: "/work/glc43/wheel.webp",
+        alt: "A cleaned and re-coated AMG alloy wheel, brake dust fully released from the face",
         ratio: 9 / 16,
-        motif: "droplet",
-        caption: "Contact angle restored",
+        motif: "shield",
+        caption: "Wheel faces re-coated at every visit",
       },
     },
     {
