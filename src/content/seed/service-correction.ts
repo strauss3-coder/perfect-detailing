@@ -49,7 +49,7 @@ export const correctionService: ServiceDoc = {
       ],
       motif: "gloss-meter",
       media: {
-        src: "/work/seven/bonnet-haze.webp",
+        src: "/work/bmw7/before-bonnet.webp",
         alt: "Raking sunlight across an uncoated black bonnet showing the haze and swirl marks left by years of automated washing",
         ratio: 16 / 9,
         motif: "gloss-meter",
@@ -84,8 +84,8 @@ export const correctionService: ServiceDoc = {
       ],
       motif: "microfibre",
       media: {
-        src: "/work/glc43/machine-polish-2.webp",
-        alt: "Machine polishing continuing across the roof and A-pillar of a black AMG estate",
+        src: "/work/panamera/polish-progress.webp",
+        alt: "A black Porsche flank part-way through correction, compound haze still showing in the reflection",
         ratio: 16 / 9,
         motif: "polisher",
         caption: "Working the agreed combination across the panel",
@@ -119,8 +119,8 @@ export const correctionService: ServiceDoc = {
       ],
       motif: "gloss-meter",
       media: {
-        src: "/work/seven/arch-reflection.webp",
-        alt: "A corrected rear arch and wheel on a black saloon holding a clean reflection through the curve",
+        src: "/work/bmw7/after-rear-quarter.webp",
+        alt: "The corrected rear quarter and tail lamp of a black BMW 7 Series holding a clean reflection through the curve",
         ratio: 16 / 9,
         motif: "sedan",
         caption: "Reflection held through the curve",
@@ -226,12 +226,12 @@ export const correctionService: ServiceDoc = {
   ],
 
   steps: [
-    { id: "xs1", index: 1, title: "Paint inspection", body: "Depth gauge across every panel, defects catalogued under three light sources, and an honest conversation about what this paint can and cannot support.", duration: "45–90 min", motif: "gloss-meter", detail: ["Readings recorded panel by panel", "Resprays, filler and thin edges flagged", "Achievable finish agreed in writing before work starts"], media: { src: "/work/i20/wash-bay.webp", alt: "A car under inspection lighting in the workshop before correction begins", ratio: 16 / 9, motif: "gloss-meter", caption: "Stage 01 — depth mapped" } },
-    { id: "xs2", index: 2, title: "Decontaminate", body: "Correction over bonded contamination drags it across the paint. Iron, tar and everything embedded comes off first.", duration: "2–3 hours", motif: "foam-cannon", detail: ["Iron remover dissolves ferrous fallout chemically", "Tar softened and lifted with solvent", "Clay treatment on fully lubricated paint"], media: { src: "/work/panamera/decontamination.webp", alt: "A gloved hand drawing a clay bar across a lubricated black panel", ratio: 16 / 9, motif: "microfibre", caption: "Stage 02 — back to bare paint" } },
-    { id: "xs3", index: 3, title: "Test section", body: "A taped 50/50 finds the least aggressive pad and compound that clears the defects, and you approve the result before the car is committed.", duration: "45 min", motif: "microfibre", detail: ["Worked up from the gentlest combination", "Wiped down with solvent so oils cannot flatter it", "Shown to you beside untouched paint"], media: { src: "/work/glc43/machine-polish.webp", alt: "A technician working a test section on a black bonnet with a rotary polisher", ratio: 16 / 9, motif: "polisher", caption: "Stage 03 — combination agreed" } },
-    { id: "xs4", index: 4, title: "Cut", body: "The defect removal pass, worked in sections at controlled speed and pressure, checked constantly rather than at the end.", duration: "5–14 hours", motif: "polisher", detail: ["Worked in small sections, never over a whole panel at once", "Pad condition monitored and changed on schedule", "Complex curves and edges taken by hand"], media: { src: "/work/glc43/cut-stage.webp", alt: "A technician working a rotary polisher and cutting pad along the wing of a black Mercedes-AMG", ratio: 16 / 9, motif: "polisher", caption: "Stage 04 — defects levelled" } },
-    { id: "xs5", index: 5, title: "Refine", body: "The cutting pass leaves its own micro-haze. A finer abrasive on a softer pad removes it and brings the gloss up.", duration: "3–10 hours", motif: "sparkle", detail: ["Softer pad, finer abrasive, lighter pressure", "Cross-polarised inspection between passes", "Third finishing pass on dark paint where specified"], media: { src: "/work/seven/bootlid-mirror.webp", alt: "A corrected black bootlid returning a sharp, unbroken reflection of the sky", ratio: 16 / 9, motif: "gloss-meter", caption: "Stage 05 — reflection whole" } },
-    { id: "xs6", index: 6, title: "Protect and hand over", body: "Panel wipe to bare clear coat, protection applied to the surface we just built, then the readings and the aftercare that keep it.", duration: "1–5 hours", motif: "shield", detail: ["Solvent wipe removes every trace of polishing oil", "Sealant or ceramic coating applied panel by panel", "Before and after gloss readings handed over with wash media"], media: { src: "/work/panamera/finished-outdoor.webp", alt: "A finished black car photographed outdoors after correction and coating", ratio: 16 / 9, motif: "sparkle", caption: "Stage 06 — handed back" } },
+    { id: "xs1", index: 1, title: "Paint inspection", body: "Depth gauge across every panel, defects catalogued under three light sources, and an honest conversation about what this paint can and cannot support.", duration: "45–90 min", motif: "gloss-meter", detail: ["Readings recorded panel by panel", "Resprays, filler and thin edges flagged", "Achievable finish agreed in writing before work starts"], media: { src: "/work/panamera/polish-before.webp", alt: "A black Porsche standing in the wash bay under inspection lighting before correction begins", ratio: 16 / 9, motif: "gloss-meter", caption: "Stage 01 — depth mapped" } },
+    { id: "xs2", index: 2, title: "Decontaminate", body: "Correction over bonded contamination drags it across the paint. Iron, tar and everything embedded comes off first.", duration: "2–3 hours", motif: "foam-cannon", detail: ["Iron remover dissolves ferrous fallout chemically", "Tar softened and lifted with solvent", "Clay treatment on fully lubricated paint"], media: { src: "/work/panamera/clay-bar.webp", alt: "A gloved hand drawing a clay bar across a lubricated black panel", ratio: 9 / 16, motif: "microfibre", caption: "Stage 02 — back to bare paint" } },
+    { id: "xs3", index: 3, title: "Test section", body: "A taped 50/50 finds the least aggressive pad and compound that clears the defects, and you approve the result before the car is committed.", duration: "45 min", motif: "microfibre", detail: ["Worked up from the gentlest combination", "Wiped down with solvent so oils cannot flatter it", "Shown to you beside untouched paint"], media: { src: "/work/poster/paint-correction.webp", alt: "A technician working a test section on a black bonnet with a rotary polisher", ratio: 16 / 9, motif: "polisher", caption: "Stage 03 — combination agreed" } },
+    { id: "xs4", index: 4, title: "Cut", body: "The defect removal pass, worked in sections at controlled speed and pressure, checked constantly rather than at the end.", duration: "5–14 hours", motif: "polisher", detail: ["Worked in small sections, never over a whole panel at once", "Pad condition monitored and changed on schedule", "Complex curves and edges taken by hand"], media: { src: "/work/panamera/polish-flank.webp", alt: "The corrected flank of a black Porsche, the reflection running unbroken along its full length", ratio: 16 / 9, motif: "polisher", caption: "Stage 04 — defects levelled" } },
+    { id: "xs5", index: 5, title: "Refine", body: "The cutting pass leaves its own micro-haze. A finer abrasive on a softer pad removes it and brings the gloss up.", duration: "3–10 hours", motif: "sparkle", detail: ["Softer pad, finer abrasive, lighter pressure", "Cross-polarised inspection between passes", "Third finishing pass on dark paint where specified"], media: { src: "/work/panamera/polish-rear.webp", alt: "A corrected black Porsche photographed from above the rear quarter, the panels returning a sharp reflection", ratio: 16 / 9, motif: "gloss-meter", caption: "Stage 05 — reflection whole" } },
+    { id: "xs6", index: 6, title: "Protect and hand over", body: "Panel wipe to bare clear coat, protection applied to the surface we just built, then the readings and the aftercare that keep it.", duration: "1–5 hours", motif: "shield", detail: ["Solvent wipe removes every trace of polishing oil", "Sealant or ceramic coating applied panel by panel", "Before and after gloss readings handed over with wash media"], media: { src: "/work/panamera/polish-side.webp", alt: "A finished black Porsche photographed outdoors after correction and coating", ratio: 16 / 9, motif: "sparkle", caption: "Stage 06 — handed back" } },
   ],
 
   lifespan: [

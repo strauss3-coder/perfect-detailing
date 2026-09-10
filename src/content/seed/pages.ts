@@ -15,7 +15,7 @@ export const about: AboutContent = {
     lede:
       "Perfect Detailing began in vehicle repair. Years of putting surfaces right after they had failed taught us something obvious in hindsight: almost all of that damage was preventable, and the customer would rather have never had it. So we made a deliberate move from reactive repair to proactive protection.",
     media: {
-      src: "/work/glc43/machine-polish.webp",
+      src: "/work/poster/paint-correction.webp",
       alt: "A Perfect Detailing technician running a rotary polisher across the bonnet of a black Mercedes-AMG",
       ratio: 16 / 9,
       motif: "polisher",
@@ -31,11 +31,11 @@ export const about: AboutContent = {
       "We are surface care specialists, and we are committed to delivering more than a clean result. Your assets — whether mobility or structural — are valuable, and they deserve to be treated that way. What has not changed since the repair days is the method: measure it, correct it, protect it, measure it again, then hand over the readings.",
     ],
     media: {
-      src: "/work/i8/badge-macro.webp",
-      alt: "Macro view of a coated badge with the surrounding paint holding a mirror reflection",
+      src: "/work/panamera/clay-bar.webp",
+      alt: "A gloved hand drawing a clay bar across a foamed black panel beside the Porsche crest",
       ratio: 9 / 16,
-      motif: "sparkle",
-      caption: "Coated clear coat at 1:1",
+      motif: "microfibre",
+      caption: "Decontamination, before anything is corrected",
     },
   },
   principles: {
@@ -123,8 +123,8 @@ export const process: ProcessContent = {
         "Achievable outcome agreed and written down before work begins",
       ],
       media: {
-        src: "/work/i20/wash-bay.webp",
-        alt: "A car standing on a wet workshop floor under inspection lighting before any work begins",
+        src: "/work/panamera/polish-before.webp",
+        alt: "A black Porsche standing on a wet workshop floor under inspection lighting before any work begins",
         ratio: 16 / 9,
         motif: "gloss-meter",
         caption: "Stage 01 — baseline recorded",
@@ -144,8 +144,8 @@ export const process: ProcessContent = {
         "Deionised final rinse — zero dissolved solids left behind",
       ],
       media: {
-        src: "/work/panamera/crest-foam.webp",
-        alt: "Snow foam breaking and running off a bonnet during the pre-soak",
+        src: "/work/panamera/foam-car.webp",
+        alt: "A car under a full covering of snow foam, left to dwell during the pre-soak",
         ratio: 16 / 9,
         motif: "foam-cannon",
         caption: "Stage 02 — foam dwell, contact wash",
@@ -187,9 +187,9 @@ export const process: ProcessContent = {
         "Environment checked — temperature, humidity, dust, light",
       ],
       media: {
-        src: "/work/panamera/decontamination.webp",
+        src: "/work/panamera/clay-bar.webp",
         alt: "A gloved hand drawing a clay bar across a lubricated panel to strip it back to bare substrate",
-        ratio: 16 / 9,
+        ratio: 9 / 16,
         motif: "microfibre",
         caption: "Stage 04 — stripped to bare substrate",
       },
@@ -208,8 +208,8 @@ export const process: ProcessContent = {
         "Additional layers applied at the correct interval where specified",
       ],
       media: {
-        src: "/work/seven/arch-reflection.webp",
-        alt: "A freshly coated rear arch inspected at a raking angle for high spots",
+        src: "/work/sl65/windscreen-coating.webp",
+        alt: "Coating worked across a windscreen with a block applicator and levelled inside its flash window",
         ratio: 16 / 9,
         motif: "shield",
         caption: "Stage 05 — levelled inside the flash window",
@@ -229,8 +229,8 @@ export const process: ProcessContent = {
         "Nothing washed, wiped or driven through weather before it is ready",
       ],
       media: {
-        src: "/work/panamera/front-quarter-bay.webp",
-        alt: "A coated car left undisturbed indoors overnight while the film cross-links",
+        src: "/work/sl65/after-detailing.webp",
+        alt: "A coated car left undisturbed indoors while the film cross-links",
         ratio: 16 / 9,
         motif: "coating-layers",
         caption: "Stage 06 — indoors, undisturbed",
@@ -250,8 +250,8 @@ export const process: ProcessContent = {
         "Anything below standard is corrected before handover, not after",
       ],
       media: {
-        src: "/work/panamera/flank-reflection.webp",
-        alt: "A workshop roofline reflected without distortion along a finished coated flank",
+        src: "/work/panamera/polish-flank.webp",
+        alt: "The yard reflected without distortion along a finished coated flank",
         ratio: 16 / 9,
         motif: "gloss-meter",
         caption: "Stage 07 — measured against stage one",
@@ -271,8 +271,8 @@ export const process: ProcessContent = {
         "Next service date suggested and diarised if you want it",
       ],
       media: {
-        src: "/work/i8/doors-open.webp",
-        alt: "A finished car handed back to its owner in good light",
+        src: "/work/panamera/polish-rear.webp",
+        alt: "A finished car photographed in good light before it is handed back to its owner",
         ratio: 16 / 9,
         motif: "sparkle",
         caption: "Stage 08 — readings, warranty, wash media",

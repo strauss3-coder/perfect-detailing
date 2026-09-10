@@ -49,7 +49,7 @@ export const maintenanceService: ServiceDoc = {
       ],
       motif: "gloss-meter",
       media: {
-        src: "/work/seven/bonnet-haze.webp",
+        src: "/work/bmw7/before-bonnet.webp",
         alt: "Raking sunlight across a black bonnet showing the haze and swirl marks left by years of automated washing",
         ratio: 16 / 9,
         motif: "gloss-meter",
@@ -71,7 +71,7 @@ export const maintenanceService: ServiceDoc = {
       ],
       motif: "foam-cannon",
       media: {
-        src: "/work/panamera/crest-foam.webp",
+        src: "/work/panamera/foam-crest.webp",
         alt: "Snow foam dwelling and running off the bonnet of a black Porsche during a maintenance wash",
         ratio: 16 / 9,
         motif: "foam-cannon",
@@ -92,9 +92,9 @@ export const maintenanceService: ServiceDoc = {
       ],
       motif: "shield",
       media: {
-        src: "/work/glc43/wheel.webp",
-        alt: "A cleaned and re-coated AMG alloy wheel, brake dust fully released from the face",
-        ratio: 9 / 16,
+        src: "/work/panamera/polish-arch.webp",
+        alt: "A re-coated wheel face and arch, brake dust fully released from the spokes",
+        ratio: 1600 / 1076,
         motif: "shield",
         caption: "Wheel faces re-coated at every visit",
       },
@@ -127,8 +127,8 @@ export const maintenanceService: ServiceDoc = {
       ],
       motif: "gloss-meter",
       media: {
-        src: "/work/seven/bootlid-mirror.webp",
-        alt: "A corrected and coated black bootlid returning a sharp, unbroken reflection during an annual inspection",
+        src: "/work/bmw7/after-rear-quarter.webp",
+        alt: "A corrected and coated black rear quarter returning a sharp reflection during an annual inspection",
         ratio: 16 / 9,
         motif: "gloss-meter",
         caption: "Measured against the handover figures",
@@ -162,8 +162,8 @@ export const maintenanceService: ServiceDoc = {
       ],
       motif: "sparkle",
       media: {
-        src: "/work/three/outdoor-front.webp",
-        alt: "A coated blue BMW photographed outdoors, held in sale condition on a maintenance plan",
+        src: "/work/bmw3/after-front.webp",
+        alt: "A coated blue BMW 3 Series photographed outdoors, held in sale condition on a maintenance plan",
         ratio: 16 / 9,
         motif: "sedan",
         caption: "Permanently in the condition a buyer values",

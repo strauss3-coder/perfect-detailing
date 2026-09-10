@@ -18,8 +18,8 @@ export const ceramicService: ServiceDoc = {
   lede:
     "A ceramic coating is a liquid silica polymer that cross-links into a hard, transparent film chemically bonded to your clear coat. It is not a shine you top up every few months — it is a sacrificial surface that takes the chemical and ultraviolet punishment your paint would otherwise absorb.",
   heroMedia: {
-    src: "/work/seven/bootlid-mirror.webp",
-    alt: "A corrected and coated black bootlid returning a sharp, unbroken reflection of the sky",
+    src: "/work/sl65/body-coating.webp",
+    alt: "The coated bonnet and wing of a Mercedes-AMG SL 65, the surface returning one clean reflection",
     ratio: 16 / 9,
     motif: "shield",
   },
@@ -77,8 +77,8 @@ export const ceramicService: ServiceDoc = {
       ],
       motif: "sparkle",
       media: {
-        src: "/work/panamera/flank-reflection.webp",
-        alt: "A workshop roofline reflected without distortion along the coated door of a black Porsche",
+        src: "/work/panamera/polish-flank.webp",
+        alt: "A coated black Porsche flank returning the yard behind it without distortion",
         ratio: 16 / 9,
         motif: "sparkle",
         caption: "Coated flank, twelve months on",
@@ -120,11 +120,11 @@ export const ceramicService: ServiceDoc = {
       ],
       motif: "polisher",
       media: {
-        src: "/work/i8/badge-macro.webp",
-        alt: "Macro view of a coated badge with the surrounding clear coat holding a mirror reflection",
-        ratio: 9 / 16,
+        src: "/work/i8/after-gloss-panel.webp",
+        alt: "A coated dark panel returning a tree and open sky as one undistorted image",
+        ratio: 16 / 9,
         motif: "sparkle",
-        caption: "Coated clear coat at 1:1",
+        caption: "Coated clear coat, sky returned whole",
       },
     },
     {
@@ -141,7 +141,7 @@ export const ceramicService: ServiceDoc = {
       ],
       motif: "gloss-meter",
       media: {
-        src: "/work/seven/bonnet-haze.webp",
+        src: "/work/bmw7/before-bonnet.webp",
         alt: "Raking sunlight across an uncoated black bonnet showing the haze left by years of automated washing",
         ratio: 16 / 9,
         motif: "gloss-meter",
@@ -185,11 +185,11 @@ export const ceramicService: ServiceDoc = {
       ],
       motif: "window",
       media: {
-        src: "/work/sl65/wheel-caliper.webp",
-        alt: "A cleaned and coated AMG wheel face with the red brake caliper visible behind the spokes",
-        ratio: 9 / 16,
-        motif: "shield",
-        caption: "Faces, barrels and calipers, coated separately",
+        src: "/work/sl65/windscreen-coating.webp",
+        alt: "A ceramic glass coating being worked across a windscreen with a block applicator",
+        ratio: 16 / 9,
+        motif: "window",
+        caption: "Glass coated on its own chemistry",
       },
     },
     {
@@ -207,7 +207,7 @@ export const ceramicService: ServiceDoc = {
       ],
       motif: "microfibre",
       media: {
-        src: "/work/panamera/crest-foam.webp",
+        src: "/work/panamera/foam-crest.webp",
         alt: "Snow foam breaking and running off a coated bonnet, taking the soiling with it",
         ratio: 16 / 9,
         motif: "foam-cannon",

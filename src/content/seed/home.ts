@@ -108,10 +108,10 @@ export const home: HomeContent = {
   },
   beforeAfter: {
     eyebrow: "Evidence",
-    title: "Drag the handle. That is the same panel.",
+    title: "Drag the handle. That is the same engine bay.",
     lede:
-      "No filters, no wet-look dressing, no reshoot from a better angle. Both frames are the same lighting setup, minutes apart, and the figures underneath come off the job card.",
-    projectId: "ba-auto-black",
+      "Same camera position, same bonnet angle, one working day apart. No filters, no wet-look dressing, and no reshoot from a kinder angle — the second frame is simply what the first one looks like once the work is done.",
+    projectId: "ba-sl65-bay",
     action: { label: "Open the gallery", href: "/gallery", intent: "ghost" },
   },
   proof: {

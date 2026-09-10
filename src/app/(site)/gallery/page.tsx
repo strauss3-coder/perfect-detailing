@@ -48,7 +48,7 @@ export default async function GalleryPage() {
               <SectionHeading
                 eyebrow="Same light, same angle"
                 title={galleryPage.beforeAfterTitle}
-                lede="Drag each handle. Both frames were shot under identical lighting minutes apart, and the measured figures underneath are from the job card."
+                lede="Drag each handle. Both frames are the same car on the same visit — one before we started, one after we finished — and what changed between them is listed underneath."
               />
             </Reveal>
 

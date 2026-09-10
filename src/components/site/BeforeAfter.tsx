@@ -122,12 +122,18 @@ export function BeforeAfter({
           {project.metrics.map((metric) => (
             <div key={metric.id} className="flex flex-col gap-2 bg-graphite p-4">
               <dt className="label-tech text-silver/60">{metric.label}</dt>
-              <dd className="flex items-baseline gap-2.5">
-                <span className="numeral text-[0.95rem] text-ash line-through decoration-ash/50">{metric.before}</span>
+              {/* Wraps rather than clips: these values are not always a short
+                  figure like "94 GU" — some describe a condition in words. */}
+              <dd className="flex flex-wrap items-baseline gap-x-2.5 gap-y-1">
+                <span className="numeral min-w-0 text-[0.95rem] break-words text-ash line-through decoration-ash/50">
+                  {metric.before}
+                </span>
                 <svg width="14" height="10" viewBox="0 0 16 10" fill="none" aria-hidden className="shrink-0">
                   <path d="M1 5h13M10 1l4 4-4 4" stroke="var(--color-ceramic)" strokeWidth="1.4" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
-                <span className="numeral text-[1.05rem] font-medium text-ceramic">{metric.after}</span>
+                <span className="numeral min-w-0 text-[1.05rem] font-medium break-words text-ceramic">
+                  {metric.after}
+                </span>
               </dd>
             </div>
           ))}

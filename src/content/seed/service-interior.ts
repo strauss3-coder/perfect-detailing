@@ -18,8 +18,8 @@ export const interiorService: ServiceDoc = {
   lede:
     "Exterior work is what other people see. The interior is what you see, touch and breathe every day — and it is the part that ages fastest, because it lives under ultraviolet light, body oils, spilled coffee, dog hair and the friction of getting in and out ten thousand times. Restoring one is patient, methodical work with a lot of different chemistry, done in an order that stops each step undoing the last.",
   heroMedia: {
-    src: "/work/sl65/cabin-red.webp",
-    alt: "The red quilted leather cabin of a Mercedes-AMG SL 65 after cleaning and conditioning",
+    src: "/work/panamera/cabin-wide.webp",
+    alt: "The full cabin of a Porsche Panamera photographed from the rear after a complete interior detail",
     ratio: 16 / 9,
     motif: "interior",
   },
@@ -70,8 +70,8 @@ export const interiorService: ServiceDoc = {
       ],
       motif: "microfibre",
       media: {
-        src: "/work/i20/rear-cabin.webp",
-        alt: "The rear seats and floor of a hatchback after extraction and dressing",
+        src: "/work/panamera/boot-after.webp",
+        alt: "The boot floor and carpet of a Porsche Panamera after hot-water extraction, the pile lifted and even",
         ratio: 16 / 9,
         motif: "interior",
         caption: "Extracted, dried, re-napped",
@@ -91,9 +91,9 @@ export const interiorService: ServiceDoc = {
       ],
       motif: "sparkle",
       media: {
-        src: "/work/sl65/door-card.webp",
-        alt: "A red quilted leather door card and its switchgear after detailing",
-        ratio: 16 / 9,
+        src: "/work/sl65/cabin-red.webp",
+        alt: "The red quilted leather cabin of a Mercedes-AMG SL 65 after cleaning and conditioning",
+        ratio: 665 / 1182,
         motif: "interior",
         caption: "Cleaned in the grain, conditioned matte",
       },
@@ -112,8 +112,8 @@ export const interiorService: ServiceDoc = {
       ],
       motif: "shield",
       media: {
-        src: "/work/i20/dashboard.webp",
-        alt: "A cleaned dashboard, screen and instrument binnacle photographed from the passenger side",
+        src: "/work/panamera/cabin-dash.webp",
+        alt: "A cleaned Porsche dashboard, centre console and switchgear photographed from the passenger side",
         ratio: 16 / 9,
         motif: "interior",
         caption: "Satin, not glossy",
@@ -161,8 +161,8 @@ export const interiorService: ServiceDoc = {
       ],
       motif: "shield",
       media: {
-        src: "/work/panamera/cabin.webp",
-        alt: "The front cabin of a Porsche Panamera after a full interior detail",
+        src: "/work/panamera/cabin-sill.webp",
+        alt: "A cleaned Porsche door sill, seat base and floor mat after protection was applied",
         ratio: 16 / 9,
         motif: "interior",
         caption: "Finished and protected",
