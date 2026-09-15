@@ -87,8 +87,8 @@ export const aircraftService: ServiceDoc = {
       ],
       motif: "polisher",
       media: {
-        src: "/work/aircraft/chalked-protected.webp",
-        alt: "A business jet fuselage divided by masking tape: the chalked, matte section labelled before on the left, the coated section on the right returning the hangar roof as a clean reflection",
+        src: "/work/aircraft/fuselage-wipe.webp",
+        alt: "A Perfect Detailing technician drawing a microfibre cloth along the polished fuselage of a business jet in a hangar",
         ratio: 16 / 9,
       },
     },
@@ -185,8 +185,8 @@ export const aircraftService: ServiceDoc = {
     body:
       "Aerodynamics is decided at the boundary layer, a few millimetres off the skin. What happens in that layer is governed by how smooth the surface underneath it is — which is the one variable a coating can actually change.",
     media: {
-      src: "/work/aircraft/fuselage-wipe.webp",
-      alt: "A Perfect Detailing technician drawing a microfibre cloth along the polished fuselage of a business jet in a hangar",
+      src: "/work/aircraft/chalked-protected.webp",
+      alt: "A business jet fuselage divided by masking tape: the chalked, matte section labelled before on the left, the coated section on the right returning the hangar roof as a clean reflection",
       ratio: 1456 / 768,
     },
     withoutLabel: "Without ceramic coating",

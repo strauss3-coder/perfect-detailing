@@ -67,12 +67,11 @@ export const solarService: ServiceDoc = {
         "Dissolved minerals leave with the water instead of drying into scale",
         "Organic soiling — bird droppings, sap, pollen — releases with a rinse",
       ],
+      /* No photograph here: the coated/uncoated pair earns more in the
+         comparison block above, where the labels printed on it line up with
+         the with/without copy. This section draws its plate until there is a
+         second beading shot to fill it. */
       motif: "droplet",
-      media: {
-        src: "/work/solar/coated-uncoated.webp",
-        alt: "Two adjacent rooftop modules at sunrise: the coated one on the left holding water in discrete beads, the uncoated one on the right covered by a flat dirty film",
-        ratio: 16 / 9,
-      },
     },
     {
       id: "sol-gain",
@@ -294,8 +293,8 @@ export const solarService: ServiceDoc = {
     body:
       "A photovoltaic cell can only convert the light that reaches it. Everything between the sun and the cell — dust, mineral haze, a rough surface scattering light back out — is generation you paid for and did not get.",
     media: {
-      src: "/profile/solar-performance.webp",
-      alt: "Split comparison of a solar panel with and without ceramic coating, showing light scattering off a soiled surface against clean transmission on a coated one",
+      src: "/work/solar/coated-uncoated.webp",
+      alt: "Two adjacent rooftop modules at sunrise: the coated one on the left holding water in discrete beads, the uncoated one on the right covered by a flat dirty film",
       ratio: 1456 / 768,
     },
     withoutLabel: "Without ceramic coating",
