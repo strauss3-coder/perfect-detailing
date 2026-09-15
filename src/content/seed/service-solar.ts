@@ -19,8 +19,8 @@ export const solarService: ServiceDoc = {
   lede:
     "Soiling is the quietest fault on a solar installation. Nothing alarms, nothing trips — output simply drifts down as dust, pollen and mineral scale build a haze across the glass. A ceramic coating changes the surface itself so that contamination struggles to hold on, and rain removes most of what does.",
   heroMedia: {
-    src: "",
-    alt: "Rooftop photovoltaic array with water beading and running clear off the coated glass",
+    src: "/work/solar/hero.webp",
+    alt: "A rooftop photovoltaic array at sunrise, the wet coated modules returning the low sun as one clean sheet of light",
     ratio: 16 / 9,
     motif: "solar-array",
   },
@@ -49,6 +49,11 @@ export const solarService: ServiceDoc = {
         "Safe on anti-reflective coated glass when applied by trained hands",
       ],
       motif: "coating-layers",
+      media: {
+        src: "/work/solar/silica-application.webp",
+        alt: "Gloved hands working Perfect Detailing silica coating across a solar module with a block applicator, the bottle standing on the panel alongside",
+        ratio: 16 / 9,
+      },
     },
     {
       id: "sol-how",
@@ -63,6 +68,11 @@ export const solarService: ServiceDoc = {
         "Organic soiling — bird droppings, sap, pollen — releases with a rinse",
       ],
       motif: "droplet",
+      media: {
+        src: "/work/solar/coated-uncoated.webp",
+        alt: "Two adjacent rooftop modules at sunrise: the coated one on the left holding water in discrete beads, the uncoated one on the right covered by a flat dirty film",
+        ratio: 16 / 9,
+      },
     },
     {
       id: "sol-gain",
@@ -77,6 +87,11 @@ export const solarService: ServiceDoc = {
         "No claim of increased output from an already-clean panel — that is physics, not chemistry",
       ],
       motif: "gloss-meter",
+      media: {
+        src: "/work/solar/inverter-yield.webp",
+        alt: "A rooftop inverter display reading 48.7 kW of PV power and 286.4 MWh of total yield, mounted beside the array it monitors",
+        ratio: 16 / 9,
+      },
     },
     {
       id: "sol-install",
@@ -91,6 +106,11 @@ export const solarService: ServiceDoc = {
         "Section-by-section application so no area cures before it is levelled",
       ],
       motif: "microfibre",
+      media: {
+        src: "/work/solar/roof-team.webp",
+        alt: "A Perfect Detailing technician walking a rooftop array at sunset, working from a deionised water cleaning rig parked on the walkway",
+        ratio: 16 / 9,
+      },
     },
   ],
 

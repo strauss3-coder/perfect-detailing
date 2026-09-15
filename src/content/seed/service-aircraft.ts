@@ -18,8 +18,8 @@ export const aircraftService: ServiceDoc = {
   lede:
     "Paint on an aircraft takes ultraviolet exposure at altitude, thermal cycling every flight, hydraulic and exhaust residue, and constant airflow carrying whatever is in it. Cleaning it is not the same job as cleaning a car — the chemistry, the water discipline and the areas you are not allowed to touch are all different.",
   heroMedia: {
-    src: "",
-    alt: "Light twin aircraft in a hangar with a technician working along the leading edge",
+    src: "/work/aircraft/hero.webp",
+    alt: "A business jet standing in a hangar at sunset, a technician working along the wing leading edge with the apron beyond",
     ratio: 16 / 9,
     motif: "aircraft",
   },
@@ -47,6 +47,11 @@ export const aircraftService: ServiceDoc = {
         "Pitot, static ports and probes covered before work begins",
       ],
       motif: "microfibre",
+      media: {
+        src: "/work/aircraft/coating-application.webp",
+        alt: "A technician working product across the fuselage of a business jet with a block applicator, bottle in hand, inside a hangar",
+        ratio: 16 / 9,
+      },
     },
     {
       id: "ac-coat",
@@ -62,6 +67,11 @@ export const aircraftService: ServiceDoc = {
         "Windscreens and cabin windows restored with a high-clarity polish",
       ],
       motif: "shield",
+      media: {
+        src: "/work/aircraft/coating-product.webp",
+        alt: "A bottle of Perfect Detailing ceramic coating with its box, a microfibre cloth and an applicator pad, resting on the wing of a business jet under a clear sky",
+        ratio: 3 / 4,
+      },
     },
     {
       id: "ac-ox",
@@ -76,6 +86,11 @@ export const aircraftService: ServiceDoc = {
         "Boots, de-ice panels and non-painted surfaces excluded by default",
       ],
       motif: "polisher",
+      media: {
+        src: "/work/aircraft/chalked-protected.webp",
+        alt: "A business jet fuselage divided by masking tape: the chalked, matte section labelled before on the left, the coated section on the right returning the hangar roof as a clean reflection",
+        ratio: 16 / 9,
+      },
     },
     {
       id: "ac-drag",
@@ -90,6 +105,11 @@ export const aircraftService: ServiceDoc = {
         "Published figures are stated with their qualifier, never as a guarantee",
       ],
       motif: "aircraft",
+      media: {
+        src: "/work/aircraft/wing-nacelle.webp",
+        alt: "The polished wing and engine nacelle of a business jet in a hangar at sunset, the leading edge running unbroken towards the open door",
+        ratio: 16 / 9,
+      },
     },
     {
       id: "ac-int",
@@ -105,6 +125,11 @@ export const aircraftService: ServiceDoc = {
         "Product applied to cloth, never sprayed into a cockpit",
       ],
       motif: "interior",
+      media: {
+        src: "/work/aircraft/cockpit.webp",
+        alt: "The glass cockpit of a business jet after an interior detail, avionics displays lit and both seats covered",
+        ratio: 16 / 9,
+      },
     },
   ],
 
@@ -160,8 +185,8 @@ export const aircraftService: ServiceDoc = {
     body:
       "Aerodynamics is decided at the boundary layer, a few millimetres off the skin. What happens in that layer is governed by how smooth the surface underneath it is — which is the one variable a coating can actually change.",
     media: {
-      src: "/profile/aircraft-aerodynamics.webp",
-      alt: "Split comparison of an aircraft with and without ceramic coating, showing laminar airflow against turbulent airflow",
+      src: "/work/aircraft/fuselage-wipe.webp",
+      alt: "A Perfect Detailing technician drawing a microfibre cloth along the polished fuselage of a business jet in a hangar",
       ratio: 1456 / 768,
     },
     withoutLabel: "Without ceramic coating",
