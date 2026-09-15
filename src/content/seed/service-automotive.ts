@@ -90,9 +90,8 @@ export const automotiveService: ServiceDoc = {
       ],
       motif: "polisher",
       media: {
-        src: "/work/poster/paint-correction.webp",
-        videoSrc: "/video/paint-correction.mp4",
-        alt: "A technician machine-polishing the bonnet of a black Mercedes-AMG with a rotary",
+        src: "/work/panamera/polish-progress.webp",
+        alt: "A black Porsche flank part-way through correction, compound haze still visible in the reflection",
         ratio: 16 / 9,
         motif: "polisher",
         caption: "Cut stage, rotary and wool pad",
@@ -197,9 +196,8 @@ export const automotiveService: ServiceDoc = {
       ],
       motif: "shield",
       media: {
-        src: "/work/poster/glass-rinse.webp",
-        videoSrc: "/video/glass-rinse.mp4",
-        alt: "Water sheeting cleanly off the coated roof and glass of a car under a plain hose rinse",
+        src: "/work/panamera/foam-crest.webp",
+        alt: "Snow foam breaking and running off the coated bonnet of a black Porsche around the crest",
         ratio: 16 / 9,
         motif: "droplet",
         caption: "Protected paint, rinsed not scrubbed",

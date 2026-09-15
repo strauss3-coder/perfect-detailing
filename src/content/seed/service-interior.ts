@@ -48,8 +48,7 @@ export const interiorService: ServiceDoc = {
       ],
       motif: "interior",
       media: {
-        src: "/work/poster/interior-detail.webp",
-        videoSrc: "/video/interior-detail.mp4",
+        src: "/work/i8/interior-brush.webp",
         alt: "A detailing brush working foam through the switchgear of a car console",
         ratio: 9 / 16,
         motif: "interior",

@@ -15,11 +15,11 @@ export const about: AboutContent = {
     lede:
       "Perfect Detailing began in vehicle repair. Years of putting surfaces right after they had failed taught us something obvious in hindsight: almost all of that damage was preventable, and the customer would rather have never had it. So we made a deliberate move from reactive repair to proactive protection.",
     media: {
-      src: "/work/poster/paint-correction.webp",
-      alt: "A Perfect Detailing technician running a rotary polisher across the bonnet of a black Mercedes-AMG",
+      src: "/work/sl65/body-coating.webp",
+      alt: "The coated bonnet and wing of a Mercedes-AMG SL 65 returning one clean reflection",
       ratio: 16 / 9,
-      motif: "polisher",
-      caption: "Cut stage, in our own bay",
+      motif: "shield",
+      caption: "Protection, in our own bay",
     },
   },
   story: {
@@ -165,9 +165,8 @@ export const process: ProcessContent = {
         "Complex curves and edges worked by hand where a machine is a risk",
       ],
       media: {
-        src: "/work/poster/paint-correction.webp",
-        videoSrc: "/video/paint-correction.mp4",
-        alt: "A technician machine-polishing a black bonnet with a rotary and cutting pad",
+        src: "/work/panamera/polish-progress.webp",
+        alt: "A black Porsche flank part-way through correction, compound haze still visible in the reflection",
         ratio: 16 / 9,
         motif: "polisher",
         caption: "Stage 03 — cut, then refine",

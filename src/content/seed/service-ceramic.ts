@@ -98,12 +98,11 @@ export const ceramicService: ServiceDoc = {
       ],
       motif: "droplet",
       media: {
-        src: "/work/poster/glass-rinse.webp",
-        videoSrc: "/video/glass-rinse.mp4",
-        alt: "Slow-motion footage of water pulling into beads and running off a coated bonnet",
-        ratio: 9 / 16,
+        src: "/work/panamera/foam-badge.webp",
+        alt: "Snow foam pulling into beads and running off the coated rear quarter of a Porsche around the e-hybrid badge",
+        ratio: 16 / 9,
         motif: "droplet",
-        caption: "Contact angle, filmed at 240 fps",
+        caption: "Contact angle, coated rear quarter",
       },
     },
     {
@@ -162,12 +161,11 @@ export const ceramicService: ServiceDoc = {
       ],
       motif: "sparkle",
       media: {
-        src: "/work/poster/gloss-sweep.webp",
-        videoSrc: "/video/gloss-sweep.mp4",
-        alt: "Camera panning along the coated flank of a black car, the reflected building line staying unbroken",
+        src: "/work/panamera/polish-rear.webp",
+        alt: "A coated black Porsche photographed from above the rear quarter, the reflection staying straight through the curve",
         ratio: 16 / 9,
         motif: "gloss-meter",
-        caption: "Reflection held along the full flank",
+        caption: "Reflection held through the curve",
       },
     },
     {

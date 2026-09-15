@@ -18,9 +18,8 @@ export const maintenanceService: ServiceDoc = {
   lede:
     "We can hand back a flawless car on a Friday. What happens on the following two hundred Saturdays decides whether it is still flawless in three years. Almost every defect we remove was put there by a wash, so the most valuable thing we sell is not the correction — it is the discipline that protects it afterwards, on a schedule, with the right media, by people who are not in a hurry.",
   heroMedia: {
-    src: "/work/poster/glass-rinse.webp",
-    videoSrc: "/video/glass-rinse.mp4",
-    alt: "Water sheeting cleanly off the coated roof and glass of a car during a maintenance wash",
+    src: "/work/panamera/foam-car.webp",
+    alt: "A black Porsche Panamera under a full covering of snow foam before any contact wash",
     ratio: 16 / 9,
     motif: "microfibre",
   },

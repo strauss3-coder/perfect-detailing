@@ -12,9 +12,8 @@ export const home: HomeContent = {
       { label: "See the work", href: "/gallery", intent: "secondary" },
     ],
     media: {
-      src: "/work/poster/hero-panamera.webp",
-      videoSrc: "/video/hero-panamera.mp4",
-      alt: "A black Porsche Panamera Sport Turismo in the Perfect Detailing bay, its bodywork holding an unbroken reflection after correction and coating",
+      src: "/work/panamera/polish-flank.webp",
+      alt: "The coated flank of a black Porsche Panamera returning the yard behind it as one undistorted reflection",
       ratio: 16 / 9,
       motif: "coupe",
     },
@@ -115,10 +114,10 @@ export const home: HomeContent = {
     action: { label: "Open the gallery", href: "/gallery", intent: "ghost" },
   },
   proof: {
-    eyebrow: "Filmed on the job",
-    title: "Three clips, three claims, no captions needed.",
+    eyebrow: "Shot on the job",
+    title: "Three frames, three claims, no captions needed.",
     lede:
-      "Everything below was shot on a working day in our own bay, on customers' cars, with a phone. Watch the pad load the panel, watch water refuse to sit on it, watch a reflection stay straight along the length of a door.",
+      "Everything below was photographed on a working day in our own bay, on customers' cars. The pad part-way through a panel, water refusing to lie flat on a coated bonnet, and a reflection staying straight across a rear quarter.",
     clips: [
       {
         id: "p1",
@@ -127,9 +126,8 @@ export const home: HomeContent = {
         body:
           "A rotary and a cutting pad taking a defined layer off a black bonnet. Filler waxes hide this damage for a fortnight; removing it is what makes the coating worth bonding on top.",
         media: {
-          src: "/work/poster/paint-correction.webp",
-          videoSrc: "/video/paint-correction.mp4",
-          alt: "A Perfect Detailing technician machine-polishing the bonnet of a black Mercedes-AMG",
+          src: "/work/panamera/polish-progress.webp",
+          alt: "A black Porsche flank part-way through correction, compound haze still visible in the reflection",
           ratio: 16 / 9,
           motif: "polisher",
           caption: "Machine correction · black metallic",
@@ -140,14 +138,13 @@ export const home: HomeContent = {
         label: "Contact angle",
         title: "Water leaves before it can dry",
         body:
-          "A plain hose over a coated roof and windscreen — no pressure washer, no chemistry, no drying towel. Water this reluctant to lie flat takes the dust with it as it goes and leaves nothing behind to etch or spot.",
+          "Snow foam breaking apart and running off a coated bonnet before it has a chance to dwell. Water this reluctant to lie flat takes the dust with it as it goes and leaves nothing behind to etch or spot.",
         media: {
-          src: "/work/poster/glass-rinse.webp",
-          videoSrc: "/video/glass-rinse.mp4",
-          alt: "Water sheeting cleanly off the coated roof and windscreen of a car under a plain hose rinse",
+          src: "/work/panamera/foam-crest.webp",
+          alt: "Snow foam breaking and running off the coated bonnet of a black Porsche around the crest",
           ratio: 16 / 9,
           motif: "droplet",
-          caption: "Rinse test · coated roof and glass",
+          caption: "Foam breaking · coated bonnet",
         },
       },
       {
@@ -155,14 +152,13 @@ export const home: HomeContent = {
         label: "Gloss",
         title: "A reflection that stays straight",
         body:
-          "The camera tracks the full length of a coated flank. Straight lines staying straight across a door and a rear quarter is the honest test of a finish — swirls and holograms break the reflection where the panel curves.",
+          "A coated rear quarter shot from above, where the panel turns hardest. Straight lines staying straight through a curve is the honest test of a finish — swirls and holograms break the reflection exactly there.",
         media: {
-          src: "/work/poster/gloss-sweep.webp",
-          videoSrc: "/video/gloss-sweep.mp4",
-          alt: "Camera panning along the coated flank of a black Porsche, the reflected building line staying unbroken",
+          src: "/work/panamera/polish-rear.webp",
+          alt: "A coated black Porsche photographed from above the rear quarter, the panels returning a sharp reflection through the curve",
           ratio: 16 / 9,
           motif: "gloss-meter",
-          caption: "Reflection sweep · coated flank",
+          caption: "Reflection · coated rear quarter",
         },
       },
     ],
