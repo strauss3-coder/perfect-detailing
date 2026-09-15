@@ -5,16 +5,15 @@ import { SectionHeading, MicronRule } from "@/components/ui/Section";
 import { ButtonLink, Arrow } from "@/components/ui/Button";
 
 /**
- * Footage instead of adjectives.
+ * Evidence instead of adjectives.
  *
- * All three clips are landscape, so the composition gives the first one the
- * full width and lets the other two share the row beneath it. That keeps a
- * clear focal point instead of three equal tiles, and it stacks in the order
- * the clips are told in on a phone.
+ * Three equal landscape tiles. An earlier version gave the first frame the
+ * full shell width, which asked more of the photograph than the library can
+ * answer: 1216px of layout wants 2432 device pixels on a retina screen, and
+ * nothing here is that wide. At a third of the row each frame is served at
+ * roughly its native resolution instead of being stretched.
  */
 export function ProofFilm({ section }: { section: HomeContent["proof"] }) {
-  const [lead, ...rest] = section.clips;
-
   return (
     <section className="relative section-y">
       {/* Cold key light behind the strip */}
@@ -44,22 +43,12 @@ export function ProofFilm({ section }: { section: HomeContent["proof"] }) {
           />
         </Reveal>
 
-        <div className="mt-14 grid gap-5">
-          {lead ? (
-            <Reveal delay={0.05}>
-              <Clip clip={lead} sizes="(min-width: 1024px) 76rem, 92vw" />
+        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {section.clips.map((clip, i) => (
+            <Reveal key={clip.id} delay={0.05 + i * 0.07}>
+              <Clip clip={clip} sizes="(min-width: 1024px) 26vw, (min-width: 768px) 46vw, 92vw" fill />
             </Reveal>
-          ) : null}
-
-          {rest.length ? (
-            <div className="grid gap-5 lg:grid-cols-2">
-              {rest.map((clip, i) => (
-                <Reveal key={clip.id} delay={0.12 + i * 0.07}>
-                  <Clip clip={clip} sizes="(min-width: 1024px) 38vw, 92vw" fill />
-                </Reveal>
-              ))}
-            </div>
-          ) : null}
+          ))}
         </div>
       </div>
     </section>

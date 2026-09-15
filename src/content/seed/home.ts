@@ -117,20 +117,20 @@ export const home: HomeContent = {
     eyebrow: "Shot on the job",
     title: "Three frames, three claims, no captions needed.",
     lede:
-      "Everything below was photographed on a working day in our own bay, on customers' cars. The pad part-way through a panel, water refusing to lie flat on a coated bonnet, and a reflection staying straight across a rear quarter.",
+      "Everything below was photographed on a working day in our own bay, on customers' cars: the damage before a machine touches it, water refusing to lie flat on a coated bonnet, and a reflection staying straight where the panel turns hardest.",
     clips: [
       {
         id: "p1",
         label: "Stage two",
         title: "Correction, not concealment",
         body:
-          "A rotary and a cutting pad taking a defined layer off a black bonnet. Filler waxes hide this damage for a fortnight; removing it is what makes the coating worth bonding on top.",
+          "Nine years of automatic washing, photographed in raking sun before a machine touches it. A filler wax would hide this for a fortnight and hand it back to you; removing it with abrasives is what makes a coating worth bonding on top.",
         media: {
-          src: "/work/panamera/polish-progress.webp",
-          alt: "A black Porsche flank part-way through correction, compound haze still visible in the reflection",
+          src: "/work/bmw7/before-bonnet.webp",
+          alt: "Raking sunlight across the uncorrected black bonnet of a BMW 7 Series, showing the haze left by years of automated washing",
           ratio: 16 / 9,
           motif: "polisher",
-          caption: "Machine correction · black metallic",
+          caption: "Before correction · black metallic",
         },
       },
       {

@@ -67,11 +67,15 @@ export const solarService: ServiceDoc = {
         "Dissolved minerals leave with the water instead of drying into scale",
         "Organic soiling — bird droppings, sap, pollen — releases with a rinse",
       ],
-      /* No photograph here: the coated/uncoated pair earns more in the
-         comparison block above, where the labels printed on it line up with
-         the with/without copy. This section draws its plate until there is a
-         second beading shot to fill it. */
       motif: "droplet",
+      /* A tighter crop of the same frame the comparison block uses, taken
+         below the printed labels and across the coated half, so the beading
+         reads on its own here without repeating that image whole. */
+      media: {
+        src: "/work/solar/beading.webp",
+        alt: "Water standing in discrete beads across a coated solar module at sunrise, the uncoated panel beyond it holding a flat film",
+        ratio: 16 / 9,
+      },
     },
     {
       id: "sol-gain",
